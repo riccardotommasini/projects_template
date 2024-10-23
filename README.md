@@ -1,20 +1,18 @@
-# SMART 2024 Template Repository
+# DataEng 2024 Template Repository
 
 ![Insalogo](./images/logo-insa_0.png)
 
-Project [SMART(PLD)](riccardotommasini.com/teaching/smart) is provided by [INSA Lyon](https://www.insa-lyon.fr/).
+Project [DATA Engineering](https://www.riccardotommasini.com/courses/dataeng-insa-ot/) is provided by [INSA Lyon](https://www.insa-lyon.fr/).
 
 Students: **[To be assigned]**
 
 ### Abstract
 
-## Description 
+## Datasets Description 
 
-## Project Goal
+## Queries 
 
 ## Requirements
-
-## Material
 
 ## Note for Students
 
