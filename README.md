@@ -1,8 +1,8 @@
-# SMART 2024 Template Repository
+# Database 2024 Template Repository
 
 ![Insalogo](./images/logo-insa_0.png)
 
-Project [SMART(PLD)](riccardotommasini.com/teaching/smart) is provided by [INSA Lyon](https://www.insa-lyon.fr/).
+Project at [https://www.riccardotommasini.com/courses/dbm1-ist/](https://www.riccardotommasini.com/courses/dbm1-ist/)
 
 Students: **[To be assigned]**
 
