@@ -1,0 +1,79 @@
+# Python
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Build and packaging artifacts generated under Router/
+Router/build/
+Router/develop-eggs/
+Router/dist/
+Router/downloads/
+Router/eggs/
+Router/.eggs/
+Router/lib/
+Router/lib64/
+Router/parts/
+Router/sdist/
+Router/var/
+Router/wheels/
+Router/*.egg-info/
+Router/.installed.cfg
+Router/*.egg
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+Router/.venv/
+Router/venv/
+Router/ENV/
+Router/env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Repository-level model artifacts
+saved_models/
+Router/saved_models/
+
+# Router data and generated outputs
+Router/*.csv
+Router/*.jsonl
+Router/routing_log.jsonl
+Router/data/chatbot_arena/*.jsonl
+
+# Router local config with real API keys
+Router/config.local.yaml
+Router/*.local.yaml
+
+# Logs
+*.log
+Router/*.log
+
+# Local environment files
+.env
+.env.*
+Router/.env
+Router/.env.*
+
+# Temporary files
+*.tmp
+.cache/
+Router/*.tmp
+Router/.cache/
+Router/.pytest_cache/
+Router/.mypy_cache/
+
+# MkDocs build output
+site/

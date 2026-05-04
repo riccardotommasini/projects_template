@@ -1,0 +1,36 @@
+data_path:
+  query_data_train: 'data/example_data/query_data/default_query_train.jsonl'
+  query_data_test: 'data/example_data/query_data/default_query_test.jsonl'
+  query_embedding_data: 'data/example_data/routing_data/query_embeddings_longformer.pt'
+  routing_data_train: 'data/example_data/routing_data/default_routing_train_data.jsonl'
+  routing_data_test: 'data/example_data/routing_data/default_routing_test_data.jsonl'
+  llm_data: 'data/example_data/llm_candidates/default_llm.json'
+  co2_data: 'custom_routers/greenrouter/co2_data.json'
+
+model_path:
+  ini_model_path: ''
+  save_model_path: 'saved_models/greenrouter/knn.pkl'
+  load_model_path: 'saved_models/greenrouter/knn.pkl'
+  difficulty_model_path: 'saved_models/greenrouter/difficulty.pt'
+
+hparam:
+  n_neighbors: 5
+  weights: 'uniform'
+  algorithm: 'auto'
+  metric: 'minkowski'
+  p: 2
+  n_jobs: -1
+  leaf_size: 30
+  threshold: 0.5
+  embedding_dim: 768
+  hidden_dim: 128
+  small_models:
+    - 'qwen2.5-7b-instruct'
+    - 'gemma-2-9b-it'
+    - 'llama-3.1-8b-instruct'
+    - 'mistral-7b-instruct-v0.3'
+  w_perf: 1.0
+  w_co2: 0.3
+  learning_rate: 0.001
+  train_epoch: 10
+  batch_size: 32
