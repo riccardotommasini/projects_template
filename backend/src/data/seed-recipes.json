@@ -1,0 +1,3094 @@
+{
+  "units": [
+    {
+      "type": "g"
+    },
+    {
+      "type": "ml"
+    },
+    {
+      "type": "pièce"
+    },
+    {
+      "type": "cuillère à soupe"
+    },
+    {
+      "type": "cuillère à café"
+    },
+    {
+      "type": "verre"
+    },
+    {
+      "type": "boîte"
+    },
+    {
+      "type": "tranche"
+    }
+  ],
+  "tags": [
+    {
+      "name": "rapide"
+    },
+    {
+      "name": "italien"
+    },
+    {
+      "name": "facile"
+    },
+    {
+      "name": "vegetarien"
+    },
+    {
+      "name": "sain"
+    },
+    {
+      "name": "épicé"
+    },
+    {
+      "name": "asiatique"
+    },
+    {
+      "name": "mexicain"
+    },
+    {
+      "name": "indien"
+    },
+    {
+      "name": "famille"
+    },
+    {
+      "name": "moyen"
+    },
+    {
+      "name": "difficile"
+    },
+    {
+      "name": "vegan"
+    },
+    {
+      "name": "sans gluten"
+    },
+    {
+      "name": "poisson"
+    },
+    {
+      "name": "fruit de mer"
+    },
+    {
+      "name": "dessert"
+    },
+    {
+      "name": "sucré"
+    },
+    {
+      "name": "léger"
+    },
+    {
+      "name": "réconfortant"
+    }
+  ],
+  "ingredients": [
+    {
+      "name": "pâtes",
+      "category": "pates",
+      "unitDefault": "g",
+      "calories": 131,
+      "price": 2.5
+    },
+    {
+      "name": "oeufs",
+      "category": "produits_laitiers",
+      "unitDefault": "pièce",
+      "calories": 155,
+      "price": 0.3
+    },
+    {
+      "name": "lard",
+      "category": "viande",
+      "unitDefault": "g",
+      "calories": 717,
+      "price": 8.0
+    },
+    {
+      "name": "parmesan",
+      "category": "fromage",
+      "unitDefault": "g",
+      "calories": 431,
+      "price": 15.0
+    },
+    {
+      "name": "tomate",
+      "category": "legumes",
+      "unitDefault": "pièce",
+      "calories": 18,
+      "price": 1.2
+    },
+    {
+      "name": "ail",
+      "category": "aromatics",
+      "unitDefault": "pièce",
+      "calories": 149,
+      "price": 0.5
+    },
+    {
+      "name": "oignon",
+      "category": "legumes",
+      "unitDefault": "pièce",
+      "calories": 40,
+      "price": 0.8
+    },
+    {
+      "name": "poulet",
+      "category": "viande",
+      "unitDefault": "g",
+      "calories": 165,
+      "price": 12.0
+    },
+    {
+      "name": "riz",
+      "category": "cereales",
+      "unitDefault": "g",
+      "calories": 130,
+      "price": 2.0
+    },
+    {
+      "name": "champignon",
+      "category": "legumes",
+      "unitDefault": "g",
+      "calories": 22,
+      "price": 4.5
+    },
+    {
+      "name": "boeuf",
+      "category": "viande",
+      "unitDefault": "g",
+      "calories": 250,
+      "price": 15.0
+    },
+    {
+      "name": "tortilla",
+      "category": "pain",
+      "unitDefault": "pièce",
+      "calories": 52,
+      "price": 3.0
+    },
+    {
+      "name": "fromage blanc",
+      "category": "produits_laitiers",
+      "unitDefault": "g",
+      "calories": 155,
+      "price": 4.0
+    },
+    {
+      "name": "salade",
+      "category": "legumes",
+      "unitDefault": "g",
+      "calories": 15,
+      "price": 2.5
+    },
+    {
+      "name": "tomate cerise",
+      "category": "legumes",
+      "unitDefault": "g",
+      "calories": 18,
+      "price": 3.5
+    },
+    {
+      "name": "concombre",
+      "category": "legumes",
+      "unitDefault": "pièce",
+      "calories": 16,
+      "price": 1.5
+    },
+    {
+      "name": "huile d'olive",
+      "category": "huiles",
+      "unitDefault": "ml",
+      "calories": 884,
+      "price": 8.0
+    },
+    {
+      "name": "vinaigre",
+      "category": "condiments",
+      "unitDefault": "ml",
+      "calories": 18,
+      "price": 3.0
+    },
+    {
+      "name": "crème fraîche",
+      "category": "produits_laitiers",
+      "unitDefault": "ml",
+      "calories": 340,
+      "price": 3.5
+    },
+    {
+      "name": "lait de coco",
+      "category": "produits_laitiers",
+      "unitDefault": "ml",
+      "calories": 230,
+      "price": 3.0
+    },
+    {
+      "name": "pois chiches",
+      "category": "legumineuses",
+      "unitDefault": "g",
+      "calories": 164,
+      "price": 1.5
+    },
+    {
+      "name": "épinards",
+      "category": "legumes",
+      "unitDefault": "g",
+      "calories": 23,
+      "price": 2.0
+    },
+    {
+      "name": "courge",
+      "category": "legumes",
+      "unitDefault": "g",
+      "calories": 26,
+      "price": 1.8
+    },
+    {
+      "name": "riz sans gluten",
+      "category": "cereales",
+      "unitDefault": "g",
+      "calories": 130,
+      "price": 3.5
+    },
+    {
+      "name": "pâtes sans gluten",
+      "category": "pates",
+      "unitDefault": "g",
+      "calories": 131,
+      "price": 4.0
+    },
+    {
+      "name": "tofu",
+      "category": "proteines_vegetales",
+      "unitDefault": "g",
+      "calories": 76,
+      "price": 5.0
+    },
+    {
+      "name": "amande",
+      "category": "noix",
+      "unitDefault": "g",
+      "calories": 579,
+      "price": 12.0
+    },
+    {
+      "name": "avocat",
+      "category": "fruits",
+      "unitDefault": "pièce",
+      "calories": 160,
+      "price": 3.0
+    },
+    {
+      "name": "lentilles",
+      "category": "legumineuses",
+      "unitDefault": "g",
+      "calories": 116,
+      "price": 2.0
+    },
+    {
+      "name": "lait d'amande",
+      "category": "boissons",
+      "unitDefault": "ml",
+      "calories": 30,
+      "price": 2.5
+    },
+    {
+      "name": "poisson blanc",
+      "category": "poisson",
+      "unitDefault": "g",
+      "calories": 82,
+      "price": 14.0
+    },
+    {
+      "name": "fruits rouges",
+      "category": "fruits",
+      "unitDefault": "g",
+      "calories": 32,
+      "price": 6.0
+    },
+    {
+      "name": "farine",
+      "category": "cereales",
+      "unitDefault": "g",
+      "calories": 364,
+      "price": 1.5
+    },
+    {
+      "name": "sucre",
+      "category": "condiments",
+      "unitDefault": "g",
+      "calories": 387,
+      "price": 2.0
+    },
+    {
+      "name": "cacao en poudre",
+      "category": "condiments",
+      "unitDefault": "g",
+      "calories": 12,
+      "price": 8.0
+    },
+    {
+      "name": "beurre",
+      "category": "produits_laitiers",
+      "unitDefault": "g",
+      "calories": 717,
+      "price": 5.0
+    },
+    {
+      "name": "flocons d'avoine",
+      "category": "cereales",
+      "unitDefault": "g",
+      "calories": 389,
+      "price": 3.5
+    },
+    {
+      "name": "saumon",
+      "category": "poisson",
+      "unitDefault": "g",
+      "calories": 208,
+      "price": 18.0
+    },
+    {
+      "name": "crevettes",
+      "category": "fruit de mer",
+      "unitDefault": "g",
+      "calories": 99,
+      "price": 16.0
+    },
+    {
+      "name": "moules",
+      "category": "fruit de mer",
+      "unitDefault": "g",
+      "calories": 82,
+      "price": 12.0
+    },
+    {
+      "name": "mozzarella",
+      "category": "fromage",
+      "unitDefault": "g",
+      "calories": 280,
+      "price": 8.0
+    },
+    {
+      "name": "ricotta",
+      "category": "fromage",
+      "unitDefault": "g",
+      "calories": 174,
+      "price": 6.0
+    },
+    {
+      "name": "feta",
+      "category": "fromage",
+      "unitDefault": "g",
+      "calories": 264,
+      "price": 10.0
+    },
+    {
+      "name": "piment",
+      "category": "legumes",
+      "unitDefault": "pièce",
+      "calories": 31,
+      "price": 1.0
+    },
+    {
+      "name": "poivron",
+      "category": "legumes",
+      "unitDefault": "pièce",
+      "calories": 31,
+      "price": 2.0
+    },
+    {
+      "name": "courgette",
+      "category": "legumes",
+      "unitDefault": "g",
+      "calories": 17,
+      "price": 1.5
+    },
+    {
+      "name": "carotte",
+      "category": "legumes",
+      "unitDefault": "g",
+      "calories": 41,
+      "price": 1.0
+    },
+    {
+      "name": "betterave",
+      "category": "legumes",
+      "unitDefault": "g",
+      "calories": 43,
+      "price": 1.2
+    },
+    {
+      "name": "champignon de Paris",
+      "category": "legumes",
+      "unitDefault": "g",
+      "calories": 22,
+      "price": 4.0
+    },
+    {
+      "name": "brocoli",
+      "category": "legumes",
+      "unitDefault": "g",
+      "calories": 34,
+      "price": 2.5
+    },
+    {
+      "name": "chou-fleur",
+      "category": "legumes",
+      "unitDefault": "g",
+      "calories": 25,
+      "price": 2.0
+    },
+    {
+      "name": "haricots verts",
+      "category": "legumes",
+      "unitDefault": "g",
+      "calories": 31,
+      "price": 3.0
+    },
+    {
+      "name": "maïs",
+      "category": "legumes",
+      "unitDefault": "g",
+      "calories": 86,
+      "price": 2.0
+    },
+    {
+      "name": "pomme de terre",
+      "category": "legumes",
+      "unitDefault": "g",
+      "calories": 77,
+      "price": 1.5
+    },
+    {
+      "name": "chocolat noir",
+      "category": "condiments",
+      "unitDefault": "g",
+      "calories": 598,
+      "price": 8.0
+    },
+    {
+      "name": "miel",
+      "category": "condiments",
+      "unitDefault": "ml",
+      "calories": 304,
+      "price": 6.0
+    },
+    {
+      "name": "lait",
+      "category": "produits_laitiers",
+      "unitDefault": "ml",
+      "calories": 61,
+      "price": 1.5
+    },
+    {
+      "name": "crème",
+      "category": "produits_laitiers",
+      "unitDefault": "ml",
+      "calories": 340,
+      "price": 3.0
+    },
+    {
+      "name": "yaourt nature",
+      "category": "produits_laitiers",
+      "unitDefault": "g",
+      "calories": 59,
+      "price": 1.5
+    },
+    {
+      "name": "noix",
+      "category": "noix",
+      "unitDefault": "g",
+      "calories": 654,
+      "price": 14.0
+    },
+    {
+      "name": "noisette",
+      "category": "noix",
+      "unitDefault": "g",
+      "calories": 628,
+      "price": 12.0
+    },
+    {
+      "name": "cacahuète",
+      "category": "noix",
+      "unitDefault": "g",
+      "calories": 567,
+      "price": 6.0
+    },
+    {
+      "name": "raisin sec",
+      "category": "fruits",
+      "unitDefault": "g",
+      "calories": 299,
+      "price": 4.0
+    },
+    {
+      "name": "banane",
+      "category": "fruits",
+      "unitDefault": "pièce",
+      "calories": 89,
+      "price": 0.8
+    },
+    {
+      "name": "pomme",
+      "category": "fruits",
+      "unitDefault": "pièce",
+      "calories": 52,
+      "price": 1.0
+    },
+    {
+      "name": "citron",
+      "category": "fruits",
+      "unitDefault": "pièce",
+      "calories": 29,
+      "price": 0.5
+    },
+    {
+      "name": "sauce soja",
+      "category": "condiments",
+      "unitDefault": "ml",
+      "calories": 61,
+      "price": 3.0
+    },
+    {
+      "name": "pâte de curry",
+      "category": "condiments",
+      "unitDefault": "g",
+      "calories": 85,
+      "price": 4.0
+    },
+    {
+      "name": "gingembre",
+      "category": "aromatics",
+      "unitDefault": "g",
+      "calories": 80,
+      "price": 3.0
+    },
+    {
+      "name": "galette de riz",
+      "category": "pain",
+      "unitDefault": "pièce",
+      "calories": 190,
+      "price": 2.5
+    },
+    {
+      "name": "pain de mie",
+      "category": "pain",
+      "unitDefault": "tranche",
+      "calories": 80,
+      "price": 0.5
+    },
+    {
+      "name": "feta fromage",
+      "category": "fromage",
+      "unitDefault": "g",
+      "calories": 264,
+      "price": 10.0
+    }
+  ],
+  "recipes": [
+    {
+      "name": "Pâtes à la Carbonara",
+      "description": "Plat italien classique rapide et savoureux avec lard, oeufs et parmesan",
+      "portion": 2,
+      "price": 8.5,
+      "prepTime": 10,
+      "cookTime": 15,
+      "nutritionalScore": 7.5,
+      "photo": "https://images.unsplash.com/photo-1588013273468-315fd88ea34c?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "tags": [
+        "rapide",
+        "italien",
+        "facile"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "text": "Faire bouillir l'eau salée dans une grande casserole"
+        },
+        {
+          "order": 2,
+          "text": "Cuire les pâtes selon les instructions du paquet"
+        },
+        {
+          "order": 3,
+          "text": "Pendant ce temps, faire cuire le lard découpé en morceaux"
+        },
+        {
+          "order": 4,
+          "text": "Battre les oeufs avec le parmesan râpé et du poivre"
+        },
+        {
+          "order": 5,
+          "text": "Égoutter les pâtes et les mélanger avec le lard chaud"
+        },
+        {
+          "order": 6,
+          "text": "Verser le mélange oeufs-fromage et mélanger rapidement du feu"
+        }
+      ],
+      "ingredients": [
+        {
+          "ingredientName": "pâtes",
+          "quantity": 400,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "oeufs",
+          "quantity": 3,
+          "unit": "pièce"
+        },
+        {
+          "ingredientName": "lard",
+          "quantity": 150,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "parmesan",
+          "quantity": 100,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "name": "Risotto aux Champignons",
+      "description": "Plat italien gourmand et crémeux aux champignons frais",
+      "portion": 3,
+      "price": 12.0,
+      "prepTime": 10,
+      "cookTime": 25,
+      "nutritionalScore": 7.0,
+      "photo": "https://plus.unsplash.com/premium_photo-1694850980302-f568e6de0f6d?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "tags": [
+        "italien",
+        "vegetarien",
+        "facile"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "text": "Peler et hacher finement l'oignon et l'ail"
+        },
+        {
+          "order": 2,
+          "text": "Nettoyer et trancher les champignons"
+        },
+        {
+          "order": 3,
+          "text": "Faire revenir l'oignon et l'ail dans l'huile d'olive"
+        },
+        {
+          "order": 4,
+          "text": "Ajouter les champignons et cuire 5 minutes"
+        },
+        {
+          "order": 5,
+          "text": "Ajouter le riz et mélanger pour bien l'enrober d'huile"
+        },
+        {
+          "order": 6,
+          "text": "Verser le bouillon chaud demi-litre à la fois en remuant constamment"
+        },
+        {
+          "order": 7,
+          "text": "Quand le riz est cuit, ajouter beurre et fromage, mélanger"
+        }
+      ],
+      "ingredients": [
+        {
+          "ingredientName": "riz",
+          "quantity": 300,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "champignon",
+          "quantity": 400,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "oignon",
+          "quantity": 1,
+          "unit": "pièce"
+        },
+        {
+          "ingredientName": "ail",
+          "quantity": 2,
+          "unit": "pièce"
+        },
+        {
+          "ingredientName": "huile d'olive",
+          "quantity": 50,
+          "unit": "ml"
+        },
+        {
+          "ingredientName": "parmesan",
+          "quantity": 50,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "name": "Curry Thaï Vert",
+      "description": "Curry thaï crémeux et épicé avec lait de coco et légumes",
+      "portion": 4,
+      "price": 15.0,
+      "prepTime": 15,
+      "cookTime": 20,
+      "nutritionalScore": 6.5,
+      "photo": "https://plus.unsplash.com/premium_photo-1694699354443-289006ee7362?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "tags": [
+        "épicé",
+        "asiatique",
+        "rapide"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "text": "Couper le poulet en cubes réguliers"
+        },
+        {
+          "order": 2,
+          "text": "Découper les légumes en gros morceaux"
+        },
+        {
+          "order": 3,
+          "text": "Faire chauffer l'huile dans un wok ou grande poêle"
+        },
+        {
+          "order": 4,
+          "text": "Ajouter la pâte de curry et bien mélanger 1 minute"
+        },
+        {
+          "order": 5,
+          "text": "Ajouter le poulet et le cuire quelques minutes"
+        },
+        {
+          "order": 6,
+          "text": "Verser le lait de coco et les légumes"
+        },
+        {
+          "order": 7,
+          "text": "Laisser mijoter 15 minutes jusqu'à cuisson du poulet"
+        }
+      ],
+      "ingredients": [
+        {
+          "ingredientName": "poulet",
+          "quantity": 600,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "lait de coco",
+          "quantity": 400,
+          "unit": "ml"
+        },
+        {
+          "ingredientName": "oignon",
+          "quantity": 1,
+          "unit": "pièce"
+        },
+        {
+          "ingredientName": "ail",
+          "quantity": 3,
+          "unit": "pièce"
+        }
+      ]
+    },
+    {
+      "name": "Salade Méditerranéenne",
+      "description": "Salade fraîche légère et colorée avec tomates et huile d'olive",
+      "portion": 2,
+      "price": 6.5,
+      "prepTime": 10,
+      "cookTime": 0,
+      "nutritionalScore": 9.0,
+      "photo": "https://plus.unsplash.com/premium_photo-1676047258557-de72954cf17c?q=80&w=1039&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "tags": [
+        "vegetarien",
+        "sain",
+        "rapide"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "text": "Laver la salade et la sécher"
+        },
+        {
+          "order": 2,
+          "text": "Découper les tomates en quartiers"
+        },
+        {
+          "order": 3,
+          "text": "Trancher finement le concombre"
+        },
+        {
+          "order": 4,
+          "text": "Préparer la vinaigrette avec huile d'olive et vinaigre"
+        },
+        {
+          "order": 5,
+          "text": "Verser la vinaigrette sur la salade et mélanger"
+        }
+      ],
+      "ingredients": [
+        {
+          "ingredientName": "salade",
+          "quantity": 300,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "tomate",
+          "quantity": 3,
+          "unit": "pièce"
+        },
+        {
+          "ingredientName": "concombre",
+          "quantity": 1,
+          "unit": "pièce"
+        },
+        {
+          "ingredientName": "huile d'olive",
+          "quantity": 30,
+          "unit": "ml"
+        },
+        {
+          "ingredientName": "vinaigre",
+          "quantity": 15,
+          "unit": "ml"
+        }
+      ]
+    },
+    {
+      "name": "Tacos au Boeuf",
+      "description": "Street food mexicaine facile à faire avec boeuf épicé et tortillas",
+      "portion": 4,
+      "price": 10.0,
+      "prepTime": 15,
+      "cookTime": 10,
+      "nutritionalScore": 6.0,
+      "photo": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=400",
+      "tags": [
+        "mexicain",
+        "rapide",
+        "famille"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "text": "Hacher l'oignon finement"
+        },
+        {
+          "order": 2,
+          "text": "Faire chauffer l'huile dans une poêle"
+        },
+        {
+          "order": 3,
+          "text": "Cuire le boeuf haché jusqu'à ce qu'il soit doré"
+        },
+        {
+          "order": 4,
+          "text": "Ajouter l'oignon et les épices, cuire 5 minutes"
+        },
+        {
+          "order": 5,
+          "text": "Réchauffer les tortillas quelques secondes à la poêle"
+        },
+        {
+          "order": 6,
+          "text": "Garnir les tortillas avec le boeuf et les garnitures au choix"
+        }
+      ],
+      "ingredients": [
+        {
+          "ingredientName": "boeuf",
+          "quantity": 500,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "tortilla",
+          "quantity": 8,
+          "unit": "pièce"
+        },
+        {
+          "ingredientName": "oignon",
+          "quantity": 2,
+          "unit": "pièce"
+        },
+        {
+          "ingredientName": "tomate",
+          "quantity": 3,
+          "unit": "pièce"
+        }
+      ]
+    },
+    {
+      "name": "Bol de Bouddha Vegan",
+      "description": "Bowl coloré et nutritif avec riz, tofu rôti, légumes de saison et avocat",
+      "portion": 2,
+      "price": 9.5,
+      "prepTime": 15,
+      "cookTime": 20,
+      "nutritionalScore": 9.0,
+      "photo": "https://plus.unsplash.com/premium_photo-1664648005718-91b617643af5?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "tags": [
+        "vegan",
+        "sain",
+        "vegetarien",
+        "rapide",
+        "facile"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "text": "Cuire le riz selon les instructions"
+        },
+        {
+          "order": 2,
+          "text": "Couper le tofu en cubes et le faire rôtir à la poêle avec huile d'olive"
+        },
+        {
+          "order": 3,
+          "text": "Découper l'avocat en tranches fines"
+        },
+        {
+          "order": 4,
+          "text": "Préparer les légumes (carottes râpées, épinards crus)"
+        },
+        {
+          "order": 5,
+          "text": "Dresser les bols en alternant les ingrédients"
+        },
+        {
+          "order": 6,
+          "text": "Arroser de sauce tahini vegan si disponible"
+        }
+      ],
+      "ingredients": [
+        {
+          "ingredientName": "riz",
+          "quantity": 200,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "tofu",
+          "quantity": 250,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "avocat",
+          "quantity": 1,
+          "unit": "pièce"
+        },
+        {
+          "ingredientName": "épinards",
+          "quantity": 150,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "huile d'olive",
+          "quantity": 30,
+          "unit": "ml"
+        }
+      ]
+    },
+    {
+      "name": "Pâtes sans Gluten au Pesto Vegan",
+      "description": "Pâtes sans gluten avec sauce pesto adaptée, tomates et légumes frais",
+      "portion": 2,
+      "price": 11.0,
+      "prepTime": 10,
+      "cookTime": 15,
+      "nutritionalScore": 8.0,
+      "photo": "https://images.unsplash.com/photo-1605590955562-be1a5fda4161?q=80&w=1998&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "tags": [
+        "sans gluten",
+        "vegan",
+        "vegetarien",
+        "facile",
+        "rapide"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "text": "Faire bouillir l'eau salée pour les pâtes"
+        },
+        {
+          "order": 2,
+          "text": "Cuire les pâtes sans gluten selon les instructions du paquet"
+        },
+        {
+          "order": 3,
+          "text": "Préparer le pesto vegan avec amandes, ail, huile d'olive et herbes"
+        },
+        {
+          "order": 4,
+          "text": "Découper les tomates en petits morceaux"
+        },
+        {
+          "order": 5,
+          "text": "Égoutter les pâtes et les mélanger avec le pesto"
+        },
+        {
+          "order": 6,
+          "text": "Ajouter les tomates et mélanger délicatement"
+        }
+      ],
+      "ingredients": [
+        {
+          "ingredientName": "pâtes sans gluten",
+          "quantity": 300,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "amande",
+          "quantity": 100,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "ail",
+          "quantity": 3,
+          "unit": "pièce"
+        },
+        {
+          "ingredientName": "tomate",
+          "quantity": 3,
+          "unit": "pièce"
+        },
+        {
+          "ingredientName": "huile d'olive",
+          "quantity": 60,
+          "unit": "ml"
+        }
+      ]
+    },
+    {
+      "name": "Curry de Pois Chiches Vegan",
+      "description": "Curry indien aromatique et épicé avec pois chiches, tofu et lait de coco",
+      "portion": 3,
+      "price": 8.5,
+      "prepTime": 10,
+      "cookTime": 25,
+      "nutritionalScore": 8.5,
+      "photo": "https://plus.unsplash.com/premium_photo-1695456063769-e291a14c3ca1?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "tags": [
+        "vegan",
+        "indien",
+        "épicé",
+        "sain",
+        "vegetarien"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "text": "Hacher l'oignon et l'ail finement"
+        },
+        {
+          "order": 2,
+          "text": "Faire revenir l'oignon et l'ail dans l'huile d'olive"
+        },
+        {
+          "order": 3,
+          "text": "Ajouter les épices de curry et mélanger 1 minute"
+        },
+        {
+          "order": 4,
+          "text": "Ajouter les pois chiches rincés et le tofu coupé en cubes"
+        },
+        {
+          "order": 5,
+          "text": "Verser le lait de coco et l'eau suffisants pour couvrir"
+        },
+        {
+          "order": 6,
+          "text": "Laisser mijoter 20 minutes, ajouter épinards en fin de cuisson"
+        }
+      ],
+      "ingredients": [
+        {
+          "ingredientName": "pois chiches",
+          "quantity": 400,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "tofu",
+          "quantity": 300,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "lait de coco",
+          "quantity": 300,
+          "unit": "ml"
+        },
+        {
+          "ingredientName": "oignon",
+          "quantity": 2,
+          "unit": "pièce"
+        },
+        {
+          "ingredientName": "ail",
+          "quantity": 3,
+          "unit": "pièce"
+        },
+        {
+          "ingredientName": "épinards",
+          "quantity": 100,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "huile d'olive",
+          "quantity": 40,
+          "unit": "ml"
+        }
+      ]
+    },
+    {
+      "name": "Salade Vegan aux Lentilles",
+      "description": "Salade protéinée vegan avec lentilles cuites, avocat et dressing tahini",
+      "portion": 2,
+      "price": 7.5,
+      "prepTime": 15,
+      "cookTime": 20,
+      "nutritionalScore": 9.0,
+      "photo": "https://images.unsplash.com/photo-1702650657375-934239d8b472?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "tags": [
+        "vegan",
+        "sain",
+        "vegetarien",
+        "facile",
+        "rapide"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "text": "Cuire les lentilles 20 minutes à l'eau bouillante salée"
+        },
+        {
+          "order": 2,
+          "text": "Égoutter et refroidir les lentilles"
+        },
+        {
+          "order": 3,
+          "text": "Préparer la base avec salade verte et tomates cerises"
+        },
+        {
+          "order": 4,
+          "text": "Ajouter les lentilles refroidies"
+        },
+        {
+          "order": 5,
+          "text": "Garnir avec les tranches d'avocat"
+        },
+        {
+          "order": 6,
+          "text": "Dresser et verser une vinaigrette simple à l'huile d'olive"
+        }
+      ],
+      "ingredients": [
+        {
+          "ingredientName": "lentilles",
+          "quantity": 200,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "salade",
+          "quantity": 200,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "tomate cerise",
+          "quantity": 150,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "avocat",
+          "quantity": 1,
+          "unit": "pièce"
+        },
+        {
+          "ingredientName": "huile d'olive",
+          "quantity": 40,
+          "unit": "ml"
+        },
+        {
+          "ingredientName": "vinaigre",
+          "quantity": 20,
+          "unit": "ml"
+        }
+      ]
+    },
+    {
+      "name": "Soupe à l'Oignon Gratinée",
+      "description": "Soupe française classique réconfortante avec oignons caramélisés et fromage",
+      "portion": 4,
+      "price": 5.5,
+      "prepTime": 15,
+      "cookTime": 35,
+      "nutritionalScore": 6.5,
+      "photo": "https://images.unsplash.com/photo-1549203438-a7696aed4dac?q=80&w=1646&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "tags": [
+        "réconfortant",
+        "français",
+        "facile",
+        "famille"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "text": "Trancher les oignons en anneaux fins"
+        },
+        {
+          "order": 2,
+          "text": "Faire caraméliser les oignons à feu moyen-doux pendant 20 minutes"
+        },
+        {
+          "order": 3,
+          "text": "Verser le bouillon chaud et laisser mijoter 15 minutes"
+        },
+        {
+          "order": 4,
+          "text": "Verser la soupe dans des bols à soupe résistant à la chaleur"
+        },
+        {
+          "order": 5,
+          "text": "Poser une tranche de pain grillé sur chaque bol"
+        },
+        {
+          "order": 6,
+          "text": "Couvrir généreusement de fromage râpé et gratiner au four 5 minutes"
+        }
+      ],
+      "ingredients": [
+        {
+          "ingredientName": "oignon",
+          "quantity": 6,
+          "unit": "pièce"
+        },
+        {
+          "ingredientName": "fromage blanc",
+          "quantity": 150,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "huile d'olive",
+          "quantity": 40,
+          "unit": "ml"
+        }
+      ]
+    },
+    {
+      "name": "Pâtes Simples à la Sauce Tomate",
+      "description": "Plat simple et réconfortant avec sauce tomate maison fraîche et basilic",
+      "portion": 2,
+      "price": 5.0,
+      "prepTime": 10,
+      "cookTime": 20,
+      "nutritionalScore": 7.0,
+      "photo": "https://plus.unsplash.com/premium_photo-1664478288635-b9703a502393?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "tags": [
+        "vegetarien",
+        "facile",
+        "rapide",
+        "réconfortant",
+        "français"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "text": "Faire bouillir l'eau salée pour les pâtes"
+        },
+        {
+          "order": 2,
+          "text": "Cuire les pâtes selon les instructions du paquet"
+        },
+        {
+          "order": 3,
+          "text": "Pendant ce temps, hacher finement l'ail et l'oignon"
+        },
+        {
+          "order": 4,
+          "text": "Faire revenir l'oignon et l'ail dans l'huile d'olive"
+        },
+        {
+          "order": 5,
+          "text": "Ajouter les tomates concassées et laisser mijoter 15 minutes"
+        },
+        {
+          "order": 6,
+          "text": "Égoutter les pâtes et les mélanger avec la sauce tomate chaude"
+        }
+      ],
+      "ingredients": [
+        {
+          "ingredientName": "pâtes",
+          "quantity": 300,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "tomate",
+          "quantity": 500,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "oignon",
+          "quantity": 1,
+          "unit": "pièce"
+        },
+        {
+          "ingredientName": "ail",
+          "quantity": 2,
+          "unit": "pièce"
+        },
+        {
+          "ingredientName": "huile d'olive",
+          "quantity": 30,
+          "unit": "ml"
+        }
+      ]
+    },
+    {
+      "name": "Poisson au Four Citron Herbes",
+      "description": "Filet de poisson blanc cuit au four avec citron, herbes aromatiques et légumes",
+      "portion": 2,
+      "price": 14.0,
+      "prepTime": 10,
+      "cookTime": 20,
+      "nutritionalScore": 9.0,
+      "photo": "https://images.unsplash.com/photo-1575053516499-bf3ab5bf59e4?q=80&w=1035&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "tags": [
+        "poisson",
+        "sain",
+        "léger",
+        "rapide",
+        "facile"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "text": "Préchauffer le four à 180°C"
+        },
+        {
+          "order": 2,
+          "text": "Préparer deux papillotes avec du papier d'aluminium"
+        },
+        {
+          "order": 3,
+          "text": "Placer les filets de poisson dans chaque papillote"
+        },
+        {
+          "order": 4,
+          "text": "Ajouter des rondelles de citron, herbes fraîches et dés de légumes"
+        },
+        {
+          "order": 5,
+          "text": "Arroser d'un trait d'huile d'olive et fermer hermétiquement"
+        },
+        {
+          "order": 6,
+          "text": "Cuire au four 15-20 minutes jusqu'à cuisson du poisson"
+        }
+      ],
+      "ingredients": [
+        {
+          "ingredientName": "poisson blanc",
+          "quantity": 400,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "courge",
+          "quantity": 200,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "oignon",
+          "quantity": 1,
+          "unit": "pièce"
+        },
+        {
+          "ingredientName": "huile d'olive",
+          "quantity": 40,
+          "unit": "ml"
+        }
+      ]
+    },
+    {
+      "name": "Gâteau au Chocolat Facile",
+      "description": "Gâteau au chocolat moelleux et gourmand, simple à préparer pour tous les gourmands",
+      "portion": 6,
+      "price": 8.0,
+      "prepTime": 15,
+      "cookTime": 35,
+      "nutritionalScore": 4.5,
+      "photo": "https://images.unsplash.com/photo-1517427294546-5aa121f68e8a?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "tags": [
+        "dessert",
+        "sucré",
+        "facile",
+        "famille"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "text": "Préchauffer le four à 180°C et beurrer un moule"
+        },
+        {
+          "order": 2,
+          "text": "Mélanger la farine, sucre et cacao en poudre"
+        },
+        {
+          "order": 3,
+          "text": "Battre les oeufs avec le beurre fondu"
+        },
+        {
+          "order": 4,
+          "text": "Mélanger les ingrédients secs avec les oeufs"
+        },
+        {
+          "order": 5,
+          "text": "Verser la pâte dans le moule"
+        },
+        {
+          "order": 6,
+          "text": "Cuire 30-35 minutes jusqu'à ce que le centre soit cuit"
+        }
+      ],
+      "ingredients": [
+        {
+          "ingredientName": "farine",
+          "quantity": 200,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "sucre",
+          "quantity": 150,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "cacao en poudre",
+          "quantity": 50,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "oeufs",
+          "quantity": 3,
+          "unit": "pièce"
+        },
+        {
+          "ingredientName": "beurre",
+          "quantity": 100,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "name": "Crumble aux Fruits Rouges",
+      "description": "Dessert gourmand et léger avec fruits rouges frais et crumble croustillant",
+      "portion": 4,
+      "price": 7.5,
+      "prepTime": 15,
+      "cookTime": 25,
+      "nutritionalScore": 6.0,
+      "photo": "https://images.unsplash.com/photo-1598982943411-fdb067f041ef?q=80&w=927&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "tags": [
+        "dessert",
+        "sucré",
+        "facile",
+        "léger"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "text": "Préchauffer le four à 190°C"
+        },
+        {
+          "order": 2,
+          "text": "Verser les fruits rouges dans un plat de cuisson"
+        },
+        {
+          "order": 3,
+          "text": "Préparer le crumble : mélanger farine, flocons d'avoine, beurre et sucre"
+        },
+        {
+          "order": 4,
+          "text": "Ajouter les amandes écraser grossièrement"
+        },
+        {
+          "order": 5,
+          "text": "Verser le crumble sur les fruits"
+        },
+        {
+          "order": 6,
+          "text": "Cuire 20-25 minutes jusqu'à ce que le crumble soit doré"
+        }
+      ],
+      "ingredients": [
+        {
+          "ingredientName": "fruits rouges",
+          "quantity": 600,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "farine",
+          "quantity": 150,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "flocons d'avoine",
+          "quantity": 100,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "beurre",
+          "quantity": 100,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "sucre",
+          "quantity": 50,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "amande",
+          "quantity": 100,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "name": "Saumon Grillé Citron",
+      "description": "Filet de saumon grillé avec citron et herbes fraîches",
+      "portion": 2,
+      "price": 16.0,
+      "prepTime": 10,
+      "cookTime": 12,
+      "nutritionalScore": 9.0,
+      "photo": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "tags": [
+        "poisson",
+        "sain",
+        "rapide",
+        "facile"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "text": "Préchauffer le gril à feu moyen-élevé"
+        },
+        {
+          "order": 2,
+          "text": "Assaisonner le saumon avec sel et poivre"
+        },
+        {
+          "order": 3,
+          "text": "Griler le saumon 6 minutes par côté"
+        },
+        {
+          "order": 4,
+          "text": "Ajouter du citron frais en fin de cuisson"
+        },
+        {
+          "order": 5,
+          "text": "Servir avec herbes fraîches"
+        }
+      ],
+      "ingredients": [
+        {
+          "ingredientName": "saumon",
+          "quantity": 400,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "citron",
+          "quantity": 1,
+          "unit": "pièce"
+        },
+        {
+          "ingredientName": "huile d'olive",
+          "quantity": 20,
+          "unit": "ml"
+        }
+      ]
+    },
+    {
+      "name": "Pâtes à la Bolognaise",
+      "description": "Pâtes avec sauce bolognaise riche à la viande",
+      "portion": 3,
+      "price": 9.0,
+      "prepTime": 15,
+      "cookTime": 40,
+      "nutritionalScore": 7.5,
+      "photo": "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "tags": [
+        "italien",
+        "facile",
+        "famille"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "text": "Faire revenir l'oignon et l'ail"
+        },
+        {
+          "order": 2,
+          "text": "Ajouter la viande hachée et cuire jusqu'à doré"
+        },
+        {
+          "order": 3,
+          "text": "Ajouter les tomates et laisser mijoter 30 min"
+        },
+        {
+          "order": 4,
+          "text": "Cuire les pâtes al dente"
+        },
+        {
+          "order": 5,
+          "text": "Verser la sauce sur les pâtes"
+        }
+      ],
+      "ingredients": [
+        {
+          "ingredientName": "pâtes",
+          "quantity": 400,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "boeuf",
+          "quantity": 300,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "tomate",
+          "quantity": 600,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "oignon",
+          "quantity": 1,
+          "unit": "pièce"
+        }
+      ]
+    },
+    {
+      "name": "Crevettes à l'Ail",
+      "description": "Crevettes poêlées à l'ail avec citron et herbes",
+      "portion": 2,
+      "price": 15.0,
+      "prepTime": 10,
+      "cookTime": 8,
+      "nutritionalScore": 8.5,
+      "photo": "https://images.unsplash.com/photo-1625943553852-781c6dd46faa?q=80&w=1645&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "tags": [
+        "fruit de mer",
+        "rapide",
+        "sain",
+        "facile"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "text": "Hacher finement l'ail"
+        },
+        {
+          "order": 2,
+          "text": "Faire chauffer l'huile dans une grande poêle"
+        },
+        {
+          "order": 3,
+          "text": "Ajouter l'ail et faire cuire 30 secondes"
+        },
+        {
+          "order": 4,
+          "text": "Ajouter les crevettes et cuire 4 minutes"
+        },
+        {
+          "order": 5,
+          "text": "Presser du citron et servir"
+        }
+      ],
+      "ingredients": [
+        {
+          "ingredientName": "crevettes",
+          "quantity": 400,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "ail",
+          "quantity": 5,
+          "unit": "pièce"
+        },
+        {
+          "ingredientName": "citron",
+          "quantity": 1,
+          "unit": "pièce"
+        },
+        {
+          "ingredientName": "huile d'olive",
+          "quantity": 30,
+          "unit": "ml"
+        }
+      ]
+    },
+    {
+      "name": "Pizza Maison",
+      "description": "Pizza maison avec sauce tomate, fromage et garnitures",
+      "portion": 4,
+      "price": 12.0,
+      "prepTime": 30,
+      "cookTime": 20,
+      "nutritionalScore": 6.5,
+      "photo": "https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?w=400",
+      "tags": [
+        "italien",
+        "facile",
+        "famille"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "text": "Préchauffer le four à 220°C"
+        },
+        {
+          "order": 2,
+          "text": "Étaler la pâte sur une plaque"
+        },
+        {
+          "order": 3,
+          "text": "Ajouter sauce tomate, fromage et garnitures"
+        },
+        {
+          "order": 4,
+          "text": "Cuire 15-20 minutes jusqu'à doré"
+        },
+        {
+          "order": 5,
+          "text": "Laisser refroidir quelques minutes"
+        }
+      ],
+      "ingredients": [
+        {
+          "ingredientName": "tomate",
+          "quantity": 300,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "mozzarella",
+          "quantity": 200,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "oignon",
+          "quantity": 1,
+          "unit": "pièce"
+        }
+      ]
+    },
+    {
+      "name": "Salade Caprese",
+      "description": "Salade méditerranéenne avec tomates, mozzarella et basilic",
+      "portion": 2,
+      "price": 7.0,
+      "prepTime": 10,
+      "cookTime": 0,
+      "nutritionalScore": 8.0,
+      "photo": "https://images.unsplash.com/photo-1564345440082-155c43c5532f?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "tags": [
+        "vegetarien",
+        "sain",
+        "rapide",
+        "facile"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "text": "Trancher les tomates frais"
+        },
+        {
+          "order": 2,
+          "text": "Couper la mozzarella en tranches"
+        },
+        {
+          "order": 3,
+          "text": "Disposer en alternance sur un plat"
+        },
+        {
+          "order": 4,
+          "text": "Ajouter basilic frais"
+        },
+        {
+          "order": 5,
+          "text": "Verser huile d'olive et vinaigre"
+        }
+      ],
+      "ingredients": [
+        {
+          "ingredientName": "tomate",
+          "quantity": 500,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "mozzarella",
+          "quantity": 250,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "huile d'olive",
+          "quantity": 40,
+          "unit": "ml"
+        }
+      ]
+    },
+    {
+      "name": "Falafel Vegan",
+      "description": "Falafel croustillant vegan avec sauce tahini",
+      "portion": 4,
+      "price": 7.0,
+      "prepTime": 20,
+      "cookTime": 20,
+      "nutritionalScore": 7.5,
+      "photo": "https://images.unsplash.com/photo-1593001872095-7d5b3868fb1d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "tags": [
+        "vegan",
+        "facile",
+        "rapide"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "text": "Mélanger pois chiches"
+        },
+        {
+          "order": 2,
+          "text": "Ajouter oignon et ail"
+        },
+        {
+          "order": 3,
+          "text": "Former des boules"
+        },
+        {
+          "order": 4,
+          "text": "Frire jusqu'à doré"
+        },
+        {
+          "order": 5,
+          "text": "Servir avec tahini"
+        }
+      ],
+      "ingredients": [
+        {
+          "ingredientName": "pois chiches",
+          "quantity": 400,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "farine",
+          "quantity": 100,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "ail",
+          "quantity": 3,
+          "unit": "pièce"
+        }
+      ]
+    },
+    {
+      "name": "Tarte Tatin",
+      "description": "Tarte aux pommes caramélisées",
+      "portion": 6,
+      "price": 9.0,
+      "prepTime": 20,
+      "cookTime": 35,
+      "nutritionalScore": 5.0,
+      "photo": "https://images.unsplash.com/photo-1473340325660-0f786fd1571c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "tags": [
+        "dessert",
+        "sucré",
+        "facile"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "text": "Préchauffer four"
+        },
+        {
+          "order": 2,
+          "text": "Caraméliser sucre"
+        },
+        {
+          "order": 3,
+          "text": "Ajouter pommes"
+        },
+        {
+          "order": 4,
+          "text": "Couvrir avec pâte"
+        },
+        {
+          "order": 5,
+          "text": "Cuire 30 min"
+        }
+      ],
+      "ingredients": [
+        {
+          "ingredientName": "pomme",
+          "quantity": 8,
+          "unit": "pièce"
+        },
+        {
+          "ingredientName": "sucre",
+          "quantity": 100,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "beurre",
+          "quantity": 100,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "name": "Granola Maison",
+      "description": "Granola croquant aux fruits secs",
+      "portion": 8,
+      "price": 6.0,
+      "prepTime": 10,
+      "cookTime": 25,
+      "nutritionalScore": 7.0,
+      "photo": "https://images.unsplash.com/photo-1559951585-645e730d3cf0?q=80&w=1091&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "tags": [
+        "dessert",
+        "sucré",
+        "facile"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "text": "Mélanger flocons"
+        },
+        {
+          "order": 2,
+          "text": "Ajouter miel"
+        },
+        {
+          "order": 3,
+          "text": "Étaler sur plaque"
+        },
+        {
+          "order": 4,
+          "text": "Cuire 20 min"
+        },
+        {
+          "order": 5,
+          "text": "Ajouter fruits secs"
+        }
+      ],
+      "ingredients": [
+        {
+          "ingredientName": "flocons d'avoine",
+          "quantity": 300,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "noix",
+          "quantity": 100,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "miel",
+          "quantity": 100,
+          "unit": "ml"
+        }
+      ]
+    },
+    {
+      "name": "Pancakes",
+      "description": "Pancakes moelleux aux fruits",
+      "portion": 4,
+      "price": 7.0,
+      "prepTime": 15,
+      "cookTime": 20,
+      "nutritionalScore": 5.5,
+      "photo": "https://images.unsplash.com/photo-1528207776546-365bb710ee93?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "tags": [
+        "dessert",
+        "sucré",
+        "facile"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "text": "Mélanger farine"
+        },
+        {
+          "order": 2,
+          "text": "Ajouter oeufs et lait"
+        },
+        {
+          "order": 3,
+          "text": "Faire cuire à la poêle"
+        },
+        {
+          "order": 4,
+          "text": "Ajouter fruits"
+        },
+        {
+          "order": 5,
+          "text": "Servir avec miel"
+        }
+      ],
+      "ingredients": [
+        {
+          "ingredientName": "farine",
+          "quantity": 200,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "oeufs",
+          "quantity": 2,
+          "unit": "pièce"
+        },
+        {
+          "ingredientName": "lait",
+          "quantity": 250,
+          "unit": "ml"
+        }
+      ]
+    },
+    {
+      "name": "Tiramisu",
+      "description": "Dessert italien classique",
+      "portion": 6,
+      "price": 8.0,
+      "prepTime": 30,
+      "cookTime": 0,
+      "nutritionalScore": 4.0,
+      "photo": "https://images.unsplash.com/photo-1698688334089-c68105801d02?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "tags": [
+        "dessert",
+        "sucré",
+        "facile"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "text": "Mélanger œufs"
+        },
+        {
+          "order": 2,
+          "text": "Ajouter mascarpone"
+        },
+        {
+          "order": 3,
+          "text": "Tremper biscuits"
+        },
+        {
+          "order": 4,
+          "text": "Alterner couches"
+        },
+        {
+          "order": 5,
+          "text": "Réfrigérer 4h"
+        }
+      ],
+      "ingredients": [
+        {
+          "ingredientName": "oeufs",
+          "quantity": 4,
+          "unit": "pièce"
+        },
+        {
+          "ingredientName": "sucre",
+          "quantity": 100,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "name": "Mousse Chocolat",
+      "description": "Mousse légère au chocolat",
+      "portion": 4,
+      "price": 5.0,
+      "prepTime": 20,
+      "cookTime": 0,
+      "nutritionalScore": 5.0,
+      "photo": "https://images.unsplash.com/photo-1551578657-a7e74acb0135?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "tags": [
+        "dessert",
+        "sucré",
+        "facile"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "text": "Faire fondre chocolat"
+        },
+        {
+          "order": 2,
+          "text": "Séparer jaunes"
+        },
+        {
+          "order": 3,
+          "text": "Monter les blancs"
+        },
+        {
+          "order": 4,
+          "text": "Mélanger"
+        },
+        {
+          "order": 5,
+          "text": "Réfrigérer"
+        }
+      ],
+      "ingredients": [
+        {
+          "ingredientName": "chocolat noir",
+          "quantity": 150,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "oeufs",
+          "quantity": 4,
+          "unit": "pièce"
+        }
+      ]
+    },
+    {
+      "name": "Crème Brûlée",
+      "description": "Dessert français crémeux",
+      "portion": 4,
+      "price": 8.0,
+      "prepTime": 20,
+      "cookTime": 45,
+      "nutritionalScore": 4.5,
+      "photo": "https://images.unsplash.com/photo-1676300184943-09b2a08319a3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "tags": [
+        "dessert",
+        "sucré",
+        "difficile"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "text": "Chauffer crème"
+        },
+        {
+          "order": 2,
+          "text": "Mélanger jaunes"
+        },
+        {
+          "order": 3,
+          "text": "Verser"
+        },
+        {
+          "order": 4,
+          "text": "Remplir ramekins"
+        },
+        {
+          "order": 5,
+          "text": "Cuire au bain-marie"
+        }
+      ],
+      "ingredients": [
+        {
+          "ingredientName": "crème",
+          "quantity": 400,
+          "unit": "ml"
+        },
+        {
+          "ingredientName": "oeufs",
+          "quantity": 5,
+          "unit": "pièce"
+        },
+        {
+          "ingredientName": "sucre",
+          "quantity": 100,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "name": "Porridge Frais",
+      "description": "Porridge chaud aux fruits",
+      "portion": 2,
+      "price": 4.0,
+      "prepTime": 2,
+      "cookTime": 15,
+      "nutritionalScore": 7.5,
+      "photo": "https://images.unsplash.com/photo-1604239611873-8f4dfc24c895?q=80&w=1035&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "tags": [
+        "facile",
+        "rapide",
+        "petit déj",
+        "sain"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "text": "Faire bouillir lait"
+        },
+        {
+          "order": 2,
+          "text": "Ajouter flocons"
+        },
+        {
+          "order": 3,
+          "text": "Mélanger"
+        },
+        {
+          "order": 4,
+          "text": "Ajouter fruits"
+        },
+        {
+          "order": 5,
+          "text": "Servir chaud"
+        }
+      ],
+      "ingredients": [
+        {
+          "ingredientName": "flocons d'avoine",
+          "quantity": 100,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "lait",
+          "quantity": 300,
+          "unit": "ml"
+        }
+      ]
+    },
+    {
+      "name": "Frittata",
+      "description": "Omelette épaisse aux légumes",
+      "portion": 4,
+      "price": 7.0,
+      "prepTime": 15,
+      "cookTime": 20,
+      "nutritionalScore": 7.5,
+      "photo": "https://images.unsplash.com/photo-1668283653825-37b80f055b05?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "tags": [
+        "vegetarien",
+        "facile",
+        "rapide"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "text": "Préparer légumes"
+        },
+        {
+          "order": 2,
+          "text": "Battre œufs"
+        },
+        {
+          "order": 3,
+          "text": "Faire revenir"
+        },
+        {
+          "order": 4,
+          "text": "Verser œufs"
+        },
+        {
+          "order": 5,
+          "text": "Finir au four"
+        }
+      ],
+      "ingredients": [
+        {
+          "ingredientName": "oeufs",
+          "quantity": 8,
+          "unit": "pièce"
+        },
+        {
+          "ingredientName": "courgette",
+          "quantity": 200,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "name": "Riz Frit",
+      "description": "Riz frit thaï avec légumes",
+      "portion": 3,
+      "price": 6.0,
+      "prepTime": 15,
+      "cookTime": 15,
+      "nutritionalScore": 7.0,
+      "photo": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?q=80&w=1625&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "tags": [
+        "asiatique",
+        "rapide",
+        "facile"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "text": "Chauffer huile"
+        },
+        {
+          "order": 2,
+          "text": "Frire l'œuf"
+        },
+        {
+          "order": 3,
+          "text": "Ajouter riz"
+        },
+        {
+          "order": 4,
+          "text": "Mélanger sauce soja"
+        },
+        {
+          "order": 5,
+          "text": "Ajouter légumes"
+        }
+      ],
+      "ingredients": [
+        {
+          "ingredientName": "riz",
+          "quantity": 300,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "oeufs",
+          "quantity": 2,
+          "unit": "pièce"
+        }
+      ]
+    },
+    {
+      "name": "Pad Thai",
+      "description": "Nouilles thaïes sautées",
+      "portion": 2,
+      "price": 7.0,
+      "prepTime": 15,
+      "cookTime": 10,
+      "nutritionalScore": 6.5,
+      "photo": "https://images.unsplash.com/photo-1637806930600-37fa8892069d?q=80&w=985&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "tags": [
+        "asiatique",
+        "rapide",
+        "facile"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "text": "Cuire nouilles"
+        },
+        {
+          "order": 2,
+          "text": "Égoutter"
+        },
+        {
+          "order": 3,
+          "text": "Sauter au wok"
+        },
+        {
+          "order": 4,
+          "text": "Ajouter sauce"
+        },
+        {
+          "order": 5,
+          "text": "Garnir"
+        }
+      ],
+      "ingredients": [
+        {
+          "ingredientName": "galette de riz",
+          "quantity": 200,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "cacahuète",
+          "quantity": 80,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "name": "Shakshuka",
+      "description": "Oeufs pochés dans sauce tomate",
+      "portion": 2,
+      "price": 6.0,
+      "prepTime": 10,
+      "cookTime": 20,
+      "nutritionalScore": 7.0,
+      "photo": "https://images.unsplash.com/photo-1590412200988-a436970781fa?q=80&w=1035&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "tags": [
+        "facile",
+        "rapide",
+        "sain"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "text": "Faire revenir oignons"
+        },
+        {
+          "order": 2,
+          "text": "Ajouter sauce tomate"
+        },
+        {
+          "order": 3,
+          "text": "Créer puits"
+        },
+        {
+          "order": 4,
+          "text": "Casser œufs"
+        },
+        {
+          "order": 5,
+          "text": "Couvrir et cuire"
+        }
+      ],
+      "ingredients": [
+        {
+          "ingredientName": "oeufs",
+          "quantity": 4,
+          "unit": "pièce"
+        },
+        {
+          "ingredientName": "tomate",
+          "quantity": 300,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "name": "Houmous",
+      "description": "Houmous crémeux maison",
+      "portion": 6,
+      "price": 4.0,
+      "prepTime": 15,
+      "cookTime": 0,
+      "nutritionalScore": 7.5,
+      "photo": "https://images.unsplash.com/photo-1637949385162-e416fb15b2ce?q=80&w=2052&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "tags": [
+        "vegan",
+        "facile",
+        "rapide"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "text": "Mixer pois chiches"
+        },
+        {
+          "order": 2,
+          "text": "Ajouter tahini"
+        },
+        {
+          "order": 3,
+          "text": "Ajouter citron"
+        },
+        {
+          "order": 4,
+          "text": "Mélanger"
+        },
+        {
+          "order": 5,
+          "text": "Servir"
+        }
+      ],
+      "ingredients": [
+        {
+          "ingredientName": "pois chiches",
+          "quantity": 400,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "citron",
+          "quantity": 1,
+          "unit": "pièce"
+        }
+      ]
+    },
+    {
+      "name": "Taboulé",
+      "description": "Salade orientale au boulgour",
+      "portion": 4,
+      "price": 5.0,
+      "prepTime": 25,
+      "cookTime": 0,
+      "nutritionalScore": 7.5,
+      "photo": "https://images.unsplash.com/photo-1702650657375-934239d8b472?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "tags": [
+        "vegetarien",
+        "sain",
+        "facile"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "text": "Réhydrater boulgour"
+        },
+        {
+          "order": 2,
+          "text": "Hacher herbes"
+        },
+        {
+          "order": 3,
+          "text": "Ajouter tomates"
+        },
+        {
+          "order": 4,
+          "text": "Verser vinaigrette"
+        },
+        {
+          "order": 5,
+          "text": "Mélanger"
+        }
+      ],
+      "ingredients": [
+        {
+          "ingredientName": "tomate",
+          "quantity": 300,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "oignon",
+          "quantity": 1,
+          "unit": "pièce"
+        }
+      ]
+    },
+    {
+      "name": "Gazpacho",
+      "description": "Soupe froide espagnole",
+      "portion": 4,
+      "price": 4.0,
+      "prepTime": 20,
+      "cookTime": 0,
+      "nutritionalScore": 7.0,
+      "photo": "https://images.unsplash.com/photo-1529566186297-155c18f9a434?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "tags": [
+        "vegetarien",
+        "sain",
+        "léger"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "text": "Préparer tomates"
+        },
+        {
+          "order": 2,
+          "text": "Mettre ingrédients"
+        },
+        {
+          "order": 3,
+          "text": "Mixer"
+        },
+        {
+          "order": 4,
+          "text": "Réfrigérer"
+        },
+        {
+          "order": 5,
+          "text": "Servir froid"
+        }
+      ],
+      "ingredients": [
+        {
+          "ingredientName": "tomate",
+          "quantity": 600,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "concombre",
+          "quantity": 1,
+          "unit": "pièce"
+        }
+      ]
+    },
+    {
+      "name": "Soupe Miso",
+      "description": "Soupe asiatique légère",
+      "portion": 2,
+      "price": 3.0,
+      "prepTime": 10,
+      "cookTime": 10,
+      "nutritionalScore": 6.5,
+      "photo": "https://images.unsplash.com/photo-1613744013720-4f505ce31735?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "tags": [
+        "asiatique",
+        "rapide",
+        "facile"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "text": "Faire bouillir eau"
+        },
+        {
+          "order": 2,
+          "text": "Délayer miso"
+        },
+        {
+          "order": 3,
+          "text": "Ajouter tofu"
+        },
+        {
+          "order": 4,
+          "text": "Ajouter algues"
+        },
+        {
+          "order": 5,
+          "text": "Servir"
+        }
+      ],
+      "ingredients": [
+        {
+          "ingredientName": "tofu",
+          "quantity": 150,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "gingembre",
+          "quantity": 20,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "name": "Coleslaw",
+      "description": "Salade de chou frais",
+      "portion": 4,
+      "price": 3.0,
+      "prepTime": 15,
+      "cookTime": 0,
+      "nutritionalScore": 7.0,
+      "photo": "https://images.unsplash.com/photo-1537784969314-05a37106f68e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "tags": [
+        "vegetarien",
+        "rapide",
+        "facile"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "text": "Émincer chou"
+        },
+        {
+          "order": 2,
+          "text": "Ajouter carottes"
+        },
+        {
+          "order": 3,
+          "text": "Préparer vinaigrette"
+        },
+        {
+          "order": 4,
+          "text": "Mélanger"
+        },
+        {
+          "order": 5,
+          "text": "Servir"
+        }
+      ],
+      "ingredients": [
+        {
+          "ingredientName": "carotte",
+          "quantity": 200,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "vinaigre",
+          "quantity": 40,
+          "unit": "ml"
+        }
+      ]
+    },
+    {
+      "name": "Omelette Jambon",
+      "description": "Omelette moussue avec jambon",
+      "portion": 1,
+      "price": 4.0,
+      "prepTime": 5,
+      "cookTime": 10,
+      "nutritionalScore": 7.0,
+      "photo": "https://images.unsplash.com/photo-1709754521379-00166805eea4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "tags": [
+        "facile",
+        "rapide",
+        "petit déj"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "text": "Battre oeufs"
+        },
+        {
+          "order": 2,
+          "text": "Chauffer poêle"
+        },
+        {
+          "order": 3,
+          "text": "Verser oeufs"
+        },
+        {
+          "order": 4,
+          "text": "Ajouter jambon"
+        },
+        {
+          "order": 5,
+          "text": "Plier et servir"
+        }
+      ],
+      "ingredients": [
+        {
+          "ingredientName": "oeufs",
+          "quantity": 2,
+          "unit": "pièce"
+        },
+        {
+          "ingredientName": "jambon",
+          "quantity": 100,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "name": "Milkshake Fraise",
+      "description": "Milkshake sucré à la fraise",
+      "portion": 2,
+      "price": 4.0,
+      "prepTime": 5,
+      "cookTime": 0,
+      "nutritionalScore": 6.0,
+      "photo": "https://images.unsplash.com/photo-1579954115545-a95591f28bfc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "tags": [
+        "boisson",
+        "sucré",
+        "facile"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "text": "Mixer fraise"
+        },
+        {
+          "order": 2,
+          "text": "Ajouter lait"
+        },
+        {
+          "order": 3,
+          "text": "Ajouter sucre"
+        },
+        {
+          "order": 4,
+          "text": "Mélanger glaçons"
+        },
+        {
+          "order": 5,
+          "text": "Servir"
+        }
+      ],
+      "ingredients": [
+        {
+          "ingredientName": "fraise",
+          "quantity": 200,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "lait",
+          "quantity": 300,
+          "unit": "ml"
+        }
+      ]
+    },
+    {
+      "name": "Nuggets Poulet",
+      "description": "Nuggets croustillants maison",
+      "portion": 4,
+      "price": 5.0,
+      "prepTime": 20,
+      "cookTime": 20,
+      "nutritionalScore": 5.0,
+      "photo": "https://images.unsplash.com/photo-1619881590738-a111d176d906?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "tags": [
+        "facile",
+        "rapide"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "text": "Découper poulet"
+        },
+        {
+          "order": 2,
+          "text": "Paner les pièces"
+        },
+        {
+          "order": 3,
+          "text": "Frire 15 min"
+        },
+        {
+          "order": 4,
+          "text": "Égoutter"
+        },
+        {
+          "order": 5,
+          "text": "Servir chaud"
+        }
+      ],
+      "ingredients": [
+        {
+          "ingredientName": "poulet",
+          "quantity": 400,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "farine",
+          "quantity": 100,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "name": "Burger Maison",
+      "description": "Burger avec steak haché et légumes",
+      "portion": 1,
+      "price": 6.0,
+      "prepTime": 15,
+      "cookTime": 15,
+      "nutritionalScore": 6.0,
+      "photo": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=1599&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "tags": [
+        "facile",
+        "rapide"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "text": "Former steak"
+        },
+        {
+          "order": 2,
+          "text": "Cuire au grill"
+        },
+        {
+          "order": 3,
+          "text": "Toaster pain"
+        },
+        {
+          "order": 4,
+          "text": "Ajouter légumes"
+        },
+        {
+          "order": 5,
+          "text": "Assembler"
+        }
+      ],
+      "ingredients": [
+        {
+          "ingredientName": "boeuf",
+          "quantity": 150,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "tomate",
+          "quantity": 50,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "name": "Falafel Pita",
+      "description": "Pita garnie de falafel et sauce",
+      "portion": 1,
+      "price": 5.0,
+      "prepTime": 10,
+      "cookTime": 0,
+      "nutritionalScore": 7.0,
+      "photo": "https://images.unsplash.com/photo-1680990999782-ba7fe26e4d0b?q=80&w=1610&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "tags": [
+        "vegan",
+        "facile",
+        "rapide"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "text": "Réchauffer pita"
+        },
+        {
+          "order": 2,
+          "text": "Placer falafel"
+        },
+        {
+          "order": 3,
+          "text": "Ajouter houmous"
+        },
+        {
+          "order": 4,
+          "text": "Ajouter salade"
+        },
+        {
+          "order": 5,
+          "text": "Rouler et servir"
+        }
+      ],
+      "ingredients": [
+        {
+          "ingredientName": "pois chiches",
+          "quantity": 100,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "pain pita",
+          "quantity": 1,
+          "unit": "pièce"
+        }
+      ]
+    },
+    {
+      "name": "Poulet Rôti",
+      "description": "Poulet entier rôti aux herbes",
+      "portion": 4,
+      "price": 10.0,
+      "prepTime": 20,
+      "cookTime": 60,
+      "nutritionalScore": 7.5,
+      "photo": "https://images.unsplash.com/photo-1606728035253-49e8a23146de?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "tags": [
+        "facile",
+        "réconfortant"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "text": "Préparer poulet"
+        },
+        {
+          "order": 2,
+          "text": "Assaisonner"
+        },
+        {
+          "order": 3,
+          "text": "Verser vin blanc"
+        },
+        {
+          "order": 4,
+          "text": "Rôtir 50 min"
+        },
+        {
+          "order": 5,
+          "text": "Laisser reposer"
+        }
+      ],
+      "ingredients": [
+        {
+          "ingredientName": "poulet",
+          "quantity": 1200,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "herbes",
+          "quantity": 20,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "name": "Ratatouille",
+      "description": "Ragout de légumes provençal",
+      "portion": 4,
+      "price": 6.0,
+      "prepTime": 25,
+      "cookTime": 45,
+      "nutritionalScore": 7.5,
+      "photo": "https://images.unsplash.com/photo-1572453800999-e8d2d1589b7c?q=80&w=1970&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "tags": [
+        "vegetarien",
+        "sain",
+        "facile"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "text": "Préparer légumes"
+        },
+        {
+          "order": 2,
+          "text": "Faire revenir oignons"
+        },
+        {
+          "order": 3,
+          "text": "Alterner couches"
+        },
+        {
+          "order": 4,
+          "text": "Ajouter tomates"
+        },
+        {
+          "order": 5,
+          "text": "Cuire 40 min"
+        }
+      ],
+      "ingredients": [
+        {
+          "ingredientName": "courgette",
+          "quantity": 200,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "aubergine",
+          "quantity": 200,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "name": "Quiche Lorraine",
+      "description": "Quiche aux lardons et fromage",
+      "portion": 6,
+      "price": 8.0,
+      "prepTime": 20,
+      "cookTime": 40,
+      "nutritionalScore": 5.5,
+      "photo": "https://images.unsplash.com/photo-1650844010413-3f24dc1c182b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "tags": [
+        "facile",
+        "réconfortant"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "text": "Étaler pâte"
+        },
+        {
+          "order": 2,
+          "text": "Cuire lardons"
+        },
+        {
+          "order": 3,
+          "text": "Préparer crème"
+        },
+        {
+          "order": 4,
+          "text": "Verser dans pâte"
+        },
+        {
+          "order": 5,
+          "text": "Cuire 35 min"
+        }
+      ],
+      "ingredients": [
+        {
+          "ingredientName": "lardons",
+          "quantity": 150,
+          "unit": "g"
+        },
+        {
+          "ingredientName": "crème",
+          "quantity": 300,
+          "unit": "ml"
+        }
+      ]
+    }
+  ]
+}

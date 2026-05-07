@@ -1,0 +1,272 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum FriendshipStatus {
+  PENDING
+  ACCEPTED
+  REJECTED
+  BLOCKED
+}
+
+enum CommentReactionType {
+  LIKE
+  DISLIKE
+}
+
+model User {
+  userID    String   @id @db.Uuid
+  firstName String
+  lastName  String
+  email     String   @unique
+  avatar    String?
+  pseudo    String   @unique
+  createdAt DateTime @default(now()) @db.Timestamptz
+
+  recipes      Recipe[]      @relation("CreatedRecipes")
+  savedRecipes SavedRecipe[]
+
+  reviews      Review[]
+  comments     RecipeComment[]
+  commentReactions CommentReaction[]
+
+  shoppingList ShoppingList?
+
+  sentFriendships     Friendship[] @relation("FriendshipRequester")
+  receivedFriendships Friendship[] @relation("FriendshipReceiver")
+
+  groupMemberships GroupMember[]
+  preferences      UserPreference[]
+}
+
+model Friendship {
+  friendshipID Int              @id @default(autoincrement())
+  requesterID  String           @db.Uuid
+  receiverID   String           @db.Uuid
+  status       FriendshipStatus @default(PENDING)
+  createdAt    DateTime         @default(now()) @db.Timestamptz
+
+  requester User @relation("FriendshipRequester", fields: [requesterID], references: [userID], onDelete: Cascade)
+  receiver  User @relation("FriendshipReceiver", fields: [receiverID], references: [userID], onDelete: Cascade)
+
+  @@unique([requesterID, receiverID])
+}
+
+model Recipe {
+  recipeID         Int      @id @default(autoincrement())
+  name             String
+  price            Float?
+  nutritionalScore Float?
+  prepTime         Int?
+  cookTime         Int?
+  photo            String?
+  portion          Int
+  description      String
+  creatorID        String   @db.Uuid
+  createdAt        DateTime @default(now()) @db.Timestamptz
+
+  creator User @relation("CreatedRecipes", fields: [creatorID], references: [userID], onDelete: Cascade)
+
+  savedBy SavedRecipe[]
+
+  steps       Step[]
+  reviews     Review[]
+  comments    RecipeComment[]
+  ingredients RecipeIngredient[]
+  tags        RecipeTag[]
+  groups      GroupRecipe[]
+}
+
+model SavedRecipe {
+  userID   String   @db.Uuid
+  recipeID Int
+  savedAt  DateTime @default(now()) @db.Timestamptz
+
+  user   User   @relation(fields: [userID], references: [userID], onDelete: Cascade)
+  recipe Recipe @relation(fields: [recipeID], references: [recipeID], onDelete: Cascade)
+
+  @@id([userID, recipeID])
+}
+
+model Review {
+  reviewID  Int      @id @default(autoincrement())
+  rating    Int
+  userID    String   @db.Uuid
+  recipeID  Int
+  createdAt DateTime @default(now()) @db.Timestamptz
+  updatedAt DateTime @updatedAt @db.Timestamptz
+
+  user   User   @relation(fields: [userID], references: [userID], onDelete: Cascade)
+  recipe Recipe @relation(fields: [recipeID], references: [recipeID], onDelete: Cascade)
+
+  @@unique([userID, recipeID])
+}
+
+model RecipeComment {
+  commentID       Int      @id @default(autoincrement())
+  content         String
+  recipeID        Int
+  userID          String   @db.Uuid
+  parentCommentID Int?
+  createdAt       DateTime @default(now()) @db.Timestamptz
+  updatedAt       DateTime @updatedAt @db.Timestamptz
+
+  recipe Recipe @relation(fields: [recipeID], references: [recipeID], onDelete: Cascade)
+  user   User   @relation(fields: [userID], references: [userID], onDelete: Cascade)
+
+  parentComment RecipeComment?  @relation("CommentReplies", fields: [parentCommentID], references: [commentID], onDelete: Cascade)
+  replies       RecipeComment[] @relation("CommentReplies")
+
+  reactions CommentReaction[]
+
+  @@index([recipeID, createdAt])
+  @@index([parentCommentID])
+  @@index([userID])
+}
+
+model CommentReaction {
+  commentID Int
+  userID    String              @db.Uuid
+  type      CommentReactionType
+  createdAt DateTime            @default(now()) @db.Timestamptz
+
+  comment RecipeComment @relation(fields: [commentID], references: [commentID], onDelete: Cascade)
+  user    User          @relation(fields: [userID], references: [userID], onDelete: Cascade)
+
+  @@id([commentID, userID])
+  @@index([userID])
+}
+
+model Step {
+  stepID   Int    @id @default(autoincrement())
+  text     String
+  order    Int
+  recipeID Int
+
+  recipe Recipe @relation(fields: [recipeID], references: [recipeID], onDelete: Cascade)
+
+  @@unique([recipeID, order])
+}
+
+model Ingredient {
+  ingredientID     Int      @id @default(autoincrement())
+  name             String   @unique
+  price            Float?
+  nutritionalScore String?
+  category         String
+  unitDefault      String
+  calories         Int
+  createdAt        DateTime @default(now()) @db.Timestamptz
+
+  recipes       RecipeIngredient[]
+  shoppingItems ShoppingItem[]
+}
+
+model Unit {
+  unitID Int    @id @default(autoincrement())
+  type   String @unique
+
+  recipeIngredients RecipeIngredient[]
+  shoppingItems     ShoppingItem[]
+}
+
+model RecipeIngredient {
+  recipeID     Int
+  ingredientID Int
+  quantity     Float
+  unitID       Int?
+
+  recipe     Recipe     @relation(fields: [recipeID], references: [recipeID], onDelete: Cascade)
+  ingredient Ingredient @relation(fields: [ingredientID], references: [ingredientID], onDelete: Restrict)
+  unit       Unit?      @relation(fields: [unitID], references: [unitID], onDelete: Restrict)
+
+  @@id([recipeID, ingredientID])
+}
+
+model Tag {
+  tagID Int    @id @default(autoincrement())
+  name  String @unique
+
+  recipes          RecipeTag[]
+  userPreferences  UserPreference[]
+}
+
+model RecipeTag {
+  recipeID Int
+  tagID    Int
+
+  recipe Recipe @relation(fields: [recipeID], references: [recipeID], onDelete: Cascade)
+  tag    Tag    @relation(fields: [tagID], references: [tagID], onDelete: Cascade)
+
+  @@id([recipeID, tagID])
+}
+
+model UserPreference {
+  userID String @db.Uuid
+  tagID  Int
+
+  user User @relation(fields: [userID], references: [userID], onDelete: Cascade)
+  tag  Tag  @relation(fields: [tagID], references: [tagID], onDelete: Cascade)
+
+  @@id([userID, tagID])
+}
+
+model Groups {
+  groupID   Int      @id @default(autoincrement())
+  name      String
+  createdAt DateTime @default(now()) @db.Timestamptz
+
+  members      GroupMember[]
+  recipes      GroupRecipe[]
+  shoppingList ShoppingList?
+}
+
+model GroupMember {
+  groupID Int
+  userID  String @db.Uuid
+
+  group Groups @relation(fields: [groupID], references: [groupID], onDelete: Cascade)
+  user  User   @relation(fields: [userID], references: [userID], onDelete: Cascade)
+
+  @@id([groupID, userID])
+}
+
+model GroupRecipe {
+  groupID  Int
+  recipeID Int
+
+  group  Groups @relation(fields: [groupID], references: [groupID], onDelete: Cascade)
+  recipe Recipe @relation(fields: [recipeID], references: [recipeID], onDelete: Cascade)
+
+  @@id([groupID, recipeID])
+}
+
+model ShoppingList {
+  listID  Int     @id @default(autoincrement())
+  name    String
+  userID  String? @unique @db.Uuid
+  groupID Int?    @unique
+
+  user  User?   @relation(fields: [userID], references: [userID], onDelete: Cascade)
+  group Groups? @relation(fields: [groupID], references: [groupID], onDelete: Cascade)
+
+  items ShoppingItem[]
+}
+
+model ShoppingItem {
+  itemID       Int     @id @default(autoincrement())
+  name         String
+  quantity     Float?
+  checked      Boolean @default(false)
+  listID       Int
+  ingredientID Int?
+  unitID       Int?
+
+  shoppingList ShoppingList @relation(fields: [listID], references: [listID], onDelete: Cascade)
+  ingredient   Ingredient?  @relation(fields: [ingredientID], references: [ingredientID], onDelete: SetNull)
+  unit         Unit?        @relation(fields: [unitID], references: [unitID], onDelete: SetNull)
+}
