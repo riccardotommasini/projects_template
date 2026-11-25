@@ -24,6 +24,10 @@ x-airflow-common: &airflow-common
     AIRFLOW__CORE__EXECUTION_API_SERVER_URL: http://airflow-webserver:8080/execution/
     AIRFLOW__SCHEDULER__ENABLE_HEALTH_CHECK: "true"
     PYTHONPATH: /opt/diplomap
+    # Warehouse DAG: the graph refresh reaches Neo4j through the service name.
+    NEO4J_URI: bolt://neo4j:7687
+    NEO4J_USER: neo4j
+    NEO4J_PASSWORD: ${NEO4J_PASSWORD:?set in .env}
   volumes:
     - ./orchestration/dags:/opt/airflow/dags:ro
     - ./ingestion:/opt/diplomap/ingestion:ro
@@ -154,8 +158,20 @@ services:
       - diplomap
     ports:
       - "127.0.0.1:${BACKEND_PORT:-8000}:8000"
+    environment:
+      # sample: contract samples; warehouse: the published DuckDB warehouse and Neo4j.
+      DIPLOMAP_API_MODE: ${DIPLOMAP_API_MODE:-sample}
+      DIPLOMAP_WAREHOUSE_PATH: /data/warehouse/diplomap.duckdb
+      DIPLOMAP_DRAIN_TIMEOUT_S: ${DIPLOMAP_DRAIN_TIMEOUT_S:-10}
+      DIPLOMAP_CORS_ORIGINS: ${DIPLOMAP_CORS_ORIGINS:-http://127.0.0.1:3000,http://localhost:3000,http://localhost:5173}
+      NEO4J_URI: bolt://neo4j:7687
+      NEO4J_USER: neo4j
+      NEO4J_PASSWORD: ${NEO4J_PASSWORD:?set in .env}
+      # P4's network queries (warehouse/diplomatic_graph/queries.cypher), read in place.
+      PYTHONPATH: /opt/diplomap
     volumes:
       - data:/data:ro
+      - ./warehouse:/opt/diplomap/warehouse:ro
     healthcheck:
       test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=4)"]
       interval: 15s
