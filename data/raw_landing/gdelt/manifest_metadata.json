@@ -1,0 +1,17 @@
+{
+  "source": "GDELT masterfilelist",
+  "masterfilelist_url": "http://data.gdeltproject.org/gdeltv2/masterfilelist.txt",
+  "start_date_utc": "2024-12-17",
+  "end_date_utc": "2024-12-23",
+  "expected_file_count": 672,
+  "expected_files_per_day": {
+    "2024-12-17": 96,
+    "2024-12-18": 96,
+    "2024-12-19": 96,
+    "2024-12-20": 96,
+    "2024-12-21": 96,
+    "2024-12-22": 96,
+    "2024-12-23": 96
+  },
+  "verified_file_count": 672
+}

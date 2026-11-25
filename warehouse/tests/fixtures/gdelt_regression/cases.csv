@@ -1,0 +1,30 @@
+gdelt_event_id,case,expected
+1216020585,"valid state pair, CAMEO code with leading zero",kept
+1216047276,"same action, pair and article coded several times: first kept",kept
+1216047277,"same action, pair and article coded several times: copy",dropped R4
+1216047278,"same action, pair and article coded several times: copy",dropped R4
+1216139515,same country on both sides (domestic),dropped R1
+1216176728,one actor without country,dropped R1
+1216196294,misdated ten years back (before the study period),dropped R2
+1216234095,South Sudan (SSD): missing from the CAMEO reference but a state,kept
+1216249048,"same action, pair and article coded several times: first kept",kept
+1216249049,"same action, pair and article coded several times: copy",dropped R4
+1216249050,"same action, pair and article coded several times: copy",dropped R4
+1216262625,international organisation facing a state,dropped R1
+1216328461,dated one year back (before the study period),dropped R2
+1216359605,"region code on one side (EUR, AFR, MEA...)",dropped R1
+1216359842,"same article and code, pair A->B (other direction also kept)",kept
+1216360447,"same article and code, pair B->A (other direction also kept)",kept
+1216382466,single mention,dropped R3
+1216392861,"region code on one side (EUR, AFR, MEA...)",dropped R1
+1216517764,"region code on one side (EUR, AFR, MEA...)",dropped R1
+1216614205,same country on both sides (domestic),dropped R1
+1216670723,dated one month back (before the study period),dropped R2
+1216758612,international organisation facing a state,dropped R1
+1216787436,single mention,dropped R3
+1216831325,"valid state pair, 4-digit CAMEO code",kept
+1216888814,one actor without country,dropped R1
+1216982491,"valid state pair, 4-digit CAMEO code",kept
+1217091635,"valid state pair, CAMEO code with leading zero",kept
+1217107517,single mention,dropped R3
+1217250350,"valid state pair, CAMEO code with leading zero",kept

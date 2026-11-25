@@ -1,0 +1,56 @@
+[
+  {
+    "leader_id": "Q100001",
+    "leader_name": "Sample Leader A",
+    "offices": [
+      {
+        "position_title": "President",
+        "represented_country": {
+          "iso3_code": "FRA",
+          "country_name": "France"
+        },
+        "valid_from": "2022-05-14",
+        "valid_to": null
+      }
+    ]
+  },
+  {
+    "leader_id": "Q100002",
+    "leader_name": "Sample Leader B",
+    "offices": [
+      {
+        "position_title": "Minister of Foreign Affairs",
+        "represented_country": {
+          "iso3_code": "JPN",
+          "country_name": "Japan"
+        },
+        "valid_from": "2021-11-10",
+        "valid_to": "2024-09-30"
+      },
+      {
+        "position_title": "Prime Minister",
+        "represented_country": {
+          "iso3_code": "JPN",
+          "country_name": "Japan"
+        },
+        "valid_from": "2024-10-01",
+        "valid_to": null
+      }
+    ]
+  },
+  {
+    "leader_id": "Q100003",
+    "leader_name": "Sample Leader C",
+    "offices": [
+      {
+        "position_title": "Chancellor",
+        "represented_country": {
+          "iso3_code": "DEU",
+          "country_name": "Germany"
+        },
+        "valid_from": "2025-01-15",
+        "valid_to": null
+      }
+    ]
+  }
+]

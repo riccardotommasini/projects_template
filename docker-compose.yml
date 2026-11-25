@@ -1,0 +1,239 @@
+# DiploMap local stack (task P1-01).
+# Usage: cp .env.example .env, then: docker compose up -d --build --wait
+# Every secret comes from .env; every host port is a variable with a default.
+
+name: diplomap
+
+x-airflow-common: &airflow-common
+  image: diplomap-airflow:3.3.2
+  user: "${AIRFLOW_UID:-50000}:0"
+  networks:
+    - diplomap
+  environment: &airflow-common-env
+    AIRFLOW__CORE__EXECUTOR: LocalExecutor
+    AIRFLOW__CORE__AUTH_MANAGER: airflow.providers.fab.auth_manager.fab_auth_manager.FabAuthManager
+    AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+    AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: "true"
+    AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://${POSTGRES_USER:?set in .env}:${POSTGRES_PASSWORD:?set in .env}@postgres:5432/${POSTGRES_DB:?set in .env}
+    # Shared by every Airflow component: they must all hold the same values.
+    AIRFLOW__CORE__FERNET_KEY: ${AIRFLOW_FERNET_KEY:?set in .env}
+    AIRFLOW__API_AUTH__JWT_SECRET: ${AIRFLOW_JWT_SECRET:?set in .env}
+    AIRFLOW__API_AUTH__JWT_ISSUER: ${AIRFLOW_JWT_ISSUER:?set in .env}
+    AIRFLOW__API__SECRET_KEY: ${AIRFLOW_API_SECRET_KEY:?set in .env}
+    # Task processes reach the Execution API through the service name, not localhost.
+    AIRFLOW__CORE__EXECUTION_API_SERVER_URL: http://airflow-webserver:8080/execution/
+    AIRFLOW__SCHEDULER__ENABLE_HEALTH_CHECK: "true"
+    PYTHONPATH: /opt/diplomap
+    # Warehouse DAG: the graph refresh reaches Neo4j through the service name.
+    NEO4J_URI: bolt://neo4j:7687
+    NEO4J_USER: neo4j
+    NEO4J_PASSWORD: ${NEO4J_PASSWORD:?set in .env}
+  volumes:
+    - ./orchestration/dags:/opt/airflow/dags:ro
+    - ./ingestion:/opt/diplomap/ingestion:ro
+    - ./warehouse:/opt/diplomap/warehouse:ro
+    - airflow-logs:/opt/airflow/logs
+    - data:/data
+
+services:
+  postgres:
+    image: postgres:17.11-bookworm
+    restart: unless-stopped
+    networks:
+      - diplomap
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:?set in .env}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set in .env}
+      POSTGRES_DB: ${POSTGRES_DB:?set in .env}
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", 'pg_isready -U "$${POSTGRES_USER}" -d "$${POSTGRES_DB}"']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+  airflow-init:
+    <<: *airflow-common
+    build:
+      context: ./orchestration
+    # Runs as root once: creates the /data layout, then the image entrypoint
+    # migrates the database and creates the admin user (_AIRFLOW_* variables).
+    user: "0:0"
+    restart: "no"
+    entrypoint: /bin/bash
+    command:
+      - -c
+      - |
+        set -euo pipefail
+        mkdir -p /data/raw_landing/gdelt /data/raw_landing/wikipedia /data/raw_landing/wikidata \
+                 /data/staging /data/warehouse /data/quarantine
+        for d in /data /data/raw_landing /data/raw_landing/gdelt /data/raw_landing/wikipedia \
+                 /data/raw_landing/wikidata /data/staging /data/warehouse /data/quarantine; do
+          chown "$${AIRFLOW_UID}:0" "$$d"
+          chmod 0775 "$$d"
+        done
+        chown -R "$${AIRFLOW_UID}:0" /opt/airflow/logs
+        /entrypoint airflow version
+        su airflow -s /bin/bash -c 'airflow pools set duckdb_writer 1 "Single writer for the DuckDB warehouse"'
+    environment:
+      <<: *airflow-common-env
+      AIRFLOW_UID: ${AIRFLOW_UID:-50000}
+      _AIRFLOW_DB_MIGRATE: "true"
+      _AIRFLOW_WWW_USER_CREATE: "true"
+      _AIRFLOW_WWW_USER_USERNAME: ${AIRFLOW_ADMIN_USERNAME:?set in .env}
+      _AIRFLOW_WWW_USER_PASSWORD: ${AIRFLOW_ADMIN_PASSWORD:?set in .env}
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  # Runs the scheduler AND the dag-processor (required by Airflow 3) in one container,
+  # through orchestration/scripts/start-scheduler.sh. The dag-processor can become
+  # a 9th service (command: dag-processor) later.
+  airflow-scheduler:
+    <<: *airflow-common
+    pull_policy: never
+    restart: unless-stopped
+    command: ["bash", "/opt/airflow/scripts/start-scheduler.sh"]
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:8974/health && airflow jobs check --job-type DagProcessorJob --local"]
+      interval: 30s
+      timeout: 30s
+      retries: 5
+      start_period: 60s
+    depends_on:
+      postgres:
+        condition: service_healthy
+      airflow-init:
+        condition: service_completed_successfully
+
+  # Airflow 3 has no webserver command: this service runs the API server (UI and API).
+  # Inspect the data volume with: docker compose exec airflow-webserver ls /data
+  airflow-webserver:
+    <<: *airflow-common
+    pull_policy: never
+    restart: unless-stopped
+    command: api-server
+    ports:
+      - "127.0.0.1:${AIRFLOW_WEB_PORT:-8081}:8080"
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost:8080/api/v2/monitor/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+    depends_on:
+      postgres:
+        condition: service_healthy
+      airflow-init:
+        condition: service_completed_successfully
+
+  neo4j:
+    image: neo4j:2026.10.1-community
+    restart: unless-stopped
+    networks:
+      - diplomap
+    environment:
+      NEO4J_AUTH: neo4j/${NEO4J_PASSWORD:?set in .env}
+    ports:
+      - "127.0.0.1:${NEO4J_HTTP_PORT:-7474}:7474"
+      - "127.0.0.1:${NEO4J_BOLT_PORT:-7687}:7687"
+    volumes:
+      - neo4j-data:/data
+      - neo4j-logs:/logs
+    healthcheck:
+      test: ["CMD-SHELL", 'cypher-shell -u neo4j -p "$${NEO4J_AUTH#neo4j/}" "RETURN 1" > /dev/null']
+      interval: 15s
+      timeout: 20s
+      retries: 10
+      start_period: 40s
+
+  backend:
+    build:
+      context: ./backend
+    image: diplomap-backend:0.1.0
+    restart: unless-stopped
+    networks:
+      - diplomap
+    ports:
+      - "127.0.0.1:${BACKEND_PORT:-8000}:8000"
+    environment:
+      # sample: contract samples; warehouse: the published DuckDB warehouse and Neo4j.
+      DIPLOMAP_API_MODE: ${DIPLOMAP_API_MODE:-sample}
+      DIPLOMAP_WAREHOUSE_PATH: /data/warehouse/diplomap.duckdb
+      DIPLOMAP_DRAIN_TIMEOUT_S: ${DIPLOMAP_DRAIN_TIMEOUT_S:-10}
+      DIPLOMAP_CORS_ORIGINS: ${DIPLOMAP_CORS_ORIGINS:-http://127.0.0.1:3000,http://localhost:3000,http://localhost:5173}
+      NEO4J_URI: bolt://neo4j:7687
+      NEO4J_USER: neo4j
+      NEO4J_PASSWORD: ${NEO4J_PASSWORD:?set in .env}
+      # P4's network queries (warehouse/diplomatic_graph/queries.cypher), read in place.
+      PYTHONPATH: /opt/diplomap
+    volumes:
+      - data:/data:ro
+      - ./warehouse:/opt/diplomap/warehouse:ro
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=4)"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    depends_on:
+      airflow-init:
+        condition: service_completed_successfully
+
+  frontend:
+    build:
+      context: ./frontend
+    image: diplomap-frontend:0.1.0
+    restart: unless-stopped
+    networks:
+      - diplomap
+    ports:
+      - "127.0.0.1:${FRONTEND_PORT:-3000}:80"
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1/"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
+    depends_on:
+      backend:
+        condition: service_healthy
+
+  jupyter:
+    image: quay.io/jupyter/scipy-notebook:2026-11-02
+    restart: unless-stopped
+    # Starts as root only so the image can switch jovyan to JUPYTER_UID, then drops privileges.
+    user: root
+    networks:
+      - diplomap
+    environment:
+      JUPYTER_TOKEN: ${JUPYTER_TOKEN:?set in .env}
+      NB_UID: ${JUPYTER_UID:-1000}
+    ports:
+      - "127.0.0.1:${JUPYTER_PORT:-8888}:8888"
+    volumes:
+      - ./business_questions:/home/jovyan/work/business_questions
+      - data:/data:ro
+    healthcheck:
+      test: ["CMD", "python", "/etc/jupyter/docker_healthcheck.py"]
+      interval: 15s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+    depends_on:
+      airflow-init:
+        condition: service_completed_successfully
+
+networks:
+  diplomap:
+    name: diplomap
+
+volumes:
+  postgres-data:
+  airflow-logs:
+  neo4j-data:
+  neo4j-logs:
+  # Shared /data layout: raw_landing/{gdelt,wikipedia,wikidata}, staging, warehouse, quarantine.
+  data:

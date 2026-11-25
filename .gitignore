@@ -1,0 +1,12 @@
+data/*
+!data/raw_landing/
+data/raw_landing/*
+!data/raw_landing/gdelt/
+data/raw_landing/gdelt/*
+!data/raw_landing/gdelt/manifest.csv
+!data/raw_landing/gdelt/manifest.json
+!data/raw_landing/gdelt/daily_summary.csv
+!data/raw_landing/gdelt/manifest_metadata.json
+__pycache__/
+*.pyc
+.env

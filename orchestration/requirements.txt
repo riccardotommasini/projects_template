@@ -1,0 +1,5 @@
+# Extra Python dependencies of the Airflow image, installed with the official constraints file.
+# duckdb, psutil and neo4j are imported by the pipeline steps (warehouse/pipeline_steps.py).
+duckdb==2.0.0
+psutil==7.2.2
+neo4j==6.4.1

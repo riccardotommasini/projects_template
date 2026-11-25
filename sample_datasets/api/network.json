@@ -1,0 +1,115 @@
+{
+  "nodes": [
+    {
+      "id": "Q100001",
+      "type": "leader",
+      "label": "Sample Leader A",
+      "iso3_code": null
+    },
+    {
+      "id": "Q100002",
+      "type": "leader",
+      "label": "Sample Leader B",
+      "iso3_code": null
+    },
+    {
+      "id": "Q100003",
+      "type": "leader",
+      "label": "Sample Leader C",
+      "iso3_code": null
+    },
+    {
+      "id": "DEU",
+      "type": "country",
+      "label": "Germany",
+      "iso3_code": "DEU"
+    },
+    {
+      "id": "FRA",
+      "type": "country",
+      "label": "France",
+      "iso3_code": "FRA"
+    },
+    {
+      "id": "JPN",
+      "type": "country",
+      "label": "Japan",
+      "iso3_code": "JPN"
+    }
+  ],
+  "edges": [
+    {
+      "source": "Q100001",
+      "target": "FRA",
+      "type": "REPRESENTS",
+      "n_visits": null,
+      "first_visit": null
+    },
+    {
+      "source": "Q100001",
+      "target": "DEU",
+      "type": "VISITED",
+      "n_visits": 1,
+      "first_visit": "2025-04-02"
+    },
+    {
+      "source": "Q100001",
+      "target": "JPN",
+      "type": "VISITED",
+      "n_visits": 1,
+      "first_visit": "2025-03-10"
+    },
+    {
+      "source": "Q100002",
+      "target": "JPN",
+      "type": "REPRESENTS",
+      "n_visits": null,
+      "first_visit": null
+    },
+    {
+      "source": "Q100002",
+      "target": "FRA",
+      "type": "VISITED",
+      "n_visits": 1,
+      "first_visit": "2025-05-20"
+    },
+    {
+      "source": "Q100003",
+      "target": "DEU",
+      "type": "REPRESENTS",
+      "n_visits": null,
+      "first_visit": null
+    },
+    {
+      "source": "Q100003",
+      "target": "JPN",
+      "type": "VISITED",
+      "n_visits": 1,
+      "first_visit": "2025-06-15"
+    }
+  ],
+  "shared_destinations": [
+    {
+      "leader_a_id": "Q100001",
+      "leader_b_id": "Q100003",
+      "n_shared": 1,
+      "shared_countries": [
+        "JPN"
+      ]
+    }
+  ],
+  "reciprocal_visits": [
+    {
+      "country_a": "FRA",
+      "country_b": "JPN",
+      "leaders_a_to_b": [
+        "Q100001"
+      ],
+      "leaders_b_to_a": [
+        "Q100002"
+      ],
+      "first_a_to_b": "2025-03-10",
+      "first_b_to_a": "2025-05-20"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+[
+  {
+    "visit_key": 1,
+    "leader_id": "Q100001",
+    "leader_name": "Sample Leader A",
+    "visitor_country": {
+      "iso3_code": "FRA",
+      "country_name": "France"
+    },
+    "host_country": {
+      "iso3_code": "JPN",
+      "country_name": "Japan"
+    },
+    "visit_type_label": "state",
+    "start_date_key": "2025-03-10",
+    "end_date_key": "2025-03-12",
+    "duration_days": 3,
+    "is_multilateral": false,
+    "matched_in_gdelt": true
+  },
+  {
+    "visit_key": 2,
+    "leader_id": "Q100001",
+    "leader_name": "Sample Leader A",
+    "visitor_country": {
+      "iso3_code": "FRA",
+      "country_name": "France"
+    },
+    "host_country": {
+      "iso3_code": "DEU",
+      "country_name": "Germany"
+    },
+    "visit_type_label": "working",
+    "start_date_key": "2025-04-02",
+    "end_date_key": "2025-04-02",
+    "duration_days": 1,
+    "is_multilateral": false,
+    "matched_in_gdelt": false
+  },
+  {
+    "visit_key": 3,
+    "leader_id": "Q100002",
+    "leader_name": "Sample Leader B",
+    "visitor_country": {
+      "iso3_code": "JPN",
+      "country_name": "Japan"
+    },
+    "host_country": {
+      "iso3_code": "FRA",
+      "country_name": "France"
+    },
+    "visit_type_label": "working",
+    "start_date_key": "2025-05-20",
+    "end_date_key": "2025-05-21",
+    "duration_days": 2,
+    "is_multilateral": false,
+    "matched_in_gdelt": true
+  },
+  {
+    "visit_key": 4,
+    "leader_id": "Q100003",
+    "leader_name": "Sample Leader C",
+    "visitor_country": {
+      "iso3_code": "DEU",
+      "country_name": "Germany"
+    },
+    "host_country": {
+      "iso3_code": "JPN",
+      "country_name": "Japan"
+    },
+    "visit_type_label": "summit",
+    "start_date_key": "2025-06-15",
+    "end_date_key": "2025-06-17",
+    "duration_days": 3,
+    "is_multilateral": true,
+    "matched_in_gdelt": true
+  }
+]

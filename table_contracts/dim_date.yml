@@ -1,0 +1,35 @@
+name: dim_date
+type: table
+layer: production
+scd_type: static
+grain: One row per calendar day.
+description: >
+  Static calendar from 2024-12-17 to 2025-07-15. The scope of the visits is the
+  first semester of 2025; the margin of 15 days on each side makes every PRE and
+  POST window complete.
+sources: [Generated]
+primary_key: [date_key]
+columns:
+  - name: date_key
+    type: DATE
+    nullable: false
+    description: The calendar day. Natural key used by every date foreign key.
+  - name: year
+    type: INTEGER
+    nullable: false
+    description: Calendar year.
+  - name: month
+    type: INTEGER
+    nullable: false
+    description: Month number, 1 to 12.
+  - name: week
+    type: INTEGER
+    nullable: false
+    description: ISO week number.
+  - name: day
+    type: INTEGER
+    nullable: false
+    description: Day of the month, 1 to 31.
+business_rules:
+  - No gaps: every day of the range appears exactly once (checked by the quality gate).
+  - week is the ISO week. Do not combine it with the calendar year blindly; for example 2024-12-30 is in ISO week 1 of 2025 but has year 2024.

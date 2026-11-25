@@ -1,0 +1,45 @@
+name: dim_country
+type: table
+layer: production
+scd_type: 1
+grain: One row per country or territory known to the project.
+description: >
+  Conformed dimension played in four roles: visitor country and host country
+  in fact_visit, actor 1 country and actor 2 country in fact_gdelt_event.
+  It carries the three country-code systems needed to join the sources.
+sources:
+  - Wikidata (ISO 3166 alpha-3)
+  - GDELT CAMEO.country.txt (CAMEO actor country codes)
+  - FIPS 10-4 country list (GDELT geography fields)
+primary_key: [country_key]
+unique: [[iso3_code], [fips_code], [cameo_code]]
+columns:
+  - name: country_key
+    type: INTEGER
+    nullable: false
+    description: Surrogate key.
+  - name: country_name
+    type: VARCHAR
+    nullable: false
+    description: English name of the country.
+  - name: iso3_code
+    type: VARCHAR
+    nullable: false
+    description: ISO 3166 alpha-3 code (3 characters). Business key; used by Wikipedia and Wikidata.
+  - name: fips_code
+    type: VARCHAR
+    nullable: true
+    description: FIPS 10-4 code (2 characters); used by the GDELT geography fields.
+  - name: cameo_code
+    type: VARCHAR
+    nullable: true
+    description: CAMEO country code (3 characters); used by the GDELT Actor1CountryCode and Actor2CountryCode fields.
+  - name: region
+    type: VARCHAR
+    nullable: true
+    description: World region, used to group countries on the globe.
+business_rules:
+  - SCD Type 1. A change is a correction of reference data and overwrites the previous value.
+  - The report types the codes CHAR(3) and CHAR(2). DuckDB does not enforce CHAR lengths, so the DDL uses VARCHAR with a CHECK on the length.
+  - The crosswalk between the three code systems is built in staging. A country that cannot be resolved is quarantined with a reason, never dropped silently.
+  - fips_code and cameo_code are nullable because some entities lack one of them. The quality gate must reject any GDELT event whose actor country cannot be resolved through cameo_code.

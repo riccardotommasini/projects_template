@@ -1,0 +1,57 @@
+name: fact_gdelt_event
+type: table
+layer: production
+grain: One row is one GDELT event between two different states.
+description: >
+  Media-coded interactions between two states from the GDELT 2.0 Events files. The table is not
+  restricted to the visitor-host pairs of fact_visit: that filter is applied in v_visit_event (C-02).
+sources: [GDELT 2.0 Events (zipped tab-separated files, 61 columns)]
+primary_key: [gdelt_event_id]
+columns:
+  - name: gdelt_event_id
+    type: BIGINT
+    nullable: false
+    description: GLOBALEVENTID of the event.
+  - name: event_date_key
+    type: DATE
+    nullable: false
+    foreign_key: dim_date.date_key
+    description: Date of the event (GDELT Day field, converted from YYYYMMDD).
+  - name: actor1_country_key
+    type: INTEGER
+    nullable: false
+    foreign_key: dim_country.country_key
+    description: Country of actor 1 (GDELT Actor1CountryCode, CAMEO code).
+  - name: actor2_country_key
+    type: INTEGER
+    nullable: false
+    foreign_key: dim_country.country_key
+    description: Country of actor 2 (GDELT Actor2CountryCode, CAMEO code).
+  - name: event_type_key
+    type: INTEGER
+    nullable: false
+    foreign_key: dim_event_type.event_type_key
+    description: CAMEO event code of the action.
+  - name: source_url
+    type: VARCHAR
+    nullable: true
+    description: URL of the first article that reported the event (degenerate dimension).
+  - name: goldstein_scale
+    type: DOUBLE
+    nullable: false
+    description: Goldstein score of the event type, between -10 and +10.
+  - name: avg_tone
+    type: DOUBLE
+    nullable: false
+    description: AvgTone, between -100 and +100.
+  - name: num_mentions
+    type: INTEGER
+    nullable: false
+    description: NumMentions, zero or more.
+business_rules:
+  - Duplicates of GLOBALEVENTID are removed and counted by the quality gate.
+  - Events with a blank actor country code cannot form a country pair and are excluded; the exclusion rate must be published in the quality report.
+  - The two actor countries must differ (DDL check). Every event between two states is loaded; v_visit_event keeps those of the visitor-host pairs (C-02).
+  - The GDELT codebook marks avg_tone and num_mentions as legacy fields that describe only the first report of the event in its first 15-minute file. Delta indicators built on them describe the tone of that first article, not of all the coverage.
+  - Goldstein depends on the event type, not on the severity of the specific event (codebook).
+  - Events outside the date range of dim_date are quarantined.

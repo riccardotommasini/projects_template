@@ -1,0 +1,20 @@
+name: dim_visit_type
+type: table
+layer: production
+scd_type: static
+grain: One row per visit category.
+description: Closed list of visit categories defined by the project.
+sources: [Defined by the project; the category is inferred from the Wikipedia trip lists]
+primary_key: [visit_type_key]
+unique: [[visit_type_label]]
+columns:
+  - name: visit_type_key
+    type: INTEGER
+    nullable: false
+    description: Surrogate key.
+  - name: visit_type_label
+    type: VARCHAR
+    nullable: false
+    description: One of state, working, summit, ceremony, unknown.
+business_rules:
+  - The list is closed and enforced by the DDL. "unknown" is used when the category cannot be determined from the source.

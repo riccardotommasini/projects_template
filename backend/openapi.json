@@ -1,0 +1,1730 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "DiploMap API",
+    "description": "Read-only API of the Globe and Network views. DIPLOMAP_API_MODE=sample serves the contract samples; DIPLOMAP_API_MODE=warehouse reads the published DuckDB warehouse and Neo4j.",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/leaders": {
+      "get": {
+        "tags": [
+          "leaders"
+        ],
+        "summary": "List the leaders and their offices",
+        "description": "Leaders of dim_leader, one item per leader_id, with their offices (SCD Type 2 versions).",
+        "operationId": "list_leaders",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/Leader"
+                  },
+                  "type": "array",
+                  "title": "Response List Leaders"
+                },
+                "example": [
+                  {
+                    "leader_id": "Q100001",
+                    "leader_name": "Sample Leader A",
+                    "offices": [
+                      {
+                        "position_title": "President",
+                        "represented_country": {
+                          "iso3_code": "FRA",
+                          "country_name": "France"
+                        },
+                        "valid_from": "2022-05-14",
+                        "valid_to": null
+                      }
+                    ]
+                  },
+                  {
+                    "leader_id": "Q100002",
+                    "leader_name": "Sample Leader B",
+                    "offices": [
+                      {
+                        "position_title": "Minister of Foreign Affairs",
+                        "represented_country": {
+                          "iso3_code": "JPN",
+                          "country_name": "Japan"
+                        },
+                        "valid_from": "2021-11-10",
+                        "valid_to": "2024-09-30"
+                      },
+                      {
+                        "position_title": "Prime Minister",
+                        "represented_country": {
+                          "iso3_code": "JPN",
+                          "country_name": "Japan"
+                        },
+                        "valid_from": "2024-10-01",
+                        "valid_to": null
+                      }
+                    ]
+                  },
+                  {
+                    "leader_id": "Q100003",
+                    "leader_name": "Sample Leader C",
+                    "offices": [
+                      {
+                        "position_title": "Chancellor",
+                        "represented_country": {
+                          "iso3_code": "DEU",
+                          "country_name": "Germany"
+                        },
+                        "valid_from": "2025-01-15",
+                        "valid_to": null
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "503": {
+            "description": "Warehouse or Neo4j unavailable.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/visits": {
+      "get": {
+        "tags": [
+          "visits"
+        ],
+        "summary": "List the visits",
+        "description": "Visits of fact_visit (Globe view), ordered by start date, optionally for one leader.",
+        "operationId": "list_visits",
+        "parameters": [
+          {
+            "name": "leader_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "pattern": "^Q[0-9]+$"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Only the visits of this leader (Wikidata QID).",
+              "title": "Leader Id"
+            },
+            "description": "Only the visits of this leader (Wikidata QID)."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VisitSummary"
+                  },
+                  "title": "Response List Visits"
+                },
+                "example": [
+                  {
+                    "visit_key": 1,
+                    "leader_id": "Q100001",
+                    "leader_name": "Sample Leader A",
+                    "visitor_country": {
+                      "iso3_code": "FRA",
+                      "country_name": "France"
+                    },
+                    "host_country": {
+                      "iso3_code": "JPN",
+                      "country_name": "Japan"
+                    },
+                    "visit_type_label": "state",
+                    "start_date_key": "2025-03-10",
+                    "end_date_key": "2025-03-12",
+                    "duration_days": 3,
+                    "is_multilateral": false,
+                    "matched_in_gdelt": true
+                  },
+                  {
+                    "visit_key": 2,
+                    "leader_id": "Q100001",
+                    "leader_name": "Sample Leader A",
+                    "visitor_country": {
+                      "iso3_code": "FRA",
+                      "country_name": "France"
+                    },
+                    "host_country": {
+                      "iso3_code": "DEU",
+                      "country_name": "Germany"
+                    },
+                    "visit_type_label": "working",
+                    "start_date_key": "2025-04-02",
+                    "end_date_key": "2025-04-02",
+                    "duration_days": 1,
+                    "is_multilateral": false,
+                    "matched_in_gdelt": false
+                  },
+                  {
+                    "visit_key": 3,
+                    "leader_id": "Q100002",
+                    "leader_name": "Sample Leader B",
+                    "visitor_country": {
+                      "iso3_code": "JPN",
+                      "country_name": "Japan"
+                    },
+                    "host_country": {
+                      "iso3_code": "FRA",
+                      "country_name": "France"
+                    },
+                    "visit_type_label": "working",
+                    "start_date_key": "2025-05-20",
+                    "end_date_key": "2025-05-21",
+                    "duration_days": 2,
+                    "is_multilateral": false,
+                    "matched_in_gdelt": true
+                  },
+                  {
+                    "visit_key": 4,
+                    "leader_id": "Q100003",
+                    "leader_name": "Sample Leader C",
+                    "visitor_country": {
+                      "iso3_code": "DEU",
+                      "country_name": "Germany"
+                    },
+                    "host_country": {
+                      "iso3_code": "JPN",
+                      "country_name": "Japan"
+                    },
+                    "visit_type_label": "summit",
+                    "start_date_key": "2025-06-15",
+                    "end_date_key": "2025-06-17",
+                    "duration_days": 3,
+                    "is_multilateral": true,
+                    "matched_in_gdelt": true
+                  }
+                ]
+              }
+            }
+          },
+          "503": {
+            "description": "Warehouse or Neo4j unavailable.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/visits/{visit_key}": {
+      "get": {
+        "tags": [
+          "visits"
+        ],
+        "summary": "Get one visit",
+        "description": "One visit with the office of its leader, its PRE and POST windows and its lineage. In sample mode only visit 1 has a sample: visits 2 to 4 answer 404 \"no sample for visit k\".",
+        "operationId": "get_visit",
+        "parameters": [
+          {
+            "name": "visit_key",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "description": "Public identifier of the visit.",
+              "title": "Visit Key"
+            },
+            "description": "Public identifier of the visit."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VisitDetail"
+                },
+                "example": {
+                  "visit_key": 1,
+                  "leader_id": "Q100001",
+                  "leader_name": "Sample Leader A",
+                  "visitor_country": {
+                    "iso3_code": "FRA",
+                    "country_name": "France"
+                  },
+                  "host_country": {
+                    "iso3_code": "JPN",
+                    "country_name": "Japan"
+                  },
+                  "visit_type_label": "state",
+                  "start_date_key": "2025-03-10",
+                  "end_date_key": "2025-03-12",
+                  "duration_days": 3,
+                  "is_multilateral": false,
+                  "matched_in_gdelt": true,
+                  "position_title": "President",
+                  "pre_window_start": "2025-02-23",
+                  "pre_window_end": "2025-03-09",
+                  "post_window_start": "2025-03-13",
+                  "post_window_end": "2025-03-27",
+                  "wiki_page_id": 90000001,
+                  "wiki_revision_id": 1200000001
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Warehouse or Neo4j unavailable.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No visit with this visit_key.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/visits/{visit_key}/kpis": {
+      "get": {
+        "tags": [
+          "visits"
+        ],
+        "summary": "Get the PRE vs POST indicators of one visit",
+        "description": "One row of v_kpi_visit. Null means and deltas when a window has no event; counts always present. In sample mode only visit 1 has a sample: visits 2 to 4 answer 404 \"no sample for visit k\".",
+        "operationId": "get_visit_kpis",
+        "parameters": [
+          {
+            "name": "visit_key",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "description": "Public identifier of the visit.",
+              "title": "Visit Key"
+            },
+            "description": "Public identifier of the visit."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VisitKpis"
+                },
+                "example": {
+                  "visit_key": 1,
+                  "n_events_pre": 3,
+                  "n_events_post": 2,
+                  "coop_share_pre": 0.6666666666666666,
+                  "coop_share_post": 1.0,
+                  "delta_coop_share": 0.33333333333333337,
+                  "tone_pre": -0.5,
+                  "tone_post": 2.0,
+                  "delta_tone": 2.5,
+                  "goldstein_pre": 1.3,
+                  "goldstein_post": 5.4,
+                  "delta_goldstein": 4.1000000000000005,
+                  "is_low_volume": true,
+                  "has_overlap": false
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Warehouse or Neo4j unavailable.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No visit with this visit_key.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/visits/{visit_key}/events": {
+      "get": {
+        "tags": [
+          "visits"
+        ],
+        "summary": "List the GDELT events attributed to one visit",
+        "description": "Rows of v_visit_event for the visit, ordered by event date: events of the PRE and POST windows. A visit without events answers an empty list. In sample mode only visit 1 has a sample: visits 2 to 4 answer 404 \"no sample for visit k\".",
+        "operationId": "get_visit_events",
+        "parameters": [
+          {
+            "name": "visit_key",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "description": "Public identifier of the visit.",
+              "title": "Visit Key"
+            },
+            "description": "Public identifier of the visit."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VisitEvent"
+                  },
+                  "title": "Response Get Visit Events"
+                },
+                "example": [
+                  {
+                    "visit_key": 1,
+                    "gdelt_event_id": 1220000001,
+                    "visit_window": "PRE",
+                    "day_offset": -10,
+                    "event_date_key": "2025-02-28",
+                    "actor1_country": {
+                      "iso3_code": "FRA",
+                      "country_name": "France"
+                    },
+                    "actor2_country": {
+                      "iso3_code": "JPN",
+                      "country_name": "Japan"
+                    },
+                    "cameo_code": "036",
+                    "is_cooperative": true,
+                    "goldstein_scale": 4.0,
+                    "avg_tone": 1.25,
+                    "num_mentions": 6,
+                    "source_url": "https://news.example.com/2025/02/28/sample-1"
+                  },
+                  {
+                    "visit_key": 1,
+                    "gdelt_event_id": 1220000002,
+                    "visit_window": "PRE",
+                    "day_offset": -5,
+                    "event_date_key": "2025-03-05",
+                    "actor1_country": {
+                      "iso3_code": "JPN",
+                      "country_name": "Japan"
+                    },
+                    "actor2_country": {
+                      "iso3_code": "FRA",
+                      "country_name": "France"
+                    },
+                    "cameo_code": "112",
+                    "is_cooperative": false,
+                    "goldstein_scale": -2.0,
+                    "avg_tone": -3.5,
+                    "num_mentions": 3,
+                    "source_url": "https://news.example.com/2025/03/05/sample-2"
+                  },
+                  {
+                    "visit_key": 1,
+                    "gdelt_event_id": 1220000003,
+                    "visit_window": "PRE",
+                    "day_offset": -1,
+                    "event_date_key": "2025-03-09",
+                    "actor1_country": {
+                      "iso3_code": "FRA",
+                      "country_name": "France"
+                    },
+                    "actor2_country": {
+                      "iso3_code": "JPN",
+                      "country_name": "Japan"
+                    },
+                    "cameo_code": "042",
+                    "is_cooperative": true,
+                    "goldstein_scale": 1.9,
+                    "avg_tone": 0.75,
+                    "num_mentions": 12,
+                    "source_url": null
+                  },
+                  {
+                    "visit_key": 1,
+                    "gdelt_event_id": 1220000004,
+                    "visit_window": "POST",
+                    "day_offset": 2,
+                    "event_date_key": "2025-03-14",
+                    "actor1_country": {
+                      "iso3_code": "JPN",
+                      "country_name": "Japan"
+                    },
+                    "actor2_country": {
+                      "iso3_code": "FRA",
+                      "country_name": "France"
+                    },
+                    "cameo_code": "057",
+                    "is_cooperative": true,
+                    "goldstein_scale": 8.0,
+                    "avg_tone": 2.5,
+                    "num_mentions": 9,
+                    "source_url": "https://news.example.com/2025/03/14/sample-4"
+                  },
+                  {
+                    "visit_key": 1,
+                    "gdelt_event_id": 1220000005,
+                    "visit_window": "POST",
+                    "day_offset": 8,
+                    "event_date_key": "2025-03-20",
+                    "actor1_country": {
+                      "iso3_code": "FRA",
+                      "country_name": "France"
+                    },
+                    "actor2_country": {
+                      "iso3_code": "JPN",
+                      "country_name": "Japan"
+                    },
+                    "cameo_code": "043",
+                    "is_cooperative": true,
+                    "goldstein_scale": 2.8,
+                    "avg_tone": 1.5,
+                    "num_mentions": 4,
+                    "source_url": "https://news.example.com/2025/03/20/sample-5"
+                  }
+                ]
+              }
+            }
+          },
+          "503": {
+            "description": "Warehouse or Neo4j unavailable.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No visit with this visit_key.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/network": {
+      "get": {
+        "tags": [
+          "network"
+        ],
+        "summary": "Get the leader-country network",
+        "description": "Leader VISITED and REPRESENTS Country graph (Neo4j projection), shared destinations, reciprocal visits.",
+        "operationId": "get_network",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Network"
+                },
+                "example": {
+                  "nodes": [
+                    {
+                      "id": "Q100001",
+                      "type": "leader",
+                      "label": "Sample Leader A",
+                      "iso3_code": null
+                    },
+                    {
+                      "id": "Q100002",
+                      "type": "leader",
+                      "label": "Sample Leader B",
+                      "iso3_code": null
+                    },
+                    {
+                      "id": "Q100003",
+                      "type": "leader",
+                      "label": "Sample Leader C",
+                      "iso3_code": null
+                    },
+                    {
+                      "id": "DEU",
+                      "type": "country",
+                      "label": "Germany",
+                      "iso3_code": "DEU"
+                    },
+                    {
+                      "id": "FRA",
+                      "type": "country",
+                      "label": "France",
+                      "iso3_code": "FRA"
+                    },
+                    {
+                      "id": "JPN",
+                      "type": "country",
+                      "label": "Japan",
+                      "iso3_code": "JPN"
+                    }
+                  ],
+                  "edges": [
+                    {
+                      "source": "Q100001",
+                      "target": "FRA",
+                      "type": "REPRESENTS",
+                      "n_visits": null,
+                      "first_visit": null
+                    },
+                    {
+                      "source": "Q100001",
+                      "target": "DEU",
+                      "type": "VISITED",
+                      "n_visits": 1,
+                      "first_visit": "2025-04-02"
+                    },
+                    {
+                      "source": "Q100001",
+                      "target": "JPN",
+                      "type": "VISITED",
+                      "n_visits": 1,
+                      "first_visit": "2025-03-10"
+                    },
+                    {
+                      "source": "Q100002",
+                      "target": "JPN",
+                      "type": "REPRESENTS",
+                      "n_visits": null,
+                      "first_visit": null
+                    },
+                    {
+                      "source": "Q100002",
+                      "target": "FRA",
+                      "type": "VISITED",
+                      "n_visits": 1,
+                      "first_visit": "2025-05-20"
+                    },
+                    {
+                      "source": "Q100003",
+                      "target": "DEU",
+                      "type": "REPRESENTS",
+                      "n_visits": null,
+                      "first_visit": null
+                    },
+                    {
+                      "source": "Q100003",
+                      "target": "JPN",
+                      "type": "VISITED",
+                      "n_visits": 1,
+                      "first_visit": "2025-06-15"
+                    }
+                  ],
+                  "shared_destinations": [
+                    {
+                      "leader_a_id": "Q100001",
+                      "leader_b_id": "Q100003",
+                      "n_shared": 1,
+                      "shared_countries": [
+                        "JPN"
+                      ]
+                    }
+                  ],
+                  "reciprocal_visits": [
+                    {
+                      "country_a": "FRA",
+                      "country_b": "JPN",
+                      "leaders_a_to_b": [
+                        "Q100001"
+                      ],
+                      "leaders_b_to_a": [
+                        "Q100002"
+                      ],
+                      "first_a_to_b": "2025-03-10",
+                      "first_b_to_a": "2025-05-20"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Warehouse or Neo4j unavailable.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/health": {
+      "get": {
+        "tags": [
+          "health"
+        ],
+        "summary": "Health",
+        "operationId": "health",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": {
+                    "type": "string"
+                  },
+                  "type": "object",
+                  "title": "Response Health"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Country": {
+        "properties": {
+          "iso3_code": {
+            "type": "string",
+            "pattern": "^[A-Z]{3}$",
+            "title": "Iso3 Code",
+            "description": "ISO 3166 alpha-3 code.",
+            "examples": [
+              "FRA"
+            ]
+          },
+          "country_name": {
+            "type": "string",
+            "title": "Country Name",
+            "description": "English name of the country."
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "iso3_code",
+          "country_name"
+        ],
+        "title": "Country",
+        "description": "A country of dim_country, nested wherever a fact holds a country key."
+      },
+      "EdgeType": {
+        "type": "string",
+        "enum": [
+          "VISITED",
+          "REPRESENTS"
+        ],
+        "title": "EdgeType"
+      },
+      "ErrorResponse": {
+        "properties": {
+          "detail": {
+            "type": "string",
+            "title": "Detail",
+            "examples": [
+              "not implemented"
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "detail"
+        ],
+        "title": "ErrorResponse",
+        "description": "Body of the 404 and 501 responses."
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "Leader": {
+        "properties": {
+          "leader_id": {
+            "type": "string",
+            "pattern": "^Q[0-9]+$",
+            "title": "Leader Id",
+            "description": "Wikidata QID.",
+            "examples": [
+              "Q100001"
+            ]
+          },
+          "leader_name": {
+            "type": "string",
+            "title": "Leader Name",
+            "description": "Full name (latest version)."
+          },
+          "offices": {
+            "items": {
+              "$ref": "#/components/schemas/Office"
+            },
+            "type": "array",
+            "minItems": 1,
+            "title": "Offices"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "leader_id",
+          "leader_name",
+          "offices"
+        ],
+        "title": "Leader",
+        "description": "A leader (one item per leader_id) with the offices of dim_leader, oldest first."
+      },
+      "Network": {
+        "properties": {
+          "nodes": {
+            "items": {
+              "$ref": "#/components/schemas/NetworkNode"
+            },
+            "type": "array",
+            "title": "Nodes"
+          },
+          "edges": {
+            "items": {
+              "$ref": "#/components/schemas/NetworkEdge"
+            },
+            "type": "array",
+            "title": "Edges"
+          },
+          "shared_destinations": {
+            "items": {
+              "$ref": "#/components/schemas/SharedDestination"
+            },
+            "type": "array",
+            "title": "Shared Destinations"
+          },
+          "reciprocal_visits": {
+            "items": {
+              "$ref": "#/components/schemas/ReciprocalVisit"
+            },
+            "type": "array",
+            "title": "Reciprocal Visits"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "nodes",
+          "edges",
+          "shared_destinations",
+          "reciprocal_visits"
+        ],
+        "title": "Network",
+        "description": "Network view: the leader-country graph plus the two analyses of business question 5."
+      },
+      "NetworkEdge": {
+        "properties": {
+          "source": {
+            "type": "string",
+            "title": "Source",
+            "description": "Leader id."
+          },
+          "target": {
+            "type": "string",
+            "title": "Target",
+            "description": "Country id (ISO3)."
+          },
+          "type": {
+            "$ref": "#/components/schemas/EdgeType"
+          },
+          "n_visits": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "minimum": 1.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "N Visits",
+            "description": "Number of visits; null for REPRESENTS."
+          },
+          "first_visit": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "First Visit",
+            "description": "Start date of the first visit; null for REPRESENTS."
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "source",
+          "target",
+          "type",
+          "n_visits",
+          "first_visit"
+        ],
+        "title": "NetworkEdge",
+        "description": "Leader VISITED Country, or Leader REPRESENTS Country (one edge per leader and country)."
+      },
+      "NetworkNode": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "type": {
+            "$ref": "#/components/schemas/NodeType"
+          },
+          "label": {
+            "type": "string",
+            "title": "Label",
+            "description": "Leader name or country name."
+          },
+          "iso3_code": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[A-Z]{3}$",
+                "description": "ISO 3166 alpha-3 code.",
+                "examples": [
+                  "FRA"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Iso3 Code",
+            "description": "Set for countries, null for leaders."
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "type",
+          "label",
+          "iso3_code"
+        ],
+        "title": "NetworkNode",
+        "description": "A Leader or Country node. id is the QID of a leader or the ISO3 code of a country."
+      },
+      "NodeType": {
+        "type": "string",
+        "enum": [
+          "leader",
+          "country"
+        ],
+        "title": "NodeType"
+      },
+      "Office": {
+        "properties": {
+          "position_title": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Position Title",
+            "description": "Office held, for example President."
+          },
+          "represented_country": {
+            "$ref": "#/components/schemas/Country"
+          },
+          "valid_from": {
+            "type": "string",
+            "format": "date",
+            "title": "Valid From",
+            "description": "First day in office."
+          },
+          "valid_to": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Valid To",
+            "description": "Last day in office, inclusive. Null while the office is held."
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "position_title",
+          "represented_country",
+          "valid_from",
+          "valid_to"
+        ],
+        "title": "Office",
+        "description": "One dim_leader version (SCD Type 2): an office held during a period."
+      },
+      "ReciprocalVisit": {
+        "properties": {
+          "country_a": {
+            "type": "string",
+            "pattern": "^[A-Z]{3}$",
+            "title": "Country A",
+            "description": "ISO 3166 alpha-3 code.",
+            "examples": [
+              "FRA"
+            ]
+          },
+          "country_b": {
+            "type": "string",
+            "pattern": "^[A-Z]{3}$",
+            "title": "Country B",
+            "description": "ISO 3166 alpha-3 code.",
+            "examples": [
+              "FRA"
+            ]
+          },
+          "leaders_a_to_b": {
+            "items": {
+              "type": "string",
+              "pattern": "^Q[0-9]+$",
+              "description": "Wikidata QID.",
+              "examples": [
+                "Q100001"
+              ]
+            },
+            "type": "array",
+            "minItems": 1,
+            "title": "Leaders A To B"
+          },
+          "leaders_b_to_a": {
+            "items": {
+              "type": "string",
+              "pattern": "^Q[0-9]+$",
+              "description": "Wikidata QID.",
+              "examples": [
+                "Q100001"
+              ]
+            },
+            "type": "array",
+            "minItems": 1,
+            "title": "Leaders B To A"
+          },
+          "first_a_to_b": {
+            "type": "string",
+            "format": "date",
+            "title": "First A To B"
+          },
+          "first_b_to_a": {
+            "type": "string",
+            "format": "date",
+            "title": "First B To A"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "country_a",
+          "country_b",
+          "leaders_a_to_b",
+          "leaders_b_to_a",
+          "first_a_to_b",
+          "first_b_to_a"
+        ],
+        "title": "ReciprocalVisit",
+        "description": "A country pair where a leader of each country visited the other one (country_a < country_b)."
+      },
+      "SharedDestination": {
+        "properties": {
+          "leader_a_id": {
+            "type": "string",
+            "pattern": "^Q[0-9]+$",
+            "title": "Leader A Id",
+            "description": "Wikidata QID.",
+            "examples": [
+              "Q100001"
+            ]
+          },
+          "leader_b_id": {
+            "type": "string",
+            "pattern": "^Q[0-9]+$",
+            "title": "Leader B Id",
+            "description": "Wikidata QID.",
+            "examples": [
+              "Q100001"
+            ]
+          },
+          "n_shared": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "N Shared"
+          },
+          "shared_countries": {
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Z]{3}$",
+              "description": "ISO 3166 alpha-3 code.",
+              "examples": [
+                "FRA"
+              ]
+            },
+            "type": "array",
+            "minItems": 1,
+            "title": "Shared Countries"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "leader_a_id",
+          "leader_b_id",
+          "n_shared",
+          "shared_countries"
+        ],
+        "title": "SharedDestination",
+        "description": "Two leaders who visited the same countries (leader_a_id < leader_b_id)."
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      },
+      "VisitDetail": {
+        "properties": {
+          "visit_key": {
+            "type": "integer",
+            "title": "Visit Key",
+            "description": "Public identifier of the visit."
+          },
+          "leader_id": {
+            "type": "string",
+            "pattern": "^Q[0-9]+$",
+            "title": "Leader Id",
+            "description": "Wikidata QID.",
+            "examples": [
+              "Q100001"
+            ]
+          },
+          "leader_name": {
+            "type": "string",
+            "title": "Leader Name"
+          },
+          "visitor_country": {
+            "$ref": "#/components/schemas/Country",
+            "description": "Country represented by the leader on the start date."
+          },
+          "host_country": {
+            "$ref": "#/components/schemas/Country",
+            "description": "Country visited."
+          },
+          "visit_type_label": {
+            "$ref": "#/components/schemas/VisitTypeLabel"
+          },
+          "start_date_key": {
+            "type": "string",
+            "format": "date",
+            "title": "Start Date Key",
+            "description": "First day of the visit."
+          },
+          "end_date_key": {
+            "type": "string",
+            "format": "date",
+            "title": "End Date Key",
+            "description": "Last day of the visit."
+          },
+          "duration_days": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Duration Days",
+            "description": "Length in days, both ends included."
+          },
+          "is_multilateral": {
+            "type": "boolean",
+            "title": "Is Multilateral",
+            "description": "True for a multilateral event such as a summit."
+          },
+          "matched_in_gdelt": {
+            "type": "boolean",
+            "title": "Matched In Gdelt",
+            "description": "True when GDELT also codes the visit (CAMEO 042 or 043)."
+          },
+          "position_title": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Position Title",
+            "description": "Office held by the leader on the start date."
+          },
+          "pre_window_start": {
+            "type": "string",
+            "format": "date",
+            "title": "Pre Window Start",
+            "description": "Start date minus 15 days."
+          },
+          "pre_window_end": {
+            "type": "string",
+            "format": "date",
+            "title": "Pre Window End",
+            "description": "Start date minus 1 day."
+          },
+          "post_window_start": {
+            "type": "string",
+            "format": "date",
+            "title": "Post Window Start",
+            "description": "End date plus 1 day."
+          },
+          "post_window_end": {
+            "type": "string",
+            "format": "date",
+            "title": "Post Window End",
+            "description": "End date plus 15 days."
+          },
+          "wiki_page_id": {
+            "type": "integer",
+            "title": "Wiki Page Id",
+            "description": "Lineage: scraped Wikipedia page."
+          },
+          "wiki_revision_id": {
+            "type": "integer",
+            "title": "Wiki Revision Id",
+            "description": "Lineage: revision of the page that was scraped."
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "visit_key",
+          "leader_id",
+          "leader_name",
+          "visitor_country",
+          "host_country",
+          "visit_type_label",
+          "start_date_key",
+          "end_date_key",
+          "duration_days",
+          "is_multilateral",
+          "matched_in_gdelt",
+          "position_title",
+          "pre_window_start",
+          "pre_window_end",
+          "post_window_start",
+          "post_window_end",
+          "wiki_page_id",
+          "wiki_revision_id"
+        ],
+        "title": "VisitDetail",
+        "description": "A visit with the office of the leader, its PRE and POST windows and its lineage."
+      },
+      "VisitEvent": {
+        "properties": {
+          "visit_key": {
+            "type": "integer",
+            "title": "Visit Key"
+          },
+          "gdelt_event_id": {
+            "type": "integer",
+            "title": "Gdelt Event Id",
+            "description": "GLOBALEVENTID."
+          },
+          "visit_window": {
+            "$ref": "#/components/schemas/VisitWindow"
+          },
+          "day_offset": {
+            "type": "integer",
+            "maximum": 15.0,
+            "minimum": -15.0,
+            "title": "Day Offset",
+            "description": "Days from the visit: -15..-1 before the start, +1..+15 after the end."
+          },
+          "event_date_key": {
+            "type": "string",
+            "format": "date",
+            "title": "Event Date Key",
+            "description": "Date of the event."
+          },
+          "actor1_country": {
+            "$ref": "#/components/schemas/Country"
+          },
+          "actor2_country": {
+            "$ref": "#/components/schemas/Country"
+          },
+          "cameo_code": {
+            "type": "string",
+            "pattern": "^[0-9]{2,4}$",
+            "title": "Cameo Code",
+            "description": "CAMEO event code, for example 042."
+          },
+          "is_cooperative": {
+            "type": "boolean",
+            "title": "Is Cooperative",
+            "description": "True for quad classes 1 and 2."
+          },
+          "goldstein_scale": {
+            "type": "number",
+            "maximum": 10.0,
+            "minimum": -10.0,
+            "title": "Goldstein Scale"
+          },
+          "avg_tone": {
+            "type": "number",
+            "maximum": 100.0,
+            "minimum": -100.0,
+            "title": "Avg Tone",
+            "description": "Tone of the first article."
+          },
+          "num_mentions": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Num Mentions"
+          },
+          "source_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Url",
+            "description": "URL of the first article."
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "visit_key",
+          "gdelt_event_id",
+          "visit_window",
+          "day_offset",
+          "event_date_key",
+          "actor1_country",
+          "actor2_country",
+          "cameo_code",
+          "is_cooperative",
+          "goldstein_scale",
+          "avg_tone",
+          "num_mentions",
+          "source_url"
+        ],
+        "title": "VisitEvent",
+        "description": "A GDELT event attributed to the PRE or POST window of a visit (one row of v_visit_event)."
+      },
+      "VisitKpis": {
+        "properties": {
+          "visit_key": {
+            "type": "integer",
+            "title": "Visit Key"
+          },
+          "n_events_pre": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "N Events Pre",
+            "description": "Events in the PRE window."
+          },
+          "n_events_post": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "N Events Post",
+            "description": "Events in the POST window."
+          },
+          "coop_share_pre": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 1.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Coop Share Pre",
+            "description": "Share of cooperative events (quad class 1-2) in PRE."
+          },
+          "coop_share_post": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 1.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Coop Share Post",
+            "description": "Same in POST."
+          },
+          "delta_coop_share": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 200.0,
+                "minimum": -200.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Delta Coop Share",
+            "description": "POST minus PRE. Headline indicator."
+          },
+          "tone_pre": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 100.0,
+                "minimum": -100.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Tone Pre",
+            "description": "Mean media tone of the coverage in PRE."
+          },
+          "tone_post": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 100.0,
+                "minimum": -100.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Tone Post",
+            "description": "Same in POST."
+          },
+          "delta_tone": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 200.0,
+                "minimum": -200.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Delta Tone",
+            "description": "POST minus PRE. Label: \"media tone of the coverage\"."
+          },
+          "goldstein_pre": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 10.0,
+                "minimum": -10.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Goldstein Pre",
+            "description": "Mean Goldstein score in PRE."
+          },
+          "goldstein_post": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 10.0,
+                "minimum": -10.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Goldstein Post",
+            "description": "Same in POST."
+          },
+          "delta_goldstein": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 200.0,
+                "minimum": -200.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Delta Goldstein",
+            "description": "POST minus PRE. Label: \"event-type mix\"."
+          },
+          "is_low_volume": {
+            "type": "boolean",
+            "title": "Is Low Volume",
+            "description": "True when PRE or POST holds fewer than 10 events."
+          },
+          "has_overlap": {
+            "type": "boolean",
+            "title": "Has Overlap",
+            "description": "True when another visit of the same country pair overlaps this one."
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "visit_key",
+          "n_events_pre",
+          "n_events_post",
+          "coop_share_pre",
+          "coop_share_post",
+          "delta_coop_share",
+          "tone_pre",
+          "tone_post",
+          "delta_tone",
+          "goldstein_pre",
+          "goldstein_post",
+          "delta_goldstein",
+          "is_low_volume",
+          "has_overlap"
+        ],
+        "title": "VisitKpis",
+        "description": "PRE vs POST indicators of one visit (one row of v_kpi_visit).\n\nA window without events gives null means and null deltas, with a count of 0.\nThe counts are always returned next to the deltas."
+      },
+      "VisitSummary": {
+        "properties": {
+          "visit_key": {
+            "type": "integer",
+            "title": "Visit Key",
+            "description": "Public identifier of the visit."
+          },
+          "leader_id": {
+            "type": "string",
+            "pattern": "^Q[0-9]+$",
+            "title": "Leader Id",
+            "description": "Wikidata QID.",
+            "examples": [
+              "Q100001"
+            ]
+          },
+          "leader_name": {
+            "type": "string",
+            "title": "Leader Name"
+          },
+          "visitor_country": {
+            "$ref": "#/components/schemas/Country",
+            "description": "Country represented by the leader on the start date."
+          },
+          "host_country": {
+            "$ref": "#/components/schemas/Country",
+            "description": "Country visited."
+          },
+          "visit_type_label": {
+            "$ref": "#/components/schemas/VisitTypeLabel"
+          },
+          "start_date_key": {
+            "type": "string",
+            "format": "date",
+            "title": "Start Date Key",
+            "description": "First day of the visit."
+          },
+          "end_date_key": {
+            "type": "string",
+            "format": "date",
+            "title": "End Date Key",
+            "description": "Last day of the visit."
+          },
+          "duration_days": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Duration Days",
+            "description": "Length in days, both ends included."
+          },
+          "is_multilateral": {
+            "type": "boolean",
+            "title": "Is Multilateral",
+            "description": "True for a multilateral event such as a summit."
+          },
+          "matched_in_gdelt": {
+            "type": "boolean",
+            "title": "Matched In Gdelt",
+            "description": "True when GDELT also codes the visit (CAMEO 042 or 043)."
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "visit_key",
+          "leader_id",
+          "leader_name",
+          "visitor_country",
+          "host_country",
+          "visit_type_label",
+          "start_date_key",
+          "end_date_key",
+          "duration_days",
+          "is_multilateral",
+          "matched_in_gdelt"
+        ],
+        "title": "VisitSummary",
+        "description": "One row of fact_visit, with its leader and countries resolved."
+      },
+      "VisitTypeLabel": {
+        "type": "string",
+        "enum": [
+          "state",
+          "working",
+          "summit",
+          "ceremony",
+          "unknown"
+        ],
+        "title": "VisitTypeLabel",
+        "description": "Closed list of dim_visit_type."
+      },
+      "VisitWindow": {
+        "type": "string",
+        "enum": [
+          "PRE",
+          "POST"
+        ],
+        "title": "VisitWindow",
+        "description": "Window of an attributed event: 15 days before the start date or after the end date."
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+name: dim_leader
+type: table
+layer: production
+scd_type: 2
+grain: One row per leader and office period.
+description: >
+  Leaders with the office they held and the country they represented. SCD Type 2,
+  because a visit must stay linked to the office held when it took place.
+sources: [Wikidata (SPARQL)]
+primary_key: [leader_key]
+unique: [[leader_id, valid_from]]
+columns:
+  - name: leader_key
+    type: INTEGER
+    nullable: false
+    description: Surrogate key, one per version.
+  - name: leader_id
+    type: VARCHAR
+    nullable: false
+    description: Wikidata QID. Stable business key across versions.
+  - name: leader_name
+    type: VARCHAR
+    nullable: false
+    description: Full name.
+  - name: position_title
+    type: VARCHAR
+    nullable: true
+    description: Office held (for example President, Prime Minister).
+  - name: represented_country_key
+    type: INTEGER
+    nullable: false
+    foreign_key: dim_country.country_key
+    description: Country represented by the leader in this office.
+  - name: valid_from
+    type: DATE
+    nullable: false
+    description: First day in office.
+  - name: valid_to
+    type: DATE
+    nullable: true
+    description: Last day in office, inclusive. NULL means the office is still held.
+business_rules:
+  - fact_visit.leader_key points to the version valid on the first day of the visit, that is valid_from <= start date and (valid_to is NULL or valid_to >= start date).
+  - Periods of the same leader_id must not overlap (cross-row rule, checked by the quality gate).
+  - leader_id must look like a Wikidata QID, ^Q[0-9]+$ (checked by the quality gate).
+open_questions:
+  - Wikidata does not always give the start of an office. Decide which default valid_from the loader uses in that case, and document it.

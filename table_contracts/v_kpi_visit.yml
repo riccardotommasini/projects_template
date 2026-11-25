@@ -1,0 +1,33 @@
+name: v_kpi_visit
+type: view
+layer: serving
+grain: One row per visit (every row of fact_visit, with or without events).
+description: >
+  PRE vs POST indicators of each visit, computed on the events of v_visit_event. Read with
+  warehouse/profiling/gdelt_measures.md: the deltas describe the media coverage of the country pair,
+  not the relationship itself. Served by the API (format to validate with P1) and shown in the Globe view.
+sources: [fact_visit, v_visit_event]
+primary_key: [visit_key]
+columns:
+  - {name: visit_key, type: BIGINT, nullable: false, description: Visit (fact_visit).}
+  - {name: n_events_pre, type: BIGINT, nullable: false, description: Events in the PRE window. Always shown next to the deltas.}
+  - {name: n_events_post, type: BIGINT, nullable: false, description: Events in the POST window.}
+  - {name: coop_share_pre, type: DOUBLE, nullable: true, description: "Share of cooperative events (quad class 1-2) in PRE, 0..1. Headline indicator."}
+  - {name: coop_share_post, type: DOUBLE, nullable: true, description: Same in POST.}
+  - {name: delta_coop_share, type: DOUBLE, nullable: true, description: POST minus PRE.}
+  - {name: tone_pre, type: DOUBLE, nullable: true, description: "Mean media tone of the coverage in PRE (AvgTone of the first article)."}
+  - {name: tone_post, type: DOUBLE, nullable: true, description: Same in POST.}
+  - {name: delta_tone, type: DOUBLE, nullable: true, description: POST minus PRE. Label it "media tone of the coverage".}
+  - {name: goldstein_pre, type: DOUBLE, nullable: true, description: Mean Goldstein score in PRE, that is the mix of event types.}
+  - {name: goldstein_post, type: DOUBLE, nullable: true, description: Same in POST.}
+  - {name: delta_goldstein, type: DOUBLE, nullable: true, description: POST minus PRE. Label it "event-type mix"; supporting figure.}
+  - {name: is_low_volume, type: BOOLEAN, nullable: false, description: True when PRE or POST holds fewer than 10 events; the deltas are then fragile.}
+  - {name: has_overlap, type: BOOLEAN, nullable: false, description: "True when another visit of the same country pair (either direction) has a PRE..POST span that meets this one."}
+business_rules:
+  - Means are per event, not weighted by mentions.
+  - A window without events gives NULL means and a NULL delta; counts are then 0.
+  - Tone and Goldstein correlate (r = 0.35, P2-11); moving together, they are one signal, not two.
+  - A positive POST delta of Goldstein or cooperative share is partly mechanical, since the visit itself adds cooperative events.
+  - Overlapping visits keep their events (C-02); has_overlap tells that their effects cannot be separated.
+open_questions:
+  - The low-volume threshold (10 events) comes from the spike week; revisit it once the real visits are loaded.

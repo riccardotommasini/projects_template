@@ -1,0 +1,26 @@
+{
+  "visit_key": 1,
+  "leader_id": "Q100001",
+  "leader_name": "Sample Leader A",
+  "visitor_country": {
+    "iso3_code": "FRA",
+    "country_name": "France"
+  },
+  "host_country": {
+    "iso3_code": "JPN",
+    "country_name": "Japan"
+  },
+  "visit_type_label": "state",
+  "start_date_key": "2025-03-10",
+  "end_date_key": "2025-03-12",
+  "duration_days": 3,
+  "is_multilateral": false,
+  "matched_in_gdelt": true,
+  "position_title": "President",
+  "pre_window_start": "2025-02-23",
+  "pre_window_end": "2025-03-09",
+  "post_window_start": "2025-03-13",
+  "post_window_end": "2025-03-27",
+  "wiki_page_id": 90000001,
+  "wiki_revision_id": 1200000001
+}

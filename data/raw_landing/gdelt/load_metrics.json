@@ -1,0 +1,4043 @@
+{
+  "database": "data\\warehouse\\diplomap.duckdb",
+  "table": "stg_gdelt_raw",
+  "files_processed": 672,
+  "rows_loaded": 813679,
+  "unreadable_rows": 0,
+  "elapsed_seconds": 81.454,
+  "peak_memory_bytes": 223383552,
+  "file_results": [
+    {
+      "file": "20241217000000.export.CSV.zip",
+      "raw_rows": 2981,
+      "loaded_rows": 2981,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217001500.export.CSV.zip",
+      "raw_rows": 2443,
+      "loaded_rows": 2443,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217003000.export.CSV.zip",
+      "raw_rows": 2302,
+      "loaded_rows": 2302,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217004500.export.CSV.zip",
+      "raw_rows": 2125,
+      "loaded_rows": 2125,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217010000.export.CSV.zip",
+      "raw_rows": 2053,
+      "loaded_rows": 2053,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217011500.export.CSV.zip",
+      "raw_rows": 1344,
+      "loaded_rows": 1344,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217013000.export.CSV.zip",
+      "raw_rows": 1928,
+      "loaded_rows": 1928,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217014500.export.CSV.zip",
+      "raw_rows": 1440,
+      "loaded_rows": 1440,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217020000.export.CSV.zip",
+      "raw_rows": 1788,
+      "loaded_rows": 1788,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217021500.export.CSV.zip",
+      "raw_rows": 1501,
+      "loaded_rows": 1501,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217023000.export.CSV.zip",
+      "raw_rows": 1580,
+      "loaded_rows": 1580,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217024500.export.CSV.zip",
+      "raw_rows": 1074,
+      "loaded_rows": 1074,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217030000.export.CSV.zip",
+      "raw_rows": 1249,
+      "loaded_rows": 1249,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217031500.export.CSV.zip",
+      "raw_rows": 1307,
+      "loaded_rows": 1307,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217033000.export.CSV.zip",
+      "raw_rows": 1270,
+      "loaded_rows": 1270,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217034500.export.CSV.zip",
+      "raw_rows": 1520,
+      "loaded_rows": 1520,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217040000.export.CSV.zip",
+      "raw_rows": 1275,
+      "loaded_rows": 1275,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217041500.export.CSV.zip",
+      "raw_rows": 1365,
+      "loaded_rows": 1365,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217043000.export.CSV.zip",
+      "raw_rows": 1141,
+      "loaded_rows": 1141,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217044500.export.CSV.zip",
+      "raw_rows": 1062,
+      "loaded_rows": 1062,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217050000.export.CSV.zip",
+      "raw_rows": 1126,
+      "loaded_rows": 1126,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217051500.export.CSV.zip",
+      "raw_rows": 937,
+      "loaded_rows": 937,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217053000.export.CSV.zip",
+      "raw_rows": 845,
+      "loaded_rows": 845,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217054500.export.CSV.zip",
+      "raw_rows": 1111,
+      "loaded_rows": 1111,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217060000.export.CSV.zip",
+      "raw_rows": 1069,
+      "loaded_rows": 1069,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217061500.export.CSV.zip",
+      "raw_rows": 1211,
+      "loaded_rows": 1211,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217063000.export.CSV.zip",
+      "raw_rows": 1433,
+      "loaded_rows": 1433,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217064500.export.CSV.zip",
+      "raw_rows": 965,
+      "loaded_rows": 965,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217070000.export.CSV.zip",
+      "raw_rows": 1107,
+      "loaded_rows": 1107,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217071500.export.CSV.zip",
+      "raw_rows": 1203,
+      "loaded_rows": 1203,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217073000.export.CSV.zip",
+      "raw_rows": 1207,
+      "loaded_rows": 1207,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217074500.export.CSV.zip",
+      "raw_rows": 1139,
+      "loaded_rows": 1139,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217080000.export.CSV.zip",
+      "raw_rows": 1438,
+      "loaded_rows": 1438,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217081500.export.CSV.zip",
+      "raw_rows": 1066,
+      "loaded_rows": 1066,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217083000.export.CSV.zip",
+      "raw_rows": 1339,
+      "loaded_rows": 1339,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217084500.export.CSV.zip",
+      "raw_rows": 1028,
+      "loaded_rows": 1028,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217090000.export.CSV.zip",
+      "raw_rows": 1125,
+      "loaded_rows": 1125,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217091500.export.CSV.zip",
+      "raw_rows": 1570,
+      "loaded_rows": 1570,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217093000.export.CSV.zip",
+      "raw_rows": 1224,
+      "loaded_rows": 1224,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217094500.export.CSV.zip",
+      "raw_rows": 1170,
+      "loaded_rows": 1170,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217100000.export.CSV.zip",
+      "raw_rows": 1170,
+      "loaded_rows": 1170,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217101500.export.CSV.zip",
+      "raw_rows": 1234,
+      "loaded_rows": 1234,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217103000.export.CSV.zip",
+      "raw_rows": 1265,
+      "loaded_rows": 1265,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217104500.export.CSV.zip",
+      "raw_rows": 1377,
+      "loaded_rows": 1377,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217110000.export.CSV.zip",
+      "raw_rows": 1669,
+      "loaded_rows": 1669,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217111500.export.CSV.zip",
+      "raw_rows": 1680,
+      "loaded_rows": 1680,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217113000.export.CSV.zip",
+      "raw_rows": 1474,
+      "loaded_rows": 1474,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217114500.export.CSV.zip",
+      "raw_rows": 1357,
+      "loaded_rows": 1357,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217120000.export.CSV.zip",
+      "raw_rows": 1531,
+      "loaded_rows": 1531,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217121500.export.CSV.zip",
+      "raw_rows": 1805,
+      "loaded_rows": 1805,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217123000.export.CSV.zip",
+      "raw_rows": 1438,
+      "loaded_rows": 1438,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217124500.export.CSV.zip",
+      "raw_rows": 1744,
+      "loaded_rows": 1744,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217130000.export.CSV.zip",
+      "raw_rows": 2084,
+      "loaded_rows": 2084,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217131500.export.CSV.zip",
+      "raw_rows": 1559,
+      "loaded_rows": 1559,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217133000.export.CSV.zip",
+      "raw_rows": 1966,
+      "loaded_rows": 1966,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217134500.export.CSV.zip",
+      "raw_rows": 1391,
+      "loaded_rows": 1391,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217140000.export.CSV.zip",
+      "raw_rows": 1938,
+      "loaded_rows": 1938,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217141500.export.CSV.zip",
+      "raw_rows": 2023,
+      "loaded_rows": 2023,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217143000.export.CSV.zip",
+      "raw_rows": 1500,
+      "loaded_rows": 1500,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217144500.export.CSV.zip",
+      "raw_rows": 1636,
+      "loaded_rows": 1636,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217150000.export.CSV.zip",
+      "raw_rows": 2067,
+      "loaded_rows": 2067,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217151500.export.CSV.zip",
+      "raw_rows": 1731,
+      "loaded_rows": 1731,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217153000.export.CSV.zip",
+      "raw_rows": 1572,
+      "loaded_rows": 1572,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217154500.export.CSV.zip",
+      "raw_rows": 1203,
+      "loaded_rows": 1203,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217160000.export.CSV.zip",
+      "raw_rows": 1941,
+      "loaded_rows": 1941,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217161500.export.CSV.zip",
+      "raw_rows": 1549,
+      "loaded_rows": 1549,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217163000.export.CSV.zip",
+      "raw_rows": 1666,
+      "loaded_rows": 1666,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217164500.export.CSV.zip",
+      "raw_rows": 1664,
+      "loaded_rows": 1664,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217170000.export.CSV.zip",
+      "raw_rows": 1822,
+      "loaded_rows": 1822,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217171500.export.CSV.zip",
+      "raw_rows": 1671,
+      "loaded_rows": 1671,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217173000.export.CSV.zip",
+      "raw_rows": 1600,
+      "loaded_rows": 1600,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217174500.export.CSV.zip",
+      "raw_rows": 1603,
+      "loaded_rows": 1603,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217180000.export.CSV.zip",
+      "raw_rows": 1727,
+      "loaded_rows": 1727,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217181500.export.CSV.zip",
+      "raw_rows": 1829,
+      "loaded_rows": 1829,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217183000.export.CSV.zip",
+      "raw_rows": 1715,
+      "loaded_rows": 1715,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217184500.export.CSV.zip",
+      "raw_rows": 1542,
+      "loaded_rows": 1542,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217190000.export.CSV.zip",
+      "raw_rows": 2124,
+      "loaded_rows": 2124,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217191500.export.CSV.zip",
+      "raw_rows": 1833,
+      "loaded_rows": 1833,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217193000.export.CSV.zip",
+      "raw_rows": 1313,
+      "loaded_rows": 1313,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217194500.export.CSV.zip",
+      "raw_rows": 1465,
+      "loaded_rows": 1465,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217200000.export.CSV.zip",
+      "raw_rows": 1559,
+      "loaded_rows": 1559,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217201500.export.CSV.zip",
+      "raw_rows": 1440,
+      "loaded_rows": 1440,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217203000.export.CSV.zip",
+      "raw_rows": 1182,
+      "loaded_rows": 1182,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217204500.export.CSV.zip",
+      "raw_rows": 1516,
+      "loaded_rows": 1516,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217210000.export.CSV.zip",
+      "raw_rows": 1690,
+      "loaded_rows": 1690,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217211500.export.CSV.zip",
+      "raw_rows": 1704,
+      "loaded_rows": 1704,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217213000.export.CSV.zip",
+      "raw_rows": 935,
+      "loaded_rows": 935,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217214500.export.CSV.zip",
+      "raw_rows": 1536,
+      "loaded_rows": 1536,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217220000.export.CSV.zip",
+      "raw_rows": 1509,
+      "loaded_rows": 1509,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217221500.export.CSV.zip",
+      "raw_rows": 1425,
+      "loaded_rows": 1425,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217223000.export.CSV.zip",
+      "raw_rows": 1563,
+      "loaded_rows": 1563,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217224500.export.CSV.zip",
+      "raw_rows": 1409,
+      "loaded_rows": 1409,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217230000.export.CSV.zip",
+      "raw_rows": 1294,
+      "loaded_rows": 1294,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217231500.export.CSV.zip",
+      "raw_rows": 1588,
+      "loaded_rows": 1588,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217233000.export.CSV.zip",
+      "raw_rows": 1327,
+      "loaded_rows": 1327,
+      "read_errors": 0
+    },
+    {
+      "file": "20241217234500.export.CSV.zip",
+      "raw_rows": 1292,
+      "loaded_rows": 1292,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218000000.export.CSV.zip",
+      "raw_rows": 2551,
+      "loaded_rows": 2551,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218001500.export.CSV.zip",
+      "raw_rows": 1821,
+      "loaded_rows": 1821,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218003000.export.CSV.zip",
+      "raw_rows": 2084,
+      "loaded_rows": 2084,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218004500.export.CSV.zip",
+      "raw_rows": 2463,
+      "loaded_rows": 2463,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218010000.export.CSV.zip",
+      "raw_rows": 2289,
+      "loaded_rows": 2289,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218011500.export.CSV.zip",
+      "raw_rows": 1545,
+      "loaded_rows": 1545,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218013000.export.CSV.zip",
+      "raw_rows": 1825,
+      "loaded_rows": 1825,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218014500.export.CSV.zip",
+      "raw_rows": 1716,
+      "loaded_rows": 1716,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218020000.export.CSV.zip",
+      "raw_rows": 1717,
+      "loaded_rows": 1717,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218021500.export.CSV.zip",
+      "raw_rows": 1382,
+      "loaded_rows": 1382,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218023000.export.CSV.zip",
+      "raw_rows": 1162,
+      "loaded_rows": 1162,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218024500.export.CSV.zip",
+      "raw_rows": 1553,
+      "loaded_rows": 1553,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218030000.export.CSV.zip",
+      "raw_rows": 1377,
+      "loaded_rows": 1377,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218031500.export.CSV.zip",
+      "raw_rows": 1699,
+      "loaded_rows": 1699,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218033000.export.CSV.zip",
+      "raw_rows": 1321,
+      "loaded_rows": 1321,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218034500.export.CSV.zip",
+      "raw_rows": 1081,
+      "loaded_rows": 1081,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218040000.export.CSV.zip",
+      "raw_rows": 877,
+      "loaded_rows": 877,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218041500.export.CSV.zip",
+      "raw_rows": 972,
+      "loaded_rows": 972,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218043000.export.CSV.zip",
+      "raw_rows": 1112,
+      "loaded_rows": 1112,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218044500.export.CSV.zip",
+      "raw_rows": 1154,
+      "loaded_rows": 1154,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218050000.export.CSV.zip",
+      "raw_rows": 858,
+      "loaded_rows": 858,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218051500.export.CSV.zip",
+      "raw_rows": 969,
+      "loaded_rows": 969,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218053000.export.CSV.zip",
+      "raw_rows": 1129,
+      "loaded_rows": 1129,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218054500.export.CSV.zip",
+      "raw_rows": 1193,
+      "loaded_rows": 1193,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218060000.export.CSV.zip",
+      "raw_rows": 1154,
+      "loaded_rows": 1154,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218061500.export.CSV.zip",
+      "raw_rows": 1164,
+      "loaded_rows": 1164,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218063000.export.CSV.zip",
+      "raw_rows": 1308,
+      "loaded_rows": 1308,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218064500.export.CSV.zip",
+      "raw_rows": 1094,
+      "loaded_rows": 1094,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218070000.export.CSV.zip",
+      "raw_rows": 1063,
+      "loaded_rows": 1063,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218071500.export.CSV.zip",
+      "raw_rows": 986,
+      "loaded_rows": 986,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218073000.export.CSV.zip",
+      "raw_rows": 1172,
+      "loaded_rows": 1172,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218074500.export.CSV.zip",
+      "raw_rows": 1142,
+      "loaded_rows": 1142,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218080000.export.CSV.zip",
+      "raw_rows": 1164,
+      "loaded_rows": 1164,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218081500.export.CSV.zip",
+      "raw_rows": 1249,
+      "loaded_rows": 1249,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218083000.export.CSV.zip",
+      "raw_rows": 1414,
+      "loaded_rows": 1414,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218084500.export.CSV.zip",
+      "raw_rows": 1177,
+      "loaded_rows": 1177,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218090000.export.CSV.zip",
+      "raw_rows": 1244,
+      "loaded_rows": 1244,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218091500.export.CSV.zip",
+      "raw_rows": 1127,
+      "loaded_rows": 1127,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218093000.export.CSV.zip",
+      "raw_rows": 1349,
+      "loaded_rows": 1349,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218094500.export.CSV.zip",
+      "raw_rows": 1117,
+      "loaded_rows": 1117,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218100000.export.CSV.zip",
+      "raw_rows": 1450,
+      "loaded_rows": 1450,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218101500.export.CSV.zip",
+      "raw_rows": 1209,
+      "loaded_rows": 1209,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218103000.export.CSV.zip",
+      "raw_rows": 1059,
+      "loaded_rows": 1059,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218104500.export.CSV.zip",
+      "raw_rows": 1111,
+      "loaded_rows": 1111,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218110000.export.CSV.zip",
+      "raw_rows": 1745,
+      "loaded_rows": 1745,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218111500.export.CSV.zip",
+      "raw_rows": 1455,
+      "loaded_rows": 1455,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218113000.export.CSV.zip",
+      "raw_rows": 1415,
+      "loaded_rows": 1415,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218114500.export.CSV.zip",
+      "raw_rows": 1054,
+      "loaded_rows": 1054,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218120000.export.CSV.zip",
+      "raw_rows": 1451,
+      "loaded_rows": 1451,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218121500.export.CSV.zip",
+      "raw_rows": 1314,
+      "loaded_rows": 1314,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218123000.export.CSV.zip",
+      "raw_rows": 1558,
+      "loaded_rows": 1558,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218124500.export.CSV.zip",
+      "raw_rows": 1441,
+      "loaded_rows": 1441,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218130000.export.CSV.zip",
+      "raw_rows": 1211,
+      "loaded_rows": 1211,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218131500.export.CSV.zip",
+      "raw_rows": 1432,
+      "loaded_rows": 1432,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218133000.export.CSV.zip",
+      "raw_rows": 1606,
+      "loaded_rows": 1606,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218134500.export.CSV.zip",
+      "raw_rows": 1358,
+      "loaded_rows": 1358,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218140000.export.CSV.zip",
+      "raw_rows": 2911,
+      "loaded_rows": 2911,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218141500.export.CSV.zip",
+      "raw_rows": 1363,
+      "loaded_rows": 1363,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218143000.export.CSV.zip",
+      "raw_rows": 1822,
+      "loaded_rows": 1822,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218144500.export.CSV.zip",
+      "raw_rows": 1750,
+      "loaded_rows": 1750,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218150000.export.CSV.zip",
+      "raw_rows": 1361,
+      "loaded_rows": 1361,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218151500.export.CSV.zip",
+      "raw_rows": 1419,
+      "loaded_rows": 1419,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218153000.export.CSV.zip",
+      "raw_rows": 1468,
+      "loaded_rows": 1468,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218154500.export.CSV.zip",
+      "raw_rows": 1697,
+      "loaded_rows": 1697,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218160000.export.CSV.zip",
+      "raw_rows": 1595,
+      "loaded_rows": 1595,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218161500.export.CSV.zip",
+      "raw_rows": 1448,
+      "loaded_rows": 1448,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218163000.export.CSV.zip",
+      "raw_rows": 1618,
+      "loaded_rows": 1618,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218164500.export.CSV.zip",
+      "raw_rows": 1966,
+      "loaded_rows": 1966,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218170000.export.CSV.zip",
+      "raw_rows": 1967,
+      "loaded_rows": 1967,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218171500.export.CSV.zip",
+      "raw_rows": 1564,
+      "loaded_rows": 1564,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218173000.export.CSV.zip",
+      "raw_rows": 1933,
+      "loaded_rows": 1933,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218174500.export.CSV.zip",
+      "raw_rows": 1673,
+      "loaded_rows": 1673,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218180000.export.CSV.zip",
+      "raw_rows": 1476,
+      "loaded_rows": 1476,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218181500.export.CSV.zip",
+      "raw_rows": 1653,
+      "loaded_rows": 1653,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218183000.export.CSV.zip",
+      "raw_rows": 1704,
+      "loaded_rows": 1704,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218184500.export.CSV.zip",
+      "raw_rows": 1416,
+      "loaded_rows": 1416,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218190000.export.CSV.zip",
+      "raw_rows": 2032,
+      "loaded_rows": 2032,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218191500.export.CSV.zip",
+      "raw_rows": 1546,
+      "loaded_rows": 1546,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218193000.export.CSV.zip",
+      "raw_rows": 1581,
+      "loaded_rows": 1581,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218194500.export.CSV.zip",
+      "raw_rows": 1557,
+      "loaded_rows": 1557,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218200000.export.CSV.zip",
+      "raw_rows": 1401,
+      "loaded_rows": 1401,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218201500.export.CSV.zip",
+      "raw_rows": 1450,
+      "loaded_rows": 1450,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218203000.export.CSV.zip",
+      "raw_rows": 1460,
+      "loaded_rows": 1460,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218204500.export.CSV.zip",
+      "raw_rows": 1429,
+      "loaded_rows": 1429,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218210000.export.CSV.zip",
+      "raw_rows": 1373,
+      "loaded_rows": 1373,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218211500.export.CSV.zip",
+      "raw_rows": 1165,
+      "loaded_rows": 1165,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218213000.export.CSV.zip",
+      "raw_rows": 1259,
+      "loaded_rows": 1259,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218214500.export.CSV.zip",
+      "raw_rows": 1555,
+      "loaded_rows": 1555,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218220000.export.CSV.zip",
+      "raw_rows": 1275,
+      "loaded_rows": 1275,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218221500.export.CSV.zip",
+      "raw_rows": 1165,
+      "loaded_rows": 1165,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218223000.export.CSV.zip",
+      "raw_rows": 1586,
+      "loaded_rows": 1586,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218224500.export.CSV.zip",
+      "raw_rows": 1297,
+      "loaded_rows": 1297,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218230000.export.CSV.zip",
+      "raw_rows": 1255,
+      "loaded_rows": 1255,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218231500.export.CSV.zip",
+      "raw_rows": 1292,
+      "loaded_rows": 1292,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218233000.export.CSV.zip",
+      "raw_rows": 1602,
+      "loaded_rows": 1602,
+      "read_errors": 0
+    },
+    {
+      "file": "20241218234500.export.CSV.zip",
+      "raw_rows": 1130,
+      "loaded_rows": 1130,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219000000.export.CSV.zip",
+      "raw_rows": 2875,
+      "loaded_rows": 2875,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219001500.export.CSV.zip",
+      "raw_rows": 2202,
+      "loaded_rows": 2202,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219003000.export.CSV.zip",
+      "raw_rows": 2082,
+      "loaded_rows": 2082,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219004500.export.CSV.zip",
+      "raw_rows": 2448,
+      "loaded_rows": 2448,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219010000.export.CSV.zip",
+      "raw_rows": 1686,
+      "loaded_rows": 1686,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219011500.export.CSV.zip",
+      "raw_rows": 1811,
+      "loaded_rows": 1811,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219013000.export.CSV.zip",
+      "raw_rows": 2034,
+      "loaded_rows": 2034,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219014500.export.CSV.zip",
+      "raw_rows": 1730,
+      "loaded_rows": 1730,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219020000.export.CSV.zip",
+      "raw_rows": 1181,
+      "loaded_rows": 1181,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219021500.export.CSV.zip",
+      "raw_rows": 1517,
+      "loaded_rows": 1517,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219023000.export.CSV.zip",
+      "raw_rows": 1360,
+      "loaded_rows": 1360,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219024500.export.CSV.zip",
+      "raw_rows": 1550,
+      "loaded_rows": 1550,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219030000.export.CSV.zip",
+      "raw_rows": 1309,
+      "loaded_rows": 1309,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219031500.export.CSV.zip",
+      "raw_rows": 1049,
+      "loaded_rows": 1049,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219033000.export.CSV.zip",
+      "raw_rows": 1269,
+      "loaded_rows": 1269,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219034500.export.CSV.zip",
+      "raw_rows": 1529,
+      "loaded_rows": 1529,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219040000.export.CSV.zip",
+      "raw_rows": 904,
+      "loaded_rows": 904,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219041500.export.CSV.zip",
+      "raw_rows": 747,
+      "loaded_rows": 747,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219043000.export.CSV.zip",
+      "raw_rows": 1126,
+      "loaded_rows": 1126,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219044500.export.CSV.zip",
+      "raw_rows": 1220,
+      "loaded_rows": 1220,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219050000.export.CSV.zip",
+      "raw_rows": 1082,
+      "loaded_rows": 1082,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219051500.export.CSV.zip",
+      "raw_rows": 949,
+      "loaded_rows": 949,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219053000.export.CSV.zip",
+      "raw_rows": 1282,
+      "loaded_rows": 1282,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219054500.export.CSV.zip",
+      "raw_rows": 888,
+      "loaded_rows": 888,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219060000.export.CSV.zip",
+      "raw_rows": 1298,
+      "loaded_rows": 1298,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219061500.export.CSV.zip",
+      "raw_rows": 1179,
+      "loaded_rows": 1179,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219063000.export.CSV.zip",
+      "raw_rows": 1179,
+      "loaded_rows": 1179,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219064500.export.CSV.zip",
+      "raw_rows": 1062,
+      "loaded_rows": 1062,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219070000.export.CSV.zip",
+      "raw_rows": 1324,
+      "loaded_rows": 1324,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219071500.export.CSV.zip",
+      "raw_rows": 960,
+      "loaded_rows": 960,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219073000.export.CSV.zip",
+      "raw_rows": 1132,
+      "loaded_rows": 1132,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219074500.export.CSV.zip",
+      "raw_rows": 1023,
+      "loaded_rows": 1023,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219080000.export.CSV.zip",
+      "raw_rows": 1320,
+      "loaded_rows": 1320,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219081500.export.CSV.zip",
+      "raw_rows": 1290,
+      "loaded_rows": 1290,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219083000.export.CSV.zip",
+      "raw_rows": 1107,
+      "loaded_rows": 1107,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219084500.export.CSV.zip",
+      "raw_rows": 1495,
+      "loaded_rows": 1495,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219090000.export.CSV.zip",
+      "raw_rows": 1466,
+      "loaded_rows": 1466,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219091500.export.CSV.zip",
+      "raw_rows": 1474,
+      "loaded_rows": 1474,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219093000.export.CSV.zip",
+      "raw_rows": 1247,
+      "loaded_rows": 1247,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219094500.export.CSV.zip",
+      "raw_rows": 1268,
+      "loaded_rows": 1268,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219100000.export.CSV.zip",
+      "raw_rows": 883,
+      "loaded_rows": 883,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219101500.export.CSV.zip",
+      "raw_rows": 1103,
+      "loaded_rows": 1103,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219103000.export.CSV.zip",
+      "raw_rows": 1131,
+      "loaded_rows": 1131,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219104500.export.CSV.zip",
+      "raw_rows": 1112,
+      "loaded_rows": 1112,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219110000.export.CSV.zip",
+      "raw_rows": 1324,
+      "loaded_rows": 1324,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219111500.export.CSV.zip",
+      "raw_rows": 1535,
+      "loaded_rows": 1535,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219113000.export.CSV.zip",
+      "raw_rows": 1373,
+      "loaded_rows": 1373,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219114500.export.CSV.zip",
+      "raw_rows": 1631,
+      "loaded_rows": 1631,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219120000.export.CSV.zip",
+      "raw_rows": 1317,
+      "loaded_rows": 1317,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219121500.export.CSV.zip",
+      "raw_rows": 1113,
+      "loaded_rows": 1113,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219123000.export.CSV.zip",
+      "raw_rows": 2849,
+      "loaded_rows": 2849,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219124500.export.CSV.zip",
+      "raw_rows": 1352,
+      "loaded_rows": 1352,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219130000.export.CSV.zip",
+      "raw_rows": 1015,
+      "loaded_rows": 1015,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219131500.export.CSV.zip",
+      "raw_rows": 1812,
+      "loaded_rows": 1812,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219133000.export.CSV.zip",
+      "raw_rows": 1643,
+      "loaded_rows": 1643,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219134500.export.CSV.zip",
+      "raw_rows": 1734,
+      "loaded_rows": 1734,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219140000.export.CSV.zip",
+      "raw_rows": 1300,
+      "loaded_rows": 1300,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219141500.export.CSV.zip",
+      "raw_rows": 2171,
+      "loaded_rows": 2171,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219143000.export.CSV.zip",
+      "raw_rows": 1325,
+      "loaded_rows": 1325,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219144500.export.CSV.zip",
+      "raw_rows": 1427,
+      "loaded_rows": 1427,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219150000.export.CSV.zip",
+      "raw_rows": 1640,
+      "loaded_rows": 1640,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219151500.export.CSV.zip",
+      "raw_rows": 1560,
+      "loaded_rows": 1560,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219153000.export.CSV.zip",
+      "raw_rows": 1514,
+      "loaded_rows": 1514,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219154500.export.CSV.zip",
+      "raw_rows": 1552,
+      "loaded_rows": 1552,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219160000.export.CSV.zip",
+      "raw_rows": 1457,
+      "loaded_rows": 1457,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219161500.export.CSV.zip",
+      "raw_rows": 1521,
+      "loaded_rows": 1521,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219163000.export.CSV.zip",
+      "raw_rows": 1275,
+      "loaded_rows": 1275,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219164500.export.CSV.zip",
+      "raw_rows": 1440,
+      "loaded_rows": 1440,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219170000.export.CSV.zip",
+      "raw_rows": 1318,
+      "loaded_rows": 1318,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219171500.export.CSV.zip",
+      "raw_rows": 1587,
+      "loaded_rows": 1587,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219173000.export.CSV.zip",
+      "raw_rows": 2116,
+      "loaded_rows": 2116,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219174500.export.CSV.zip",
+      "raw_rows": 1784,
+      "loaded_rows": 1784,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219180000.export.CSV.zip",
+      "raw_rows": 1227,
+      "loaded_rows": 1227,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219181500.export.CSV.zip",
+      "raw_rows": 1956,
+      "loaded_rows": 1956,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219183000.export.CSV.zip",
+      "raw_rows": 2157,
+      "loaded_rows": 2157,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219184500.export.CSV.zip",
+      "raw_rows": 1619,
+      "loaded_rows": 1619,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219190000.export.CSV.zip",
+      "raw_rows": 1461,
+      "loaded_rows": 1461,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219191500.export.CSV.zip",
+      "raw_rows": 1755,
+      "loaded_rows": 1755,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219193000.export.CSV.zip",
+      "raw_rows": 1241,
+      "loaded_rows": 1241,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219194500.export.CSV.zip",
+      "raw_rows": 1511,
+      "loaded_rows": 1511,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219200000.export.CSV.zip",
+      "raw_rows": 1910,
+      "loaded_rows": 1910,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219201500.export.CSV.zip",
+      "raw_rows": 1553,
+      "loaded_rows": 1553,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219203000.export.CSV.zip",
+      "raw_rows": 1367,
+      "loaded_rows": 1367,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219204500.export.CSV.zip",
+      "raw_rows": 1479,
+      "loaded_rows": 1479,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219210000.export.CSV.zip",
+      "raw_rows": 1626,
+      "loaded_rows": 1626,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219211500.export.CSV.zip",
+      "raw_rows": 1586,
+      "loaded_rows": 1586,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219213000.export.CSV.zip",
+      "raw_rows": 1377,
+      "loaded_rows": 1377,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219214500.export.CSV.zip",
+      "raw_rows": 1309,
+      "loaded_rows": 1309,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219220000.export.CSV.zip",
+      "raw_rows": 1399,
+      "loaded_rows": 1399,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219221500.export.CSV.zip",
+      "raw_rows": 1405,
+      "loaded_rows": 1405,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219223000.export.CSV.zip",
+      "raw_rows": 1544,
+      "loaded_rows": 1544,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219224500.export.CSV.zip",
+      "raw_rows": 1283,
+      "loaded_rows": 1283,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219230000.export.CSV.zip",
+      "raw_rows": 1380,
+      "loaded_rows": 1380,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219231500.export.CSV.zip",
+      "raw_rows": 1309,
+      "loaded_rows": 1309,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219233000.export.CSV.zip",
+      "raw_rows": 1399,
+      "loaded_rows": 1399,
+      "read_errors": 0
+    },
+    {
+      "file": "20241219234500.export.CSV.zip",
+      "raw_rows": 1035,
+      "loaded_rows": 1035,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220000000.export.CSV.zip",
+      "raw_rows": 2341,
+      "loaded_rows": 2341,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220001500.export.CSV.zip",
+      "raw_rows": 2995,
+      "loaded_rows": 2995,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220003000.export.CSV.zip",
+      "raw_rows": 1848,
+      "loaded_rows": 1848,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220004500.export.CSV.zip",
+      "raw_rows": 1993,
+      "loaded_rows": 1993,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220010000.export.CSV.zip",
+      "raw_rows": 1600,
+      "loaded_rows": 1600,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220011500.export.CSV.zip",
+      "raw_rows": 1658,
+      "loaded_rows": 1658,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220013000.export.CSV.zip",
+      "raw_rows": 2059,
+      "loaded_rows": 2059,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220014500.export.CSV.zip",
+      "raw_rows": 1751,
+      "loaded_rows": 1751,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220020000.export.CSV.zip",
+      "raw_rows": 1657,
+      "loaded_rows": 1657,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220021500.export.CSV.zip",
+      "raw_rows": 1748,
+      "loaded_rows": 1748,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220023000.export.CSV.zip",
+      "raw_rows": 1350,
+      "loaded_rows": 1350,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220024500.export.CSV.zip",
+      "raw_rows": 1408,
+      "loaded_rows": 1408,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220030000.export.CSV.zip",
+      "raw_rows": 1262,
+      "loaded_rows": 1262,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220031500.export.CSV.zip",
+      "raw_rows": 1057,
+      "loaded_rows": 1057,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220033000.export.CSV.zip",
+      "raw_rows": 996,
+      "loaded_rows": 996,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220034500.export.CSV.zip",
+      "raw_rows": 1205,
+      "loaded_rows": 1205,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220040000.export.CSV.zip",
+      "raw_rows": 1505,
+      "loaded_rows": 1505,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220041500.export.CSV.zip",
+      "raw_rows": 800,
+      "loaded_rows": 800,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220043000.export.CSV.zip",
+      "raw_rows": 1119,
+      "loaded_rows": 1119,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220044500.export.CSV.zip",
+      "raw_rows": 1118,
+      "loaded_rows": 1118,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220050000.export.CSV.zip",
+      "raw_rows": 1004,
+      "loaded_rows": 1004,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220051500.export.CSV.zip",
+      "raw_rows": 893,
+      "loaded_rows": 893,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220053000.export.CSV.zip",
+      "raw_rows": 919,
+      "loaded_rows": 919,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220054500.export.CSV.zip",
+      "raw_rows": 1297,
+      "loaded_rows": 1297,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220060000.export.CSV.zip",
+      "raw_rows": 1048,
+      "loaded_rows": 1048,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220061500.export.CSV.zip",
+      "raw_rows": 1011,
+      "loaded_rows": 1011,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220063000.export.CSV.zip",
+      "raw_rows": 637,
+      "loaded_rows": 637,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220064500.export.CSV.zip",
+      "raw_rows": 1183,
+      "loaded_rows": 1183,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220070000.export.CSV.zip",
+      "raw_rows": 1138,
+      "loaded_rows": 1138,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220071500.export.CSV.zip",
+      "raw_rows": 923,
+      "loaded_rows": 923,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220073000.export.CSV.zip",
+      "raw_rows": 1147,
+      "loaded_rows": 1147,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220074500.export.CSV.zip",
+      "raw_rows": 1259,
+      "loaded_rows": 1259,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220080000.export.CSV.zip",
+      "raw_rows": 1117,
+      "loaded_rows": 1117,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220081500.export.CSV.zip",
+      "raw_rows": 1241,
+      "loaded_rows": 1241,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220083000.export.CSV.zip",
+      "raw_rows": 944,
+      "loaded_rows": 944,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220084500.export.CSV.zip",
+      "raw_rows": 1273,
+      "loaded_rows": 1273,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220090000.export.CSV.zip",
+      "raw_rows": 990,
+      "loaded_rows": 990,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220091500.export.CSV.zip",
+      "raw_rows": 1775,
+      "loaded_rows": 1775,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220093000.export.CSV.zip",
+      "raw_rows": 1373,
+      "loaded_rows": 1373,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220094500.export.CSV.zip",
+      "raw_rows": 1153,
+      "loaded_rows": 1153,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220100000.export.CSV.zip",
+      "raw_rows": 1162,
+      "loaded_rows": 1162,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220101500.export.CSV.zip",
+      "raw_rows": 973,
+      "loaded_rows": 973,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220103000.export.CSV.zip",
+      "raw_rows": 1457,
+      "loaded_rows": 1457,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220104500.export.CSV.zip",
+      "raw_rows": 1278,
+      "loaded_rows": 1278,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220110000.export.CSV.zip",
+      "raw_rows": 1134,
+      "loaded_rows": 1134,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220111500.export.CSV.zip",
+      "raw_rows": 1479,
+      "loaded_rows": 1479,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220113000.export.CSV.zip",
+      "raw_rows": 2318,
+      "loaded_rows": 2318,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220114500.export.CSV.zip",
+      "raw_rows": 1284,
+      "loaded_rows": 1284,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220120000.export.CSV.zip",
+      "raw_rows": 1005,
+      "loaded_rows": 1005,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220121500.export.CSV.zip",
+      "raw_rows": 1684,
+      "loaded_rows": 1684,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220123000.export.CSV.zip",
+      "raw_rows": 1367,
+      "loaded_rows": 1367,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220124500.export.CSV.zip",
+      "raw_rows": 1418,
+      "loaded_rows": 1418,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220130000.export.CSV.zip",
+      "raw_rows": 1346,
+      "loaded_rows": 1346,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220131500.export.CSV.zip",
+      "raw_rows": 1322,
+      "loaded_rows": 1322,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220133000.export.CSV.zip",
+      "raw_rows": 1487,
+      "loaded_rows": 1487,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220134500.export.CSV.zip",
+      "raw_rows": 1759,
+      "loaded_rows": 1759,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220140000.export.CSV.zip",
+      "raw_rows": 1393,
+      "loaded_rows": 1393,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220141500.export.CSV.zip",
+      "raw_rows": 1642,
+      "loaded_rows": 1642,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220143000.export.CSV.zip",
+      "raw_rows": 1647,
+      "loaded_rows": 1647,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220144500.export.CSV.zip",
+      "raw_rows": 1377,
+      "loaded_rows": 1377,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220150000.export.CSV.zip",
+      "raw_rows": 1439,
+      "loaded_rows": 1439,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220151500.export.CSV.zip",
+      "raw_rows": 1264,
+      "loaded_rows": 1264,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220153000.export.CSV.zip",
+      "raw_rows": 1542,
+      "loaded_rows": 1542,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220154500.export.CSV.zip",
+      "raw_rows": 1476,
+      "loaded_rows": 1476,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220160000.export.CSV.zip",
+      "raw_rows": 1260,
+      "loaded_rows": 1260,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220161500.export.CSV.zip",
+      "raw_rows": 1426,
+      "loaded_rows": 1426,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220163000.export.CSV.zip",
+      "raw_rows": 1740,
+      "loaded_rows": 1740,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220164500.export.CSV.zip",
+      "raw_rows": 1420,
+      "loaded_rows": 1420,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220170000.export.CSV.zip",
+      "raw_rows": 1498,
+      "loaded_rows": 1498,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220171500.export.CSV.zip",
+      "raw_rows": 1744,
+      "loaded_rows": 1744,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220173000.export.CSV.zip",
+      "raw_rows": 1630,
+      "loaded_rows": 1630,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220174500.export.CSV.zip",
+      "raw_rows": 1542,
+      "loaded_rows": 1542,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220180000.export.CSV.zip",
+      "raw_rows": 1900,
+      "loaded_rows": 1900,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220181500.export.CSV.zip",
+      "raw_rows": 1671,
+      "loaded_rows": 1671,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220183000.export.CSV.zip",
+      "raw_rows": 1604,
+      "loaded_rows": 1604,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220184500.export.CSV.zip",
+      "raw_rows": 1741,
+      "loaded_rows": 1741,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220190000.export.CSV.zip",
+      "raw_rows": 1757,
+      "loaded_rows": 1757,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220191500.export.CSV.zip",
+      "raw_rows": 1504,
+      "loaded_rows": 1504,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220193000.export.CSV.zip",
+      "raw_rows": 1434,
+      "loaded_rows": 1434,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220194500.export.CSV.zip",
+      "raw_rows": 1565,
+      "loaded_rows": 1565,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220200000.export.CSV.zip",
+      "raw_rows": 1203,
+      "loaded_rows": 1203,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220201500.export.CSV.zip",
+      "raw_rows": 1506,
+      "loaded_rows": 1506,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220203000.export.CSV.zip",
+      "raw_rows": 1038,
+      "loaded_rows": 1038,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220204500.export.CSV.zip",
+      "raw_rows": 1373,
+      "loaded_rows": 1373,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220210000.export.CSV.zip",
+      "raw_rows": 1352,
+      "loaded_rows": 1352,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220211500.export.CSV.zip",
+      "raw_rows": 1438,
+      "loaded_rows": 1438,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220213000.export.CSV.zip",
+      "raw_rows": 1425,
+      "loaded_rows": 1425,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220214500.export.CSV.zip",
+      "raw_rows": 1241,
+      "loaded_rows": 1241,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220220000.export.CSV.zip",
+      "raw_rows": 1321,
+      "loaded_rows": 1321,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220221500.export.CSV.zip",
+      "raw_rows": 1380,
+      "loaded_rows": 1380,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220223000.export.CSV.zip",
+      "raw_rows": 1179,
+      "loaded_rows": 1179,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220224500.export.CSV.zip",
+      "raw_rows": 1261,
+      "loaded_rows": 1261,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220230000.export.CSV.zip",
+      "raw_rows": 1534,
+      "loaded_rows": 1534,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220231500.export.CSV.zip",
+      "raw_rows": 1255,
+      "loaded_rows": 1255,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220233000.export.CSV.zip",
+      "raw_rows": 1474,
+      "loaded_rows": 1474,
+      "read_errors": 0
+    },
+    {
+      "file": "20241220234500.export.CSV.zip",
+      "raw_rows": 755,
+      "loaded_rows": 755,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221000000.export.CSV.zip",
+      "raw_rows": 1897,
+      "loaded_rows": 1897,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221001500.export.CSV.zip",
+      "raw_rows": 2511,
+      "loaded_rows": 2511,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221003000.export.CSV.zip",
+      "raw_rows": 1366,
+      "loaded_rows": 1366,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221004500.export.CSV.zip",
+      "raw_rows": 1655,
+      "loaded_rows": 1655,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221010000.export.CSV.zip",
+      "raw_rows": 1428,
+      "loaded_rows": 1428,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221011500.export.CSV.zip",
+      "raw_rows": 1373,
+      "loaded_rows": 1373,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221013000.export.CSV.zip",
+      "raw_rows": 1387,
+      "loaded_rows": 1387,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221014500.export.CSV.zip",
+      "raw_rows": 1326,
+      "loaded_rows": 1326,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221020000.export.CSV.zip",
+      "raw_rows": 895,
+      "loaded_rows": 895,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221021500.export.CSV.zip",
+      "raw_rows": 1230,
+      "loaded_rows": 1230,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221023000.export.CSV.zip",
+      "raw_rows": 1285,
+      "loaded_rows": 1285,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221024500.export.CSV.zip",
+      "raw_rows": 1136,
+      "loaded_rows": 1136,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221030000.export.CSV.zip",
+      "raw_rows": 587,
+      "loaded_rows": 587,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221031500.export.CSV.zip",
+      "raw_rows": 1267,
+      "loaded_rows": 1267,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221033000.export.CSV.zip",
+      "raw_rows": 1043,
+      "loaded_rows": 1043,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221034500.export.CSV.zip",
+      "raw_rows": 1032,
+      "loaded_rows": 1032,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221040000.export.CSV.zip",
+      "raw_rows": 957,
+      "loaded_rows": 957,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221041500.export.CSV.zip",
+      "raw_rows": 788,
+      "loaded_rows": 788,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221043000.export.CSV.zip",
+      "raw_rows": 880,
+      "loaded_rows": 880,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221044500.export.CSV.zip",
+      "raw_rows": 934,
+      "loaded_rows": 934,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221050000.export.CSV.zip",
+      "raw_rows": 468,
+      "loaded_rows": 468,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221051500.export.CSV.zip",
+      "raw_rows": 607,
+      "loaded_rows": 607,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221053000.export.CSV.zip",
+      "raw_rows": 1163,
+      "loaded_rows": 1163,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221054500.export.CSV.zip",
+      "raw_rows": 768,
+      "loaded_rows": 768,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221060000.export.CSV.zip",
+      "raw_rows": 721,
+      "loaded_rows": 721,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221061500.export.CSV.zip",
+      "raw_rows": 871,
+      "loaded_rows": 871,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221063000.export.CSV.zip",
+      "raw_rows": 777,
+      "loaded_rows": 777,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221064500.export.CSV.zip",
+      "raw_rows": 777,
+      "loaded_rows": 777,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221070000.export.CSV.zip",
+      "raw_rows": 953,
+      "loaded_rows": 953,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221071500.export.CSV.zip",
+      "raw_rows": 928,
+      "loaded_rows": 928,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221073000.export.CSV.zip",
+      "raw_rows": 555,
+      "loaded_rows": 555,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221074500.export.CSV.zip",
+      "raw_rows": 684,
+      "loaded_rows": 684,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221080000.export.CSV.zip",
+      "raw_rows": 873,
+      "loaded_rows": 873,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221081500.export.CSV.zip",
+      "raw_rows": 798,
+      "loaded_rows": 798,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221083000.export.CSV.zip",
+      "raw_rows": 495,
+      "loaded_rows": 495,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221084500.export.CSV.zip",
+      "raw_rows": 654,
+      "loaded_rows": 654,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221090000.export.CSV.zip",
+      "raw_rows": 818,
+      "loaded_rows": 818,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221091500.export.CSV.zip",
+      "raw_rows": 836,
+      "loaded_rows": 836,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221093000.export.CSV.zip",
+      "raw_rows": 868,
+      "loaded_rows": 868,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221094500.export.CSV.zip",
+      "raw_rows": 779,
+      "loaded_rows": 779,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221100000.export.CSV.zip",
+      "raw_rows": 1773,
+      "loaded_rows": 1773,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221101500.export.CSV.zip",
+      "raw_rows": 745,
+      "loaded_rows": 745,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221103000.export.CSV.zip",
+      "raw_rows": 540,
+      "loaded_rows": 540,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221104500.export.CSV.zip",
+      "raw_rows": 844,
+      "loaded_rows": 844,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221110000.export.CSV.zip",
+      "raw_rows": 779,
+      "loaded_rows": 779,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221111500.export.CSV.zip",
+      "raw_rows": 760,
+      "loaded_rows": 760,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221113000.export.CSV.zip",
+      "raw_rows": 975,
+      "loaded_rows": 975,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221114500.export.CSV.zip",
+      "raw_rows": 1066,
+      "loaded_rows": 1066,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221120000.export.CSV.zip",
+      "raw_rows": 1251,
+      "loaded_rows": 1251,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221121500.export.CSV.zip",
+      "raw_rows": 925,
+      "loaded_rows": 925,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221123000.export.CSV.zip",
+      "raw_rows": 828,
+      "loaded_rows": 828,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221124500.export.CSV.zip",
+      "raw_rows": 618,
+      "loaded_rows": 618,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221130000.export.CSV.zip",
+      "raw_rows": 888,
+      "loaded_rows": 888,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221131500.export.CSV.zip",
+      "raw_rows": 924,
+      "loaded_rows": 924,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221133000.export.CSV.zip",
+      "raw_rows": 724,
+      "loaded_rows": 724,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221134500.export.CSV.zip",
+      "raw_rows": 956,
+      "loaded_rows": 956,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221140000.export.CSV.zip",
+      "raw_rows": 751,
+      "loaded_rows": 751,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221141500.export.CSV.zip",
+      "raw_rows": 835,
+      "loaded_rows": 835,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221143000.export.CSV.zip",
+      "raw_rows": 999,
+      "loaded_rows": 999,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221144500.export.CSV.zip",
+      "raw_rows": 735,
+      "loaded_rows": 735,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221150000.export.CSV.zip",
+      "raw_rows": 818,
+      "loaded_rows": 818,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221151500.export.CSV.zip",
+      "raw_rows": 718,
+      "loaded_rows": 718,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221153000.export.CSV.zip",
+      "raw_rows": 817,
+      "loaded_rows": 817,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221154500.export.CSV.zip",
+      "raw_rows": 653,
+      "loaded_rows": 653,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221160000.export.CSV.zip",
+      "raw_rows": 797,
+      "loaded_rows": 797,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221161500.export.CSV.zip",
+      "raw_rows": 959,
+      "loaded_rows": 959,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221163000.export.CSV.zip",
+      "raw_rows": 976,
+      "loaded_rows": 976,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221164500.export.CSV.zip",
+      "raw_rows": 775,
+      "loaded_rows": 775,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221170000.export.CSV.zip",
+      "raw_rows": 613,
+      "loaded_rows": 613,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221171500.export.CSV.zip",
+      "raw_rows": 1042,
+      "loaded_rows": 1042,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221173000.export.CSV.zip",
+      "raw_rows": 599,
+      "loaded_rows": 599,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221174500.export.CSV.zip",
+      "raw_rows": 818,
+      "loaded_rows": 818,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221180000.export.CSV.zip",
+      "raw_rows": 870,
+      "loaded_rows": 870,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221181500.export.CSV.zip",
+      "raw_rows": 653,
+      "loaded_rows": 653,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221183000.export.CSV.zip",
+      "raw_rows": 482,
+      "loaded_rows": 482,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221184500.export.CSV.zip",
+      "raw_rows": 856,
+      "loaded_rows": 856,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221190000.export.CSV.zip",
+      "raw_rows": 721,
+      "loaded_rows": 721,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221191500.export.CSV.zip",
+      "raw_rows": 870,
+      "loaded_rows": 870,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221193000.export.CSV.zip",
+      "raw_rows": 721,
+      "loaded_rows": 721,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221194500.export.CSV.zip",
+      "raw_rows": 811,
+      "loaded_rows": 811,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221200000.export.CSV.zip",
+      "raw_rows": 661,
+      "loaded_rows": 661,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221201500.export.CSV.zip",
+      "raw_rows": 777,
+      "loaded_rows": 777,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221203000.export.CSV.zip",
+      "raw_rows": 649,
+      "loaded_rows": 649,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221204500.export.CSV.zip",
+      "raw_rows": 769,
+      "loaded_rows": 769,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221210000.export.CSV.zip",
+      "raw_rows": 698,
+      "loaded_rows": 698,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221211500.export.CSV.zip",
+      "raw_rows": 666,
+      "loaded_rows": 666,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221213000.export.CSV.zip",
+      "raw_rows": 550,
+      "loaded_rows": 550,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221214500.export.CSV.zip",
+      "raw_rows": 410,
+      "loaded_rows": 410,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221220000.export.CSV.zip",
+      "raw_rows": 714,
+      "loaded_rows": 714,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221221500.export.CSV.zip",
+      "raw_rows": 599,
+      "loaded_rows": 599,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221223000.export.CSV.zip",
+      "raw_rows": 583,
+      "loaded_rows": 583,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221224500.export.CSV.zip",
+      "raw_rows": 734,
+      "loaded_rows": 734,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221230000.export.CSV.zip",
+      "raw_rows": 467,
+      "loaded_rows": 467,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221231500.export.CSV.zip",
+      "raw_rows": 594,
+      "loaded_rows": 594,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221233000.export.CSV.zip",
+      "raw_rows": 407,
+      "loaded_rows": 407,
+      "read_errors": 0
+    },
+    {
+      "file": "20241221234500.export.CSV.zip",
+      "raw_rows": 532,
+      "loaded_rows": 532,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222000000.export.CSV.zip",
+      "raw_rows": 1142,
+      "loaded_rows": 1142,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222001500.export.CSV.zip",
+      "raw_rows": 940,
+      "loaded_rows": 940,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222003000.export.CSV.zip",
+      "raw_rows": 675,
+      "loaded_rows": 675,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222004500.export.CSV.zip",
+      "raw_rows": 593,
+      "loaded_rows": 593,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222010000.export.CSV.zip",
+      "raw_rows": 1592,
+      "loaded_rows": 1592,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222011500.export.CSV.zip",
+      "raw_rows": 689,
+      "loaded_rows": 689,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222013000.export.CSV.zip",
+      "raw_rows": 817,
+      "loaded_rows": 817,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222014500.export.CSV.zip",
+      "raw_rows": 442,
+      "loaded_rows": 442,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222020000.export.CSV.zip",
+      "raw_rows": 534,
+      "loaded_rows": 534,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222021500.export.CSV.zip",
+      "raw_rows": 446,
+      "loaded_rows": 446,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222023000.export.CSV.zip",
+      "raw_rows": 730,
+      "loaded_rows": 730,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222024500.export.CSV.zip",
+      "raw_rows": 466,
+      "loaded_rows": 466,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222030000.export.CSV.zip",
+      "raw_rows": 526,
+      "loaded_rows": 526,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222031500.export.CSV.zip",
+      "raw_rows": 584,
+      "loaded_rows": 584,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222033000.export.CSV.zip",
+      "raw_rows": 736,
+      "loaded_rows": 736,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222034500.export.CSV.zip",
+      "raw_rows": 396,
+      "loaded_rows": 396,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222040000.export.CSV.zip",
+      "raw_rows": 690,
+      "loaded_rows": 690,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222041500.export.CSV.zip",
+      "raw_rows": 486,
+      "loaded_rows": 486,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222043000.export.CSV.zip",
+      "raw_rows": 710,
+      "loaded_rows": 710,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222044500.export.CSV.zip",
+      "raw_rows": 615,
+      "loaded_rows": 615,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222050000.export.CSV.zip",
+      "raw_rows": 532,
+      "loaded_rows": 532,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222051500.export.CSV.zip",
+      "raw_rows": 533,
+      "loaded_rows": 533,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222053000.export.CSV.zip",
+      "raw_rows": 519,
+      "loaded_rows": 519,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222054500.export.CSV.zip",
+      "raw_rows": 394,
+      "loaded_rows": 394,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222060000.export.CSV.zip",
+      "raw_rows": 764,
+      "loaded_rows": 764,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222061500.export.CSV.zip",
+      "raw_rows": 644,
+      "loaded_rows": 644,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222063000.export.CSV.zip",
+      "raw_rows": 587,
+      "loaded_rows": 587,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222064500.export.CSV.zip",
+      "raw_rows": 588,
+      "loaded_rows": 588,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222070000.export.CSV.zip",
+      "raw_rows": 536,
+      "loaded_rows": 536,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222071500.export.CSV.zip",
+      "raw_rows": 469,
+      "loaded_rows": 469,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222073000.export.CSV.zip",
+      "raw_rows": 741,
+      "loaded_rows": 741,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222074500.export.CSV.zip",
+      "raw_rows": 818,
+      "loaded_rows": 818,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222080000.export.CSV.zip",
+      "raw_rows": 575,
+      "loaded_rows": 575,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222081500.export.CSV.zip",
+      "raw_rows": 545,
+      "loaded_rows": 545,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222083000.export.CSV.zip",
+      "raw_rows": 629,
+      "loaded_rows": 629,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222084500.export.CSV.zip",
+      "raw_rows": 672,
+      "loaded_rows": 672,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222090000.export.CSV.zip",
+      "raw_rows": 471,
+      "loaded_rows": 471,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222091500.export.CSV.zip",
+      "raw_rows": 514,
+      "loaded_rows": 514,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222093000.export.CSV.zip",
+      "raw_rows": 800,
+      "loaded_rows": 800,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222094500.export.CSV.zip",
+      "raw_rows": 885,
+      "loaded_rows": 885,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222100000.export.CSV.zip",
+      "raw_rows": 541,
+      "loaded_rows": 541,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222101500.export.CSV.zip",
+      "raw_rows": 664,
+      "loaded_rows": 664,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222103000.export.CSV.zip",
+      "raw_rows": 556,
+      "loaded_rows": 556,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222104500.export.CSV.zip",
+      "raw_rows": 806,
+      "loaded_rows": 806,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222110000.export.CSV.zip",
+      "raw_rows": 553,
+      "loaded_rows": 553,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222111500.export.CSV.zip",
+      "raw_rows": 450,
+      "loaded_rows": 450,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222113000.export.CSV.zip",
+      "raw_rows": 789,
+      "loaded_rows": 789,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222114500.export.CSV.zip",
+      "raw_rows": 687,
+      "loaded_rows": 687,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222120000.export.CSV.zip",
+      "raw_rows": 707,
+      "loaded_rows": 707,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222121500.export.CSV.zip",
+      "raw_rows": 793,
+      "loaded_rows": 793,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222123000.export.CSV.zip",
+      "raw_rows": 852,
+      "loaded_rows": 852,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222124500.export.CSV.zip",
+      "raw_rows": 854,
+      "loaded_rows": 854,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222130000.export.CSV.zip",
+      "raw_rows": 949,
+      "loaded_rows": 949,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222131500.export.CSV.zip",
+      "raw_rows": 676,
+      "loaded_rows": 676,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222133000.export.CSV.zip",
+      "raw_rows": 671,
+      "loaded_rows": 671,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222134500.export.CSV.zip",
+      "raw_rows": 1282,
+      "loaded_rows": 1282,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222140000.export.CSV.zip",
+      "raw_rows": 1008,
+      "loaded_rows": 1008,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222141500.export.CSV.zip",
+      "raw_rows": 675,
+      "loaded_rows": 675,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222143000.export.CSV.zip",
+      "raw_rows": 647,
+      "loaded_rows": 647,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222144500.export.CSV.zip",
+      "raw_rows": 754,
+      "loaded_rows": 754,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222150000.export.CSV.zip",
+      "raw_rows": 496,
+      "loaded_rows": 496,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222151500.export.CSV.zip",
+      "raw_rows": 797,
+      "loaded_rows": 797,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222153000.export.CSV.zip",
+      "raw_rows": 686,
+      "loaded_rows": 686,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222154500.export.CSV.zip",
+      "raw_rows": 1077,
+      "loaded_rows": 1077,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222160000.export.CSV.zip",
+      "raw_rows": 634,
+      "loaded_rows": 634,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222161500.export.CSV.zip",
+      "raw_rows": 701,
+      "loaded_rows": 701,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222163000.export.CSV.zip",
+      "raw_rows": 864,
+      "loaded_rows": 864,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222164500.export.CSV.zip",
+      "raw_rows": 926,
+      "loaded_rows": 926,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222170000.export.CSV.zip",
+      "raw_rows": 656,
+      "loaded_rows": 656,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222171500.export.CSV.zip",
+      "raw_rows": 705,
+      "loaded_rows": 705,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222173000.export.CSV.zip",
+      "raw_rows": 1128,
+      "loaded_rows": 1128,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222174500.export.CSV.zip",
+      "raw_rows": 795,
+      "loaded_rows": 795,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222180000.export.CSV.zip",
+      "raw_rows": 598,
+      "loaded_rows": 598,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222181500.export.CSV.zip",
+      "raw_rows": 837,
+      "loaded_rows": 837,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222183000.export.CSV.zip",
+      "raw_rows": 624,
+      "loaded_rows": 624,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222184500.export.CSV.zip",
+      "raw_rows": 764,
+      "loaded_rows": 764,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222190000.export.CSV.zip",
+      "raw_rows": 905,
+      "loaded_rows": 905,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222191500.export.CSV.zip",
+      "raw_rows": 653,
+      "loaded_rows": 653,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222193000.export.CSV.zip",
+      "raw_rows": 685,
+      "loaded_rows": 685,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222194500.export.CSV.zip",
+      "raw_rows": 710,
+      "loaded_rows": 710,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222200000.export.CSV.zip",
+      "raw_rows": 871,
+      "loaded_rows": 871,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222201500.export.CSV.zip",
+      "raw_rows": 792,
+      "loaded_rows": 792,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222203000.export.CSV.zip",
+      "raw_rows": 882,
+      "loaded_rows": 882,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222204500.export.CSV.zip",
+      "raw_rows": 523,
+      "loaded_rows": 523,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222210000.export.CSV.zip",
+      "raw_rows": 568,
+      "loaded_rows": 568,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222211500.export.CSV.zip",
+      "raw_rows": 592,
+      "loaded_rows": 592,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222213000.export.CSV.zip",
+      "raw_rows": 881,
+      "loaded_rows": 881,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222214500.export.CSV.zip",
+      "raw_rows": 638,
+      "loaded_rows": 638,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222220000.export.CSV.zip",
+      "raw_rows": 1272,
+      "loaded_rows": 1272,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222221500.export.CSV.zip",
+      "raw_rows": 640,
+      "loaded_rows": 640,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222223000.export.CSV.zip",
+      "raw_rows": 502,
+      "loaded_rows": 502,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222224500.export.CSV.zip",
+      "raw_rows": 747,
+      "loaded_rows": 747,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222230000.export.CSV.zip",
+      "raw_rows": 423,
+      "loaded_rows": 423,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222231500.export.CSV.zip",
+      "raw_rows": 746,
+      "loaded_rows": 746,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222233000.export.CSV.zip",
+      "raw_rows": 755,
+      "loaded_rows": 755,
+      "read_errors": 0
+    },
+    {
+      "file": "20241222234500.export.CSV.zip",
+      "raw_rows": 497,
+      "loaded_rows": 497,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223000000.export.CSV.zip",
+      "raw_rows": 1414,
+      "loaded_rows": 1414,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223001500.export.CSV.zip",
+      "raw_rows": 929,
+      "loaded_rows": 929,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223003000.export.CSV.zip",
+      "raw_rows": 1236,
+      "loaded_rows": 1236,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223004500.export.CSV.zip",
+      "raw_rows": 929,
+      "loaded_rows": 929,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223010000.export.CSV.zip",
+      "raw_rows": 856,
+      "loaded_rows": 856,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223011500.export.CSV.zip",
+      "raw_rows": 933,
+      "loaded_rows": 933,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223013000.export.CSV.zip",
+      "raw_rows": 767,
+      "loaded_rows": 767,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223014500.export.CSV.zip",
+      "raw_rows": 919,
+      "loaded_rows": 919,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223020000.export.CSV.zip",
+      "raw_rows": 849,
+      "loaded_rows": 849,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223021500.export.CSV.zip",
+      "raw_rows": 758,
+      "loaded_rows": 758,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223023000.export.CSV.zip",
+      "raw_rows": 667,
+      "loaded_rows": 667,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223024500.export.CSV.zip",
+      "raw_rows": 855,
+      "loaded_rows": 855,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223030000.export.CSV.zip",
+      "raw_rows": 1114,
+      "loaded_rows": 1114,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223031500.export.CSV.zip",
+      "raw_rows": 713,
+      "loaded_rows": 713,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223033000.export.CSV.zip",
+      "raw_rows": 711,
+      "loaded_rows": 711,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223034500.export.CSV.zip",
+      "raw_rows": 623,
+      "loaded_rows": 623,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223040000.export.CSV.zip",
+      "raw_rows": 473,
+      "loaded_rows": 473,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223041500.export.CSV.zip",
+      "raw_rows": 525,
+      "loaded_rows": 525,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223043000.export.CSV.zip",
+      "raw_rows": 938,
+      "loaded_rows": 938,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223044500.export.CSV.zip",
+      "raw_rows": 541,
+      "loaded_rows": 541,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223050000.export.CSV.zip",
+      "raw_rows": 493,
+      "loaded_rows": 493,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223051500.export.CSV.zip",
+      "raw_rows": 671,
+      "loaded_rows": 671,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223053000.export.CSV.zip",
+      "raw_rows": 796,
+      "loaded_rows": 796,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223054500.export.CSV.zip",
+      "raw_rows": 1030,
+      "loaded_rows": 1030,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223060000.export.CSV.zip",
+      "raw_rows": 838,
+      "loaded_rows": 838,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223061500.export.CSV.zip",
+      "raw_rows": 732,
+      "loaded_rows": 732,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223063000.export.CSV.zip",
+      "raw_rows": 809,
+      "loaded_rows": 809,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223064500.export.CSV.zip",
+      "raw_rows": 945,
+      "loaded_rows": 945,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223070000.export.CSV.zip",
+      "raw_rows": 1335,
+      "loaded_rows": 1335,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223071500.export.CSV.zip",
+      "raw_rows": 1119,
+      "loaded_rows": 1119,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223073000.export.CSV.zip",
+      "raw_rows": 1170,
+      "loaded_rows": 1170,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223074500.export.CSV.zip",
+      "raw_rows": 955,
+      "loaded_rows": 955,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223080000.export.CSV.zip",
+      "raw_rows": 1039,
+      "loaded_rows": 1039,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223081500.export.CSV.zip",
+      "raw_rows": 920,
+      "loaded_rows": 920,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223083000.export.CSV.zip",
+      "raw_rows": 765,
+      "loaded_rows": 765,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223084500.export.CSV.zip",
+      "raw_rows": 2024,
+      "loaded_rows": 2024,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223090000.export.CSV.zip",
+      "raw_rows": 881,
+      "loaded_rows": 881,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223091500.export.CSV.zip",
+      "raw_rows": 862,
+      "loaded_rows": 862,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223093000.export.CSV.zip",
+      "raw_rows": 1117,
+      "loaded_rows": 1117,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223094500.export.CSV.zip",
+      "raw_rows": 878,
+      "loaded_rows": 878,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223100000.export.CSV.zip",
+      "raw_rows": 1277,
+      "loaded_rows": 1277,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223101500.export.CSV.zip",
+      "raw_rows": 1027,
+      "loaded_rows": 1027,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223103000.export.CSV.zip",
+      "raw_rows": 876,
+      "loaded_rows": 876,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223104500.export.CSV.zip",
+      "raw_rows": 1246,
+      "loaded_rows": 1246,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223110000.export.CSV.zip",
+      "raw_rows": 1127,
+      "loaded_rows": 1127,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223111500.export.CSV.zip",
+      "raw_rows": 1027,
+      "loaded_rows": 1027,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223113000.export.CSV.zip",
+      "raw_rows": 1546,
+      "loaded_rows": 1546,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223114500.export.CSV.zip",
+      "raw_rows": 1338,
+      "loaded_rows": 1338,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223120000.export.CSV.zip",
+      "raw_rows": 1018,
+      "loaded_rows": 1018,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223121500.export.CSV.zip",
+      "raw_rows": 1013,
+      "loaded_rows": 1013,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223123000.export.CSV.zip",
+      "raw_rows": 1574,
+      "loaded_rows": 1574,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223124500.export.CSV.zip",
+      "raw_rows": 1111,
+      "loaded_rows": 1111,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223130000.export.CSV.zip",
+      "raw_rows": 1295,
+      "loaded_rows": 1295,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223131500.export.CSV.zip",
+      "raw_rows": 1128,
+      "loaded_rows": 1128,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223133000.export.CSV.zip",
+      "raw_rows": 1305,
+      "loaded_rows": 1305,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223134500.export.CSV.zip",
+      "raw_rows": 1485,
+      "loaded_rows": 1485,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223140000.export.CSV.zip",
+      "raw_rows": 1570,
+      "loaded_rows": 1570,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223141500.export.CSV.zip",
+      "raw_rows": 1009,
+      "loaded_rows": 1009,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223143000.export.CSV.zip",
+      "raw_rows": 1214,
+      "loaded_rows": 1214,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223144500.export.CSV.zip",
+      "raw_rows": 1339,
+      "loaded_rows": 1339,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223150000.export.CSV.zip",
+      "raw_rows": 1465,
+      "loaded_rows": 1465,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223151500.export.CSV.zip",
+      "raw_rows": 1534,
+      "loaded_rows": 1534,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223153000.export.CSV.zip",
+      "raw_rows": 1476,
+      "loaded_rows": 1476,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223154500.export.CSV.zip",
+      "raw_rows": 1132,
+      "loaded_rows": 1132,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223160000.export.CSV.zip",
+      "raw_rows": 1602,
+      "loaded_rows": 1602,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223161500.export.CSV.zip",
+      "raw_rows": 1401,
+      "loaded_rows": 1401,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223163000.export.CSV.zip",
+      "raw_rows": 1381,
+      "loaded_rows": 1381,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223164500.export.CSV.zip",
+      "raw_rows": 1366,
+      "loaded_rows": 1366,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223170000.export.CSV.zip",
+      "raw_rows": 1167,
+      "loaded_rows": 1167,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223171500.export.CSV.zip",
+      "raw_rows": 1544,
+      "loaded_rows": 1544,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223173000.export.CSV.zip",
+      "raw_rows": 1340,
+      "loaded_rows": 1340,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223174500.export.CSV.zip",
+      "raw_rows": 1489,
+      "loaded_rows": 1489,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223180000.export.CSV.zip",
+      "raw_rows": 1664,
+      "loaded_rows": 1664,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223181500.export.CSV.zip",
+      "raw_rows": 1055,
+      "loaded_rows": 1055,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223183000.export.CSV.zip",
+      "raw_rows": 971,
+      "loaded_rows": 971,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223184500.export.CSV.zip",
+      "raw_rows": 1614,
+      "loaded_rows": 1614,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223190000.export.CSV.zip",
+      "raw_rows": 1488,
+      "loaded_rows": 1488,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223191500.export.CSV.zip",
+      "raw_rows": 1279,
+      "loaded_rows": 1279,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223193000.export.CSV.zip",
+      "raw_rows": 1418,
+      "loaded_rows": 1418,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223194500.export.CSV.zip",
+      "raw_rows": 1351,
+      "loaded_rows": 1351,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223200000.export.CSV.zip",
+      "raw_rows": 1198,
+      "loaded_rows": 1198,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223201500.export.CSV.zip",
+      "raw_rows": 1223,
+      "loaded_rows": 1223,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223203000.export.CSV.zip",
+      "raw_rows": 1054,
+      "loaded_rows": 1054,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223204500.export.CSV.zip",
+      "raw_rows": 1077,
+      "loaded_rows": 1077,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223210000.export.CSV.zip",
+      "raw_rows": 1356,
+      "loaded_rows": 1356,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223211500.export.CSV.zip",
+      "raw_rows": 1254,
+      "loaded_rows": 1254,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223213000.export.CSV.zip",
+      "raw_rows": 1310,
+      "loaded_rows": 1310,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223214500.export.CSV.zip",
+      "raw_rows": 939,
+      "loaded_rows": 939,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223220000.export.CSV.zip",
+      "raw_rows": 1197,
+      "loaded_rows": 1197,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223221500.export.CSV.zip",
+      "raw_rows": 1579,
+      "loaded_rows": 1579,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223223000.export.CSV.zip",
+      "raw_rows": 907,
+      "loaded_rows": 907,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223224500.export.CSV.zip",
+      "raw_rows": 844,
+      "loaded_rows": 844,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223230000.export.CSV.zip",
+      "raw_rows": 811,
+      "loaded_rows": 811,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223231500.export.CSV.zip",
+      "raw_rows": 822,
+      "loaded_rows": 822,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223233000.export.CSV.zip",
+      "raw_rows": 797,
+      "loaded_rows": 797,
+      "read_errors": 0
+    },
+    {
+      "file": "20241223234500.export.CSV.zip",
+      "raw_rows": 706,
+      "loaded_rows": 706,
+      "read_errors": 0
+    }
+  ]
+}

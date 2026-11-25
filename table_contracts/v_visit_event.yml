@@ -1,0 +1,30 @@
+name: v_visit_event
+type: view
+layer: serving
+grain: One row per (visit, GDELT event) pair, for each event inside the PRE or POST window of the visit.
+description: >
+  GDELT events attributed to the visits, with the window they fall in and their measures.
+  Source of the PRE/POST curves and of the event list of a visit; aggregated by v_kpi_visit.
+sources: [fact_visit, fact_gdelt_event, dim_event_type]
+primary_key: [visit_key, gdelt_event_id]
+columns:
+  - {name: visit_key, type: BIGINT, nullable: false, description: Visit (fact_visit).}
+  - {name: gdelt_event_id, type: BIGINT, nullable: false, description: Event (fact_gdelt_event).}
+  - {name: visit_window, type: VARCHAR, nullable: false, description: PRE or POST.}
+  - {name: day_offset, type: INTEGER, nullable: false, description: "Days from the visit: -15..-1 before the start date, +1..+15 after the end date."}
+  - {name: event_date_key, type: DATE, nullable: false, description: Date of the event.}
+  - {name: actor1_country_key, type: INTEGER, nullable: false, description: Country of actor 1.}
+  - {name: actor2_country_key, type: INTEGER, nullable: false, description: Country of actor 2.}
+  - {name: event_type_key, type: INTEGER, nullable: false, description: CAMEO event type.}
+  - {name: cameo_code, type: VARCHAR, nullable: false, description: CAMEO code of the event type.}
+  - {name: is_cooperative, type: BOOLEAN, nullable: false, description: True for quad classes 1 and 2.}
+  - {name: goldstein_scale, type: DOUBLE, nullable: false, description: Goldstein score of the event type.}
+  - {name: avg_tone, type: DOUBLE, nullable: false, description: Tone of the first article (see warehouse/profiling/gdelt_measures.md).}
+  - {name: num_mentions, type: INTEGER, nullable: false, description: NumMentions.}
+  - {name: source_url, type: VARCHAR, nullable: true, description: URL of the first article.}
+business_rules:
+  - "C-02, pair: the event links the visitor and host countries of the visit, in either direction."
+  - "C-02, countries: the pair is between countries; the event does not have to involve the leader."
+  - "C-02, multilateral visits: only the visitor-host pair is used, not the other participants."
+  - "C-02, overlap: an event inside the windows of several visits is attributed to each of them; v_kpi_visit flags the overlap."
+  - Events during the visit days (start to end) belong to no window and are not in the view.

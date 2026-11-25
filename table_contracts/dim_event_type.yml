@@ -1,0 +1,35 @@
+name: dim_event_type
+type: table
+layer: production
+scd_type: static
+grain: One row per CAMEO event code.
+description: >
+  Static CAMEO taxonomy (version 1.1b3, as used by the GDELT Events codebook V2.0).
+  It tells whether an event is cooperative, which drives the cooperative-share KPI.
+sources: [GDELT CAMEO.eventcodes.txt]
+primary_key: [event_type_key]
+unique: [[cameo_code]]
+columns:
+  - name: event_type_key
+    type: INTEGER
+    nullable: false
+    description: Surrogate key.
+  - name: cameo_code
+    type: VARCHAR
+    nullable: false
+    description: Detailed CAMEO event code. Stored as a string because of leading zeros (for example 042).
+  - name: root_code
+    type: VARCHAR
+    nullable: false
+    description: Root category, 01 to 20. It is the first two characters of cameo_code.
+  - name: quad_class
+    type: INTEGER
+    nullable: false
+    description: 1 verbal cooperation, 2 material cooperation, 3 verbal conflict, 4 material conflict.
+  - name: is_cooperative
+    type: BOOLEAN
+    nullable: false
+    description: True when quad_class is 1 or 2.
+business_rules:
+  - Roots 01-05 map to quad_class 1, 06-09 to 2, 10-14 to 3 and 15-20 to 4 (CAMEO convention). Verify against the QuadClass column of the real Events files.
+  - is_cooperative must equal (quad_class in 1, 2); the DDL enforces it.

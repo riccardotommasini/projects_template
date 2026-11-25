@@ -1,0 +1,1 @@
+-- This script will build and load fact_visit and fact_gdelt_event in the production warehouse.

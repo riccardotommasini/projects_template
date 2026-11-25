@@ -1,0 +1,11 @@
+gdelt_event_id,event_date,date_added,actor1_country_code,actor2_country_code,event_code,event_root_code,quad_class,goldstein_scale,avg_tone,num_mentions,is_root_event,source_url
+1216020585,2024-12-17,2024-12-17 00:00:00,ISR,PSE,0874,08,2,10.0,-5.50314465408805,4,False,https://www.adn.com/nation-world/2024/12/16/negotiators-say-israel-and-hamas-are-inching-toward-a-ceasefire-deal-heres-what-it-could-look-like/
+1216047276,2024-12-17,2024-12-17 02:45:00,UKR,PRK,190,19,4,-10.0,-7.90816326530612,2,False,https://www.yahoo.com/news/russia-trying-hide-north-korean-015449826.html
+1216234095,2024-12-17,2024-12-17 23:15:00,KEN,SSD,190,19,4,-10.0,-3.0690537084399,10,True,https://eturbonews.com/south-sudan-isolated-juba-international-airport-and-land-borders/
+1216249048,2024-12-18,2024-12-18 00:45:00,TWN,CHN,150,15,4,-7.2,-2.26700251889169,2,True,https://aninews.in/news/world/asia/chinas-unannounced-military-drills-signal-evolving-strategy-potential-shift-in-tactics20241217233247/
+1216359842,2024-12-18,2024-12-18 14:00:00,ISL,NOR,040,04,1,1.0,-1.10132158590309,2,True,https://www.globalsecurity.org/wmd/library/news/ukraine/2024/12/ukraine-241217-lithuania-pres01.htm
+1216360447,2024-12-18,2024-12-18 14:00:00,NOR,ISL,040,04,1,1.0,-1.10132158590309,2,True,https://www.globalsecurity.org/wmd/library/news/ukraine/2024/12/ukraine-241217-lithuania-pres01.htm
+1216831325,2024-12-20,2024-12-20 18:45:00,GBR,IRL,1241,12,3,-4.0,6.63900414937759,2,True,https://www.yahoo.com/news/supreme-court-rejects-gas-cavern-174641746.html
+1216982491,2024-12-21,2024-12-21 19:15:00,FRA,BLR,1241,12,3,-4.0,-7.88381742738589,2,True,https://www.jurist.org/news/2024/12/cpj-demands-belarus-release-journalist-sentenced-to-prison-over-post-election-protest-coverage/
+1217091635,2024-12-22,2024-12-22 18:45:00,RWA,USA,012,01,1,-0.4,-2.04081632653061,10,True,https://www.plenglish.com/news/2024/12/22/peace-negotiations-in-eastern-drc-urged-to-continue/
+1217250350,2024-12-23,2024-12-23 18:45:00,USA,ESP,043,04,1,2.8,-1.72413793103449,3,True,https://www.hola.com/us/celebrities/20241223737632/amber-heard-shows-support-blake-lively/
