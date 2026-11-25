@@ -15,7 +15,8 @@ What is tested:
 3. backend/openapi.json equals app.openapi().
 4. The examples agree with each other (event counts and means versus kpis,
    visit 1 across files, network versus visits).
-5. /health answers 200; the data routes answer 501; an unexpected field fails.
+5. /health answers 200; invalid parameters answer 422; an unexpected field fails.
+   The routes in each mode are tested in test_sample_mode.py and test_warehouse_mode.py.
 """
 
 from __future__ import annotations
@@ -44,7 +45,8 @@ if str(BACKEND) not in sys.path:
     sys.path.insert(0, str(BACKEND))
 
 from examples import EXAMPLES
-from main import app
+from main import app, create_app
+from repository import SampleSource
 from schemas import Leader, Network, VisitDetail, VisitEvent, VisitKpis, VisitSummary
 
 # path -> (operation id, response model, example file name)
@@ -75,7 +77,8 @@ def d(value: str) -> date:
 
 @pytest.fixture(scope="module")
 def client():
-    return TestClient(app)
+    # Sample mode whatever the environment of the test run.
+    return TestClient(create_app(SampleSource(), environ={}))
 
 
 # 1. Example files
@@ -138,7 +141,8 @@ def test_every_data_route_documents_its_example_and_errors():
         assert operation.get("summary"), path
         responses = operation["responses"]
         assert "example" in responses["200"]["content"]["application/json"], path
-        assert responses["501"]["content"]["application/json"]["schema"] == {
+        assert "501" not in responses, path
+        assert responses["503"]["content"]["application/json"]["schema"] == {
             "$ref": "#/components/schemas/ErrorResponse"
         }, path
         assert ("404" in responses) == (path in VISIT_ROUTES), path
@@ -280,23 +284,13 @@ def test_network_analyses_follow_from_the_edges():
     ]
 
 
-# 5. Behaviour of the stub app
+# 5. Behaviour of the app
 
 
 def test_health_answers_200(client):
     response = client.get("/health")
     assert response.status_code == 200
     assert response.json() == {"status": "ok"}
-
-
-@pytest.mark.parametrize(
-    "url",
-    ["/leaders", "/visits", "/visits?leader_id=Q100001", "/visits/1", "/visits/1/kpis", "/visits/1/events", "/network"],
-)
-def test_data_routes_answer_501(client, url):
-    response = client.get(url)
-    assert response.status_code == 501
-    assert response.json() == {"detail": "not implemented"}
 
 
 @pytest.mark.parametrize("url", ["/visits?leader_id=leader-a","/visits/0", "/visits/abc/kpis"])

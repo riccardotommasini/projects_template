@@ -2,7 +2,7 @@
   "openapi": "3.1.0",
   "info": {
     "title": "DiploMap API",
-    "description": "Read-only API of the Globe and Network views. Contract only: the data routes answer 501.",
+    "description": "Read-only API of the Globe and Network views. DIPLOMAP_API_MODE=sample serves the contract samples; DIPLOMAP_API_MODE=warehouse reads the published DuckDB warehouse and Neo4j.",
     "version": "0.1.0"
   },
   "paths": {
@@ -85,8 +85,8 @@
               }
             }
           },
-          "501": {
-            "description": "Not implemented yet (contract only).",
+          "503": {
+            "description": "Warehouse or Neo4j unavailable.",
             "content": {
               "application/json": {
                 "schema": {
@@ -220,8 +220,8 @@
               }
             }
           },
-          "501": {
-            "description": "Not implemented yet (contract only).",
+          "503": {
+            "description": "Warehouse or Neo4j unavailable.",
             "content": {
               "application/json": {
                 "schema": {
@@ -249,7 +249,7 @@
           "visits"
         ],
         "summary": "Get one visit",
-        "description": "One visit with the office of its leader, its PRE and POST windows and its lineage.",
+        "description": "One visit with the office of its leader, its PRE and POST windows and its lineage. In sample mode only visit 1 has a sample: visits 2 to 4 answer 404 \"no sample for visit k\".",
         "operationId": "get_visit",
         "parameters": [
           {
@@ -302,8 +302,8 @@
               }
             }
           },
-          "501": {
-            "description": "Not implemented yet (contract only).",
+          "503": {
+            "description": "Warehouse or Neo4j unavailable.",
             "content": {
               "application/json": {
                 "schema": {
@@ -341,7 +341,7 @@
           "visits"
         ],
         "summary": "Get the PRE vs POST indicators of one visit",
-        "description": "One row of v_kpi_visit. Null means and deltas when a window has no event; counts always present.",
+        "description": "One row of v_kpi_visit. Null means and deltas when a window has no event; counts always present. In sample mode only visit 1 has a sample: visits 2 to 4 answer 404 \"no sample for visit k\".",
         "operationId": "get_visit_kpis",
         "parameters": [
           {
@@ -384,8 +384,8 @@
               }
             }
           },
-          "501": {
-            "description": "Not implemented yet (contract only).",
+          "503": {
+            "description": "Warehouse or Neo4j unavailable.",
             "content": {
               "application/json": {
                 "schema": {
@@ -423,7 +423,7 @@
           "visits"
         ],
         "summary": "List the GDELT events attributed to one visit",
-        "description": "Rows of v_visit_event for the visit, ordered by event date: events of the PRE and POST windows.",
+        "description": "Rows of v_visit_event for the visit, ordered by event date: events of the PRE and POST windows. A visit without events answers an empty list. In sample mode only visit 1 has a sample: visits 2 to 4 answer 404 \"no sample for visit k\".",
         "operationId": "get_visit_events",
         "parameters": [
           {
@@ -561,8 +561,8 @@
               }
             }
           },
-          "501": {
-            "description": "Not implemented yet (contract only).",
+          "503": {
+            "description": "Warehouse or Neo4j unavailable.",
             "content": {
               "application/json": {
                 "schema": {
@@ -728,8 +728,8 @@
               }
             }
           },
-          "501": {
-            "description": "Not implemented yet (contract only).",
+          "503": {
+            "description": "Warehouse or Neo4j unavailable.",
             "content": {
               "application/json": {
                 "schema": {

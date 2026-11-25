@@ -1,5 +1,8 @@
 # Runtime dependencies of the backend image. pydantic is pinned to the version
-# fastapi 0.136.3 resolves to (it requires pydantic>=2.9.0).
+# fastapi 0.136.3 resolves to (it requires pydantic>=2.9.0). duckdb is the version of
+# the warehouse tests; neo4j is the driver version tested by P4.
 fastapi==0.136.3
 uvicorn==0.52.4
 pydantic==2.14.3
+duckdb==2.0.0
+neo4j==6.4.1
