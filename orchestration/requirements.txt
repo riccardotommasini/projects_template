@@ -1,2 +1,9 @@
-# Extra Python dependencies of the Airflow image, installed with the official constraints file.
-# Intentionally empty for now: the official image already ships what the stack needs.
+# Dependencies imported by the ingestion DAGs and warehouse loaders.
+# They are installed in the Airflow image with Airflow's official constraints.
+beautifulsoup4
+duckdb
+lxml
+pandas
+psutil
+PyYAML
+requests
