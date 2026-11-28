@@ -78,7 +78,7 @@ jobs:
           docker compose --env-file .env.ci run --rm airflow-init
 
       - name: Check DAG import errors
-        run: docker compose --env-file .env.ci run --rm --no-deps --entrypoint airflow airflow-init dags list-import-errors
+        run: docker compose --env-file .env.ci run --rm --no-deps --user airflow --entrypoint airflow airflow-init dags list-import-errors
 
       - name: Stop CI services
         if: always()
