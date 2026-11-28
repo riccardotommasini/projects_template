@@ -55,3 +55,32 @@ jobs:
       - name: Run tests
         run: python -m pytest -q
 
+  airflow-validation:
+    name: Validate Docker Compose and Airflow DAGs
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Create CI environment file
+        run: cp .env.example .env.ci
+
+      - name: Validate Docker Compose configuration
+        run: docker compose --env-file .env.ci config --quiet
+
+      - name: Build Airflow image
+        run: docker compose --env-file .env.ci build airflow-init
+
+      - name: Initialize Airflow metadata database
+        run: |
+          docker compose --env-file .env.ci up -d postgres
+          docker compose --env-file .env.ci run --rm airflow-init
+
+      - name: Check DAG import errors
+        run: docker compose --env-file .env.ci run --rm --no-deps --entrypoint airflow airflow-init dags list-import-errors
+
+      - name: Stop CI services
+        if: always()
+        run: docker compose --env-file .env.ci down -v
+
