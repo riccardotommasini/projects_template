@@ -29,14 +29,24 @@ jobs:
           python-version: "3.13"
           cache: pip
 
-      - name: Install project dependencies
+      - name: Upgrade pip
+        run: python -m pip install --upgrade pip
+
+      - name: Install ingestion and warehouse dependencies
+        if: hashFiles('requirements.txt') != ''
+        run: python -m pip install -r requirements.txt
+
+      - name: Install orchestration dependencies
+        if: hashFiles('orchestration/requirements.txt') != ''
+        run: python -m pip install -r orchestration/requirements.txt
+
+      - name: Install backend dependencies
+        if: hashFiles('backend/requirements.txt') != ''
+        run: python -m pip install -r backend/requirements.txt
+
+      - name: Install test dependencies
+        # Starlette's TestClient requires httpx2 in the current backend stack.
         run: |
-          python -m pip install --upgrade pip
-          for requirements_file in requirements.txt orchestration/requirements.txt backend/requirements.txt; do
-            if [ -f "$requirements_file" ]; then
-              python -m pip install -r "$requirements_file"
-            fi
-          done
           python -m pip install pytest httpx2
 
       - name: Compile Python files
