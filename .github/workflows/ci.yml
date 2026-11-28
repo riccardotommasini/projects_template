@@ -32,10 +32,6 @@ jobs:
       - name: Upgrade pip
         run: python -m pip install --upgrade pip
 
-      - name: Install ingestion and warehouse dependencies
-        if: hashFiles('requirements.txt') != ''
-        run: python -m pip install -r requirements.txt
-
       - name: Install orchestration dependencies
         if: hashFiles('orchestration/requirements.txt') != ''
         run: python -m pip install -r orchestration/requirements.txt
@@ -45,9 +41,9 @@ jobs:
         run: python -m pip install -r backend/requirements.txt
 
       - name: Install test dependencies
-        # Starlette's TestClient requires httpx2 in the current backend stack.
+        # Starlette's TestClient requires httpx in the backend test suite.
         run: |
-          python -m pip install pytest httpx2
+          python -m pip install pytest httpx
 
       - name: Compile Python files
         run: python -m compileall -q ingestion warehouse orchestration backend
